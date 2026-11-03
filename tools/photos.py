@@ -131,6 +131,71 @@ QUETES = {
     "cafe-cremeux": (
         "an irish coffee in a glass mug topped with whipped cream",
         ["coffee", "mug", "cream", "irish", "cup"]),
+
+    # --- les 21 recettes ajoutées pour arriver à 50 ---
+    "margarita-classique": (
+        "a classic margarita in a coupe glass with a salt rim and a lime wedge",
+        ["margarita", "coupe", "salt", "lime", "martini glass"]),
+    "daiquiri-classique": (
+        "a classic clear daiquiri in a coupe glass with a lime wheel",
+        ["daiquiri", "coupe", "martini glass", "lime", "clear", "white"]),
+    "whisky-sour": (
+        "an amber whiskey sour cocktail with a layer of white foam on top and a cherry garnish",
+        ["whiskey", "whisky", "sour", "foam", "cherry", "amber", "brown", "orange"]),
+    "gimlet-au-sureau": (
+        "a clear gin gimlet in a coupe glass with a lime wheel",
+        ["gimlet", "gin", "coupe", "lime", "clear", "martini glass"]),
+    "sour-a-l-orgeat": (
+        "a creamy almond gin sour with thick foam in a coupe glass",
+        ["sour", "foam", "coupe", "almond", "creamy", "white"]),
+    "sidecar-a-l-erable": (
+        "a sidecar cocktail in a coupe glass with a sugar rim and an orange twist",
+        ["sidecar", "coupe", "sugar", "orange", "amber", "martini glass"]),
+    "jagerita": (
+        "a dark herbal margarita in a coupe glass with a lime wedge",
+        ["dark", "coupe", "lime", "margarita", "martini glass"]),
+    "ciel-bleu": (
+        "a bright blue cocktail in a coupe glass with a lemon twist",
+        ["blue", "coupe", "martini glass", "lemon"]),
+    "espresso-martini-classique": (
+        "a classic espresso martini with foam and coffee beans in a martini glass",
+        ["espresso", "martini", "coffee bean", "foam", "dark"]),
+    "paloma-maison": (
+        "a paloma cocktail in a tall glass with grapefruit, lime and ice",
+        ["paloma", "tall", "highball", "lime", "ice", "pink", "grapefruit"]),
+    "rhum-collins": (
+        "a tall highball glass of golden rum collins with a lime wheel, ice and soda, on a bar",
+        ["collins", "tall", "highball", "lime", "ice", "rum", "golden", "glass"]),
+    "vodka-soda-au-sureau": (
+        "a clear vodka soda in a tall highball glass with lemon and ice",
+        ["vodka", "soda", "tall", "highball", "lemon", "ice", "clear"]),
+    "spritz-flor-del-fuego": (
+        "a red orange spritz in a tall glass with ice and soda",
+        ["spritz", "orange", "red", "tall", "ice"]),
+    "poisson-rouge-soda": (
+        "a pink cocktail in a tall glass with a lime wedge and ice",
+        ["pink", "tall", "highball", "lime", "ice", "red"]),
+    "tequila-soda-lime": (
+        "a clear tequila soda in a tall glass with lime wedges and ice",
+        ["tequila", "soda", "tall", "highball", "lime", "ice", "clear"]),
+    "black-russian": (
+        "a black russian, a dark coffee cocktail in a rocks glass over ice",
+        ["dark", "black", "coffee", "rocks", "ice", "short"]),
+    "vieux-carre-d-erable": (
+        "an amber stirred cocktail in a rocks glass with a large ice cube",
+        ["amber", "rocks", "ice cube", "short", "whisky", "whiskey"]),
+    "shooter-erable-cannelle": (
+        "an amber shot glass with cinnamon on a bar",
+        ["shot glass", "amber", "cinnamon", "shooter"]),
+    "b-52-maison": (
+        "a layered b52 shot in a shot glass with three visible layers",
+        ["shot glass", "layered", "layers", "shooter"]),
+    "cafe-a-l-amaretto": (
+        "a hot coffee in a mug with a splash of cream, on a table",
+        ["coffee", "mug", "cream", "cup"]),
+    "tasse-chocolat-cafe": (
+        "a hot chocolate coffee in a mug with cocoa dusted on top",
+        ["chocolate", "coffee", "mug", "cocoa", "cup"]),
 }
 
 

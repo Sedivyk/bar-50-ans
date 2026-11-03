@@ -860,5 +860,638 @@
       }
     ],
     "methode": "Verse dans une tasse de café chaud et remue."
+  },
+  {
+    "id": "margarita-classique",
+    "nom": "Margarita classique",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "patron",
+          "casamigos"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "grandmarnier"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "lime"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "La vraie, la simple. Un bord de sel si le cœur t’en dit."
+  },
+  {
+    "id": "daiquiri-classique",
+    "nom": "Daïquiri classique",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "brugal",
+          "appleton",
+          "cihuatan"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "sirop"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "Trois ingrédients, rien à cacher : c’est le test d’un bon rhum."
+  },
+  {
+    "id": "whisky-sour",
+    "nom": "Whisky Sour",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "gretzky",
+          "auchen"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "citron"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "sirop"
+        ]
+      },
+      {
+        "q": "1 blanc",
+        "ids": [
+          "oeuf"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "Le blanc d’œuf n’ajoute aucun goût : il donne la mousse."
+  },
+  {
+    "id": "gimlet-au-sureau",
+    "nom": "Gimlet au sureau",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "beefeater",
+          "romeos",
+          "ungava"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "stgermain"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "lime"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "Le gimlet classique, en plus floral."
+  },
+  {
+    "id": "sour-a-l-orgeat",
+    "nom": "Sour à l’orgeat",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "beefeater",
+          "romeos",
+          "ungava"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "citron"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "orgeat"
+        ]
+      },
+      {
+        "q": "1 blanc",
+        "ids": [
+          "oeuf"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "L’orgeat du Mai Tai, mais tout en douceur."
+  },
+  {
+    "id": "sidecar-a-l-erable",
+    "nom": "Sidecar à l’érable",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "gretzky",
+          "auchen"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "grandmarnier"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "citron"
+        ]
+      },
+      {
+        "q": "¼ oz",
+        "ids": [
+          "gv"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "Un sidecar qui a passé l’hiver au Québec."
+  },
+  {
+    "id": "jagerita",
+    "nom": "Jägerita",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "jager"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "grandmarnier"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "lime"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "Oui, vraiment : le Jäger et la lime vont étonnamment bien ensemble."
+  },
+  {
+    "id": "ciel-bleu",
+    "nom": "Ciel bleu",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "beefeater",
+          "romeos",
+          "ungava"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "sourpuss"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "citron"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "La couleur fait la moitié du travail."
+  },
+  {
+    "id": "espresso-martini-classique",
+    "nom": "Espresso Martini classique",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "highseas",
+          "vvanille"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "cafe_liq",
+          "espresso_liq",
+          "tiamaria"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "cafe"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "Secoue plus fort que tu penses : c’est ce qui fait la mousse."
+  },
+  {
+    "id": "paloma-maison",
+    "nom": "Paloma maison",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "patron",
+          "casamigos"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "sirop",
+          "agave"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "note": "Le cocktail de tous les jours au Mexique."
+  },
+  {
+    "id": "rhum-collins",
+    "nom": "Rhum Collins",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "brugal",
+          "appleton",
+          "cihuatan"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "sirop"
+        ]
+      },
+      {
+        "q": "3 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "vodka-soda-au-sureau",
+    "nom": "Vodka soda au sureau",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "highseas",
+          "vvanille"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "stgermain"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "citron"
+        ]
+      },
+      {
+        "q": "3 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "spritz-flor-del-fuego",
+    "nom": "Spritz Flor del Fuego",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "flor"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "aperol"
+        ]
+      },
+      {
+        "q": "3 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "citron"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "note": "Pour sortir enfin la Flor del Fuego de la tablette."
+  },
+  {
+    "id": "poisson-rouge-soda",
+    "nom": "Poisson rouge soda",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "poisson"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "note": "Simple et rose, comme il se doit."
+  },
+  {
+    "id": "tequila-soda-lime",
+    "nom": "Tequila soda lime",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "patron",
+          "casamigos"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "note": "Le plus léger du lot. Parfait quand la soirée est longue."
+  },
+  {
+    "id": "black-russian",
+    "nom": "Black Russian",
+    "verre": "court",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "highseas"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "cafe_liq",
+          "espresso_liq",
+          "tiamaria"
+        ]
+      }
+    ],
+    "methode": "Verse sur un gros glaçon et remue doucement.",
+    "note": "Deux ingrédients, et il traverse les décennies."
+  },
+  {
+    "id": "vieux-carre-d-erable",
+    "nom": "Vieux carré d’érable",
+    "verre": "court",
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "gretzky",
+          "auchen"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "brugal",
+          "appleton",
+          "cihuatan"
+        ]
+      },
+      {
+        "q": "¼ oz",
+        "ids": [
+          "gv"
+        ]
+      },
+      {
+        "q": "2 traits",
+        "ids": [
+          "angostura",
+          "orangebit"
+        ]
+      }
+    ],
+    "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon.",
+    "note": "Le whisky et le rhum ensemble : plus rond que l’un ou l’autre."
+  },
+  {
+    "id": "shooter-erable-cannelle",
+    "nom": "Shooter érable-cannelle",
+    "verre": "shooter",
+    "ingredients": [
+      {
+        "q": "¾ oz",
+        "ids": [
+          "gv"
+        ]
+      },
+      {
+        "q": "¼ oz",
+        "ids": [
+          "fireball"
+        ]
+      }
+    ],
+    "methode": "Verse le Grands Voyageurs, puis le Fireball par-dessus. Sers bien froid."
+  },
+  {
+    "id": "b-52-maison",
+    "nom": "B-52 maison",
+    "verre": "shooter",
+    "ingredients": [
+      {
+        "q": "½ oz",
+        "ids": [
+          "cafe_liq",
+          "espresso_liq",
+          "tiamaria"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "licor43"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "grandmarnier"
+        ]
+      }
+    ],
+    "methode": "Verse dans l’ordre, doucement sur le dos d’une cuillère, pour garder les trois étages."
+  },
+  {
+    "id": "cafe-a-l-amaretto",
+    "nom": "Café à l’amaretto",
+    "verre": "tasse",
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "amaretto_miel",
+          "amaretto_erable"
+        ]
+      },
+      {
+        "q": "5 oz",
+        "ids": [
+          "cafe"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "creme"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Verse l’amaretto dans un café chaud et remue."
+  },
+  {
+    "id": "tasse-chocolat-cafe",
+    "nom": "Tasse chocolat-café",
+    "verre": "tasse",
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "olmeca"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "cafe_liq",
+          "espresso_liq",
+          "tiamaria"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "cafe"
+        ]
+      }
+    ],
+    "methode": "Verse dans une tasse de café chaud et remue.",
+    "note": "L’Olmeca chocolat noir prend tout son sens ici."
   }
 ]

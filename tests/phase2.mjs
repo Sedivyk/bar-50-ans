@@ -209,6 +209,29 @@ await page.waitForTimeout(500);
 const src2 = await revenue.first().locator(".photo img").getAttribute("src").catch(() => null);
 check("l’import ramène la photo", !!src2 && src2.startsWith("blob:"), String(src2));
 
+/* --------------------------------- 7. le clavier ne doit pas tout perdre */
+
+// « Annuler » ferme sans rien enregistrer, même avec un champ rempli
+await ouvrirBar();
+await page.locator("#ajouter-bouteille").click();
+await page.waitForSelector("#b-nom");
+await page.locator("#b-nom").fill("Bouteille annulée");
+await page.locator('.boutons [data-annuler]').click();
+await page.waitForTimeout(400);
+check("« Annuler » ferme la fenêtre", await page.locator("#dlg[open]").count() === 0);
+check("« Annuler » n’enregistre rien",
+  await page.locator('.chip:has-text("Bouteille annulée")').count() === 0);
+
+// Entrée dans un champ enregistre, au lieu de fermer la fenêtre
+await page.locator("#ajouter-bouteille").click();
+await page.waitForSelector("#b-nom");
+await page.locator("#b-nom").fill("Bombay Sapphire");
+await page.locator("#b-type").selectOption("gin");
+await page.locator("#b-nom").press("Enter");
+await page.waitForTimeout(600);
+check("Entrée enregistre la bouteille au lieu de fermer",
+  await page.locator('.chip:has-text("Bombay Sapphire")').count() === 1);
+
 /* ------------------------------------------------------------ propreté */
 
 const brisees = await page.evaluate(() =>

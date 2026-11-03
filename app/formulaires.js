@@ -15,10 +15,30 @@ const dlg = () => document.getElementById("dlg");
 
 function ouvrir(titre, corps, apres) {
   const d = dlg();
-  d.innerHTML = `<form method="dialog" class="feuille">
-      <header><h2>${esc(titre)}</h2><button class="fermer" value="annuler" aria-label="Fermer">✕</button></header>
+  /* Aucun bouton n’est de type « submit » et le formulaire ne valide rien
+     lui-même : sinon Entrée fermerait la fenêtre sans rien enregistrer
+     (l’envoi implicite choisit le premier bouton, c’est-à-dire la croix),
+     et une vérification du navigateur bloquerait même « Annuler ». */
+  d.innerHTML = `<form class="feuille" novalidate>
+      <header><h2>${esc(titre)}</h2><button type="button" class="fermer" data-annuler aria-label="Fermer">✕</button></header>
       <div class="contenu">${corps}</div>
     </form>`;
+
+  const form = d.querySelector("form");
+  form.addEventListener("submit", (e) => e.preventDefault());
+  d.querySelectorAll("[data-annuler]").forEach((b) => b.addEventListener("click", fermer));
+
+  // Entrée dans un champ enregistre, sauf dans la liste des ingrédients
+  // et dans les zones de texte, où elle sert à écrire.
+  form.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" || e.target.tagName === "TEXTAREA") return;
+    if (!["INPUT", "SELECT"].includes(e.target.tagName)) return;
+    e.preventDefault();
+    if (e.target.closest(".ing-ligne")) return;
+    const principal = d.querySelector(".boutons .gros");
+    if (principal) principal.click();
+  });
+
   d.showModal();
   if (apres) apres(d);
   return d;
@@ -49,7 +69,7 @@ function optionsCategories(selection) {
 export function ajouterBouteille(apres, bouteille = null) {
   const edition = !!bouteille;
   ouvrir(edition ? "Modifier la bouteille" : "Ajouter une bouteille", `
-    ${champ("b-nom", "Nom de la bouteille", `type="text" required maxlength="80" autocomplete="off" value="${esc(bouteille ? bouteille.nom : "")}"`)}
+    ${champ("b-nom", "Nom de la bouteille", `type="text" maxlength="80" autocomplete="off" value="${esc(bouteille ? bouteille.nom : "")}"`)}
     <label class="ch"><span>Catégorie</span>
       <select id="b-cat">${optionsCategories(bouteille ? bouteille.categorie : "Liqueurs")}
         <option value="__new">+ Nouvelle catégorie…</option></select></label>
@@ -59,7 +79,7 @@ export function ajouterBouteille(apres, bouteille = null) {
       <small>Le type sert à reconnaître la bouteille dans les recettes : « Patrón, Casamigos → Tequila blanche ».</small></label>
     <div class="boutons">
       <button class="gros" id="b-ok" type="button">${edition ? "Enregistrer" : "Ajouter"}</button>
-      <button class="lien-btn" value="annuler">Annuler</button>
+      <button type="button" class="lien-btn" data-annuler>Annuler</button>
     </div>`, (d) => {
     const cat = d.querySelector("#b-cat");
     const neuf = d.querySelector("#b-cat-new").closest(".ch");
@@ -172,7 +192,7 @@ export function ajouterRecette(recette = null) {
 
   ouvrir(edition ? "Modifier la recette" : "Ajouter une recette", `
     <datalist id="toutes-bouteilles">${listeBouteilles()}</datalist>
-    ${champ("r-nom", "Nom du cocktail", `type="text" required maxlength="60" autocomplete="off" value="${esc(edition ? recette.nom : "")}"`)}
+    ${champ("r-nom", "Nom du cocktail", `type="text" maxlength="60" autocomplete="off" value="${esc(edition ? recette.nom : "")}"`)}
 
     <label class="ch"><span>Verre</span><select id="r-verre">
       ${VERRES.map((v) => `<option value="${v}"${edition && recette.verre === v ? " selected" : ""}>${esc(VERRE_ETIQUETTE[v])}</option>`).join("")}
@@ -206,7 +226,7 @@ export function ajouterRecette(recette = null) {
     <p class="erreur" id="r-erreur" hidden></p>
     <div class="boutons">
       <button class="gros" id="r-ok" type="button">${edition ? "Enregistrer" : "Ajouter la recette"}</button>
-      <button class="lien-btn" value="annuler">Annuler</button>
+      <button type="button" class="lien-btn" data-annuler>Annuler</button>
     </div>`, (d) => {
     const ings = d.querySelector("#r-ings");
     const apercu = d.querySelector("#r-apercu");

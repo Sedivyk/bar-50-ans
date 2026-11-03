@@ -2,7 +2,7 @@
    Met le site, les données et les photos en cache pour un usage hors ligne.
    Bump VERSION à chaque déploiement pour forcer le renouvellement du cache. */
 
-const VERSION = "ton-bar-v1";
+const VERSION = "ton-bar-v2";
 const SHELL_CACHE = VERSION + "-shell";
 const RUNTIME_CACHE = VERSION + "-runtime";
 
@@ -14,6 +14,7 @@ const SHELL = [
   "./manifest.webmanifest",
   "./data/ingredients.json",
   "./data/recettes.json",
+  "./data/credits.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/icon-maskable-512.png",
@@ -23,13 +24,28 @@ const SHELL = [
 
 const FONT_HOSTS = ["fonts.googleapis.com", "fonts.gstatic.com"];
 
+/* Les photos ne sont pas listées en dur : on lit data/credits.json,
+   dont chaque entrée correspond à img/<slug>.jpg. */
+async function photoList() {
+  try {
+    const res = await fetch("./data/credits.json", { cache: "no-cache" });
+    if (!res.ok) return [];
+    const credits = await res.json();
+    return Object.keys(credits).map((slug) => "./img/" + slug + ".jpg");
+  } catch (e) {
+    return [];
+  }
+}
+
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches
-      .open(SHELL_CACHE)
+    (async () => {
+      const cache = await caches.open(SHELL_CACHE);
+      const urls = SHELL.concat(await photoList());
       // addAll échoue en bloc : on tolère les absences (une photo pas encore poussée).
-      .then((cache) => Promise.all(SHELL.map((url) => cache.add(url).catch(() => {}))))
-      .then(() => self.skipWaiting())
+      await Promise.all(urls.map((url) => cache.add(url).catch(() => {})));
+      await self.skipWaiting();
+    })()
   );
 });
 

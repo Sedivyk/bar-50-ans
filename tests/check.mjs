@@ -131,11 +131,32 @@ async function run(base) {
     await page.waitForTimeout(200);
     await page.screenshot({ path: path.join(SHOTS, `recette-${scheme}.png`), fullPage: true });
 
-    // aucune image brisée
-    const badImgs = await page.evaluate(() =>
-      [...document.images].filter((i) => !i.complete || i.naturalWidth === 0).map((i) => i.src)
-    );
-    check(`[${scheme}] aucune image brisée`, badImgs.length === 0, badImgs.join(", "));
+    // aucune image brisée. On déroule d'abord la page pour déclencher le
+    // chargement différé, sinon une image encore en attente passerait pour
+    // brisée. Brisée = chargement terminé mais largeur nulle.
+    await page.evaluate(async () => {
+      for (let y = 0; y < document.body.scrollHeight; y += 400) {
+        window.scrollTo(0, y);
+        await new Promise((r) => setTimeout(r, 60));
+      }
+      window.scrollTo(0, 0);
+      await Promise.all(
+        [...document.images].map((i) =>
+          i.complete ? null : new Promise((r) => {
+            i.addEventListener("load", r, { once: true });
+            i.addEventListener("error", r, { once: true });
+            setTimeout(r, 3000);
+          })
+        )
+      );
+    });
+    const imgStats = await page.evaluate(() => ({
+      total: document.images.length,
+      charges: [...document.images].filter((i) => i.complete && i.naturalWidth > 0).length,
+      brisees: [...document.images].filter((i) => i.complete && i.naturalWidth === 0).map((i) => i.src)
+    }));
+    check(`[${scheme}] aucune image brisée (${imgStats.charges}/${imgStats.total} chargées)`,
+      imgStats.brisees.length === 0, imgStats.brisees.join(", "));
     check(`[${scheme}] aucune requête en erreur`, broken.length === 0, broken.join(", "));
     check(`[${scheme}] aucune erreur console`, errors.length === 0, errors.join(" | "));
 
@@ -174,6 +195,35 @@ async function run(base) {
     navigator.serviceWorker.ready.then((r) => !!r.active).catch(() => false)
   );
   check("service worker actif", swReady);
+
+  // chaque recette a soit une photo, soit un verre dessiné — jamais rien
+  const couverture = await page.evaluate(() =>
+    [...document.querySelectorAll("details.r")].map((d) => ({
+      id: d.dataset.id,
+      visuel: !!d.querySelector(".thumb img, .thumb .glass")
+    }))
+  );
+  check(`chaque recette affichée a une vignette (${couverture.length})`,
+    couverture.length > 0 && couverture.every((c) => c.visuel),
+    couverture.filter((c) => !c.visuel).map((c) => c.id).join(", "));
+
+  // une photo qui ne charge pas doit être remplacée par le verre dessiné
+  const ctx2 = await browser.newContext({ ...devices["iPhone 13"], viewport: { width: 390, height: 844 }, locale: "fr-CA" });
+  const page2 = await ctx2.newPage();
+  await page2.route("**/img/*.jpg", (route) => route.abort());
+  await page2.goto(base, { waitUntil: "domcontentloaded" });
+  await page2.waitForSelector("details.r");
+  await page2.locator("details.r").first().locator("summary").click();
+  await page2.waitForTimeout(600);
+  const replis = await page2.evaluate(() => ({
+    brisees: [...document.images].filter((i) => i.complete && i.naturalWidth === 0).length,
+    verres: document.querySelectorAll(".thumb .glass").length,
+    grandVerre: document.querySelectorAll(".photo.noimg .glass").length
+  }));
+  check("photo illisible : aucune image brisée ne reste", replis.brisees === 0);
+  check(`photo illisible : les vignettes deviennent des verres (${replis.verres})`, replis.verres > 0);
+  check(`photo illisible : la grande photo devient un verre (${replis.grandVerre})`, replis.grandVerre > 0);
+  await ctx2.close();
 
   // hors ligne : la page doit encore s’ouvrir et afficher des recettes
   await ctx.setOffline(true);

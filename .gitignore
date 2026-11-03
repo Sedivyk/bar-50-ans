@@ -6,3 +6,6 @@ captures/
 # Le plan décrit l'utilisatrice : il reste local, le dépôt est public.
 PLAN.md
 plan.md
+
+# Page de revision des photos : regeneree par tools/photos.py
+revision-photos.html

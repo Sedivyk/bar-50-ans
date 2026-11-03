@@ -3,47 +3,12 @@
              node tests/check.mjs <url>    (teste une adresse déjà en ligne)
    Captures écrites dans captures/ (non versionné). */
 
-import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { chromium, devices } from "playwright";
+import { serve, ROOT } from "./serveur.mjs";
 
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SHOTS = path.join(ROOT, "captures");
-
-const TYPES = {
-  ".html": "text/html; charset=utf-8",
-  ".js": "text/javascript; charset=utf-8",
-  ".mjs": "text/javascript; charset=utf-8",
-  ".json": "application/json; charset=utf-8",
-  ".webmanifest": "application/manifest+json; charset=utf-8",
-  ".png": "image/png",
-  ".jpg": "image/jpeg",
-  ".jpeg": "image/jpeg",
-  ".svg": "image/svg+xml",
-  ".ico": "image/x-icon",
-  ".css": "text/css; charset=utf-8"
-};
-
-function serve() {
-  const server = http.createServer((req, res) => {
-    let rel = decodeURIComponent(req.url.split("?")[0]);
-    if (rel.endsWith("/")) rel += "index.html";
-    const file = path.join(ROOT, rel);
-    if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) {
-      res.writeHead(404, { "content-type": "text/plain; charset=utf-8" });
-      res.end("404");
-      return;
-    }
-    res.writeHead(200, {
-      "content-type": TYPES[path.extname(file).toLowerCase()] || "application/octet-stream",
-      "cache-control": "no-store"
-    });
-    fs.createReadStream(file).pipe(res);
-  });
-  return new Promise((ok) => server.listen(0, "127.0.0.1", () => ok(server)));
-}
 
 const results = [];
 function check(name, pass, detail = "") {

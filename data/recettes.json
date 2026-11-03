@@ -7,9 +7,8 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "patron",
-          "casamigos"
+        "types": [
+          "tequila-blanche"
         ]
       },
       {
@@ -20,14 +19,14 @@
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       },
       {
         "q": "1 pincée",
-        "ids": [
-          "shimmer"
+        "types": [
+          "poudre-scintillante"
         ],
         "facultatif": true
       }
@@ -42,9 +41,8 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "patron",
-          "casamigos"
+        "types": [
+          "tequila-blanche"
         ]
       },
       {
@@ -55,13 +53,13 @@
       },
       {
         "q": "½ oz",
-        "ids": [
-          "grandmarnier"
+        "types": [
+          "liqueur-orange"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       }
@@ -76,34 +74,33 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "patron",
-          "casamigos"
+        "types": [
+          "tequila-blanche"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "moonshine"
+        "types": [
+          "alcool-piquant"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
-          "grandmarnier"
+        "types": [
+          "liqueur-orange"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "agave",
-          "sirop"
+        "types": [
+          "sirop-simple",
+          "sirop-agave"
         ]
       }
     ],
@@ -117,24 +114,23 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "patron",
-          "casamigos"
+        "types": [
+          "tequila-blanche"
         ]
       },
       {
         "q": "¼ oz",
-        "ids": [
-          "gv",
-          "agave",
-          "sirop"
+        "types": [
+          "whisky-erable",
+          "sirop-simple",
+          "sirop-agave"
         ]
       },
       {
         "q": "2 traits",
-        "ids": [
-          "angostura",
-          "orangebit"
+        "types": [
+          "amers-aromatiques",
+          "amers-orange"
         ]
       }
     ],
@@ -147,22 +143,21 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "gretzky",
-          "auchen"
+        "types": [
+          "whisky"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "gv"
+        "types": [
+          "whisky-erable"
         ]
       },
       {
         "q": "2 traits",
-        "ids": [
-          "angostura",
-          "orangebit"
+        "types": [
+          "amers-aromatiques",
+          "amers-orange"
         ]
       }
     ],
@@ -181,26 +176,25 @@
       },
       {
         "q": "1 oz",
-        "ids": [
-          "brugal",
-          "cihuatan"
+        "types": [
+          "rhum-vieux"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "grandmarnier"
+        "types": [
+          "liqueur-orange"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "orgeat"
+        "types": [
+          "sirop-orgeat"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       }
@@ -214,22 +208,20 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "brugal",
-          "appleton",
-          "cihuatan",
-          "havana"
+        "types": [
+          "rhum-vieux",
+          "rhum-epice"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "banane"
+        "types": [
+          "liqueur-banane"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       }
@@ -243,26 +235,26 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "vvanille"
+        "types": [
+          "vodka-vanille"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
-          "passion"
+        "types": [
+          "puree-fruit"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       },
       {
         "q": "¼ oz",
-        "ids": [
-          "sirop"
+        "types": [
+          "sirop-simple"
         ],
         "facultatif": true
       }
@@ -276,20 +268,20 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "highseas",
-          "vvanille"
+        "types": [
+          "vodka-vanille",
+          "vodka"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
-          "gv"
+        "types": [
+          "whisky-erable"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
+        "types": [
           "cafe"
         ]
       }
@@ -309,7 +301,7 @@
       },
       {
         "q": "1½ oz",
-        "ids": [
+        "types": [
           "cafe"
         ]
       }
@@ -323,9 +315,8 @@
     "ingredients": [
       {
         "q": "1 oz",
-        "ids": [
-          "amaretto_miel",
-          "amaretto_erable"
+        "types": [
+          "amaretto"
         ]
       },
       {
@@ -336,13 +327,13 @@
       },
       {
         "q": "1 oz",
-        "ids": [
+        "types": [
           "citron"
         ]
       },
       {
         "q": "1 blanc",
-        "ids": [
+        "types": [
           "oeuf"
         ],
         "facultatif": true
@@ -357,26 +348,25 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "amaretto_miel",
-          "amaretto_erable"
+        "types": [
+          "amaretto"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
+        "types": [
           "citron"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "sirop"
+        "types": [
+          "sirop-simple"
         ]
       },
       {
         "q": "1 blanc",
-        "ids": [
+        "types": [
           "oeuf"
         ],
         "facultatif": true
@@ -391,16 +381,14 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "gretzky",
-          "auchen"
+        "types": [
+          "whisky"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
-          "amaretto_miel",
-          "amaretto_erable"
+        "types": [
+          "amaretto"
         ]
       }
     ],
@@ -419,14 +407,14 @@
       },
       {
         "q": "½ oz",
-        "ids": [
-          "stgermain"
+        "types": [
+          "liqueur-sureau"
         ]
       },
       {
         "q": "4 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       }
     ],
@@ -439,28 +427,26 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "beefeater",
-          "romeos",
-          "ungava"
+        "types": [
+          "gin"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
-          "stgermain"
+        "types": [
+          "liqueur-sureau"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
+        "types": [
           "citron"
         ]
       },
       {
         "q": "3 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       }
     ],
@@ -473,27 +459,26 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "beefeater",
-          "romeos"
+        "types": [
+          "gin"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
+        "types": [
           "citron"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "sirop"
+        "types": [
+          "sirop-simple"
         ]
       },
       {
         "q": "3 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       }
     ],
@@ -506,10 +491,8 @@
     "ingredients": [
       {
         "q": "1 oz",
-        "ids": [
-          "beefeater",
-          "romeos",
-          "ungava"
+        "types": [
+          "gin"
         ]
       },
       {
@@ -520,20 +503,20 @@
       },
       {
         "q": "½ oz",
-        "ids": [
-          "stgermain"
+        "types": [
+          "liqueur-sureau"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "citron"
         ]
       },
       {
         "q": "2 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       }
     ],
@@ -552,13 +535,13 @@
       },
       {
         "q": "3 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "citron"
         ],
         "facultatif": true
@@ -573,20 +556,20 @@
     "ingredients": [
       {
         "q": "1 oz",
-        "ids": [
-          "highseas"
+        "types": [
+          "vodka"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
-          "sourpuss"
+        "types": [
+          "liqueur-bleue"
         ]
       },
       {
         "q": "3 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       }
     ],
@@ -599,20 +582,20 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "highseas"
+        "types": [
+          "vodka"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       },
       {
         "q": "4 oz",
-        "ids": [
-          "gingerbeer"
+        "types": [
+          "ginger-beer"
         ]
       }
     ],
@@ -625,21 +608,21 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "smoky",
-          "havana"
+        "types": [
+          "rhum-brun",
+          "rhum-epice"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       },
       {
         "q": "4 oz",
-        "ids": [
-          "gingerbeer"
+        "types": [
+          "ginger-beer"
         ]
       }
     ],
@@ -658,14 +641,14 @@
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       },
       {
         "q": "4 oz",
-        "ids": [
-          "gingerbeer"
+        "types": [
+          "ginger-beer"
         ]
       }
     ],
@@ -678,19 +661,19 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "havana"
+        "types": [
+          "rhum-epice"
         ]
       },
       {
         "q": "4 oz",
-        "ids": [
+        "types": [
           "cola"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "lime"
         ],
         "facultatif": true
@@ -705,20 +688,19 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "patron",
-          "casamigos"
+        "types": [
+          "tequila-blanche"
         ]
       },
       {
         "q": "4 oz",
-        "ids": [
-          "jusorange"
+        "types": [
+          "jus-orange"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "grenadine"
         ]
       }
@@ -733,15 +715,15 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "highseas",
-          "vvanille"
+        "types": [
+          "vodka-vanille",
+          "vodka"
         ]
       },
       {
         "q": "4 oz",
-        "ids": [
-          "jusorange"
+        "types": [
+          "jus-orange"
         ]
       },
       {
@@ -760,20 +742,20 @@
     "ingredients": [
       {
         "q": "½ oz",
-        "ids": [
-          "olmeca"
+        "types": [
+          "liqueur-chocolat"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "banane"
+        "types": [
+          "liqueur-banane"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "sheridans"
+        "types": [
+          "liqueur-cafe-creme"
         ]
       }
     ],
@@ -786,20 +768,20 @@
     "ingredients": [
       {
         "q": "¾ oz",
-        "ids": [
-          "mcgilli"
+        "types": [
+          "liqueur-pomme"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
-          "butterscotch"
+        "types": [
+          "liqueur-caramel"
         ]
       },
       {
         "q": "¼ oz",
-        "ids": [
-          "fireball"
+        "types": [
+          "liqueur-cannelle"
         ],
         "facultatif": true
       }
@@ -813,19 +795,19 @@
     "ingredients": [
       {
         "q": "1 oz",
-        "ids": [
-          "vpb"
+        "types": [
+          "vodka-arachide"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
-          "olmeca"
+        "types": [
+          "liqueur-chocolat"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
+        "types": [
           "creme"
         ]
       }
@@ -839,22 +821,20 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "sheridans"
+        "types": [
+          "liqueur-cafe-creme"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "cafe_liq",
-          "espresso_liq",
-          "tiamaria"
+        "types": [
+          "liqueur-cafe"
         ],
         "facultatif": true
       },
       {
         "q": "5 oz",
-        "ids": [
+        "types": [
           "cafe"
         ]
       }
@@ -868,20 +848,19 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "patron",
-          "casamigos"
+        "types": [
+          "tequila-blanche"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
-          "grandmarnier"
+        "types": [
+          "liqueur-orange"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       }
@@ -896,22 +875,20 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "brugal",
-          "appleton",
-          "cihuatan"
+        "types": [
+          "rhum-vieux"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "sirop"
+        "types": [
+          "sirop-simple"
         ]
       }
     ],
@@ -925,26 +902,25 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "gretzky",
-          "auchen"
+        "types": [
+          "whisky"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
+        "types": [
           "citron"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "sirop"
+        "types": [
+          "sirop-simple"
         ]
       },
       {
         "q": "1 blanc",
-        "ids": [
+        "types": [
           "oeuf"
         ],
         "facultatif": true
@@ -960,21 +936,19 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "beefeater",
-          "romeos",
-          "ungava"
+        "types": [
+          "gin"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
-          "stgermain"
+        "types": [
+          "liqueur-sureau"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       }
@@ -989,27 +963,25 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "beefeater",
-          "romeos",
-          "ungava"
+        "types": [
+          "gin"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
+        "types": [
           "citron"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "orgeat"
+        "types": [
+          "sirop-orgeat"
         ]
       },
       {
         "q": "1 blanc",
-        "ids": [
+        "types": [
           "oeuf"
         ],
         "facultatif": true
@@ -1025,27 +997,26 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "gretzky",
-          "auchen"
+        "types": [
+          "whisky"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
-          "grandmarnier"
+        "types": [
+          "liqueur-orange"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
+        "types": [
           "citron"
         ]
       },
       {
         "q": "¼ oz",
-        "ids": [
-          "gv"
+        "types": [
+          "whisky-erable"
         ]
       }
     ],
@@ -1065,13 +1036,13 @@
       },
       {
         "q": "1 oz",
-        "ids": [
-          "grandmarnier"
+        "types": [
+          "liqueur-orange"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       }
@@ -1086,21 +1057,19 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "beefeater",
-          "romeos",
-          "ungava"
+        "types": [
+          "gin"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
-          "sourpuss"
+        "types": [
+          "liqueur-bleue"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
+        "types": [
           "citron"
         ]
       }
@@ -1115,22 +1084,20 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "highseas",
-          "vvanille"
+        "types": [
+          "vodka-vanille",
+          "vodka"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
-          "cafe_liq",
-          "espresso_liq",
-          "tiamaria"
+        "types": [
+          "liqueur-cafe"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
+        "types": [
           "cafe"
         ]
       }
@@ -1145,28 +1112,27 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "patron",
-          "casamigos"
+        "types": [
+          "tequila-blanche"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "sirop",
-          "agave"
+        "types": [
+          "sirop-simple",
+          "sirop-agave"
         ]
       },
       {
         "q": "4 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       }
     ],
@@ -1180,28 +1146,26 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "brugal",
-          "appleton",
-          "cihuatan"
+        "types": [
+          "rhum-vieux"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
-          "sirop"
+        "types": [
+          "sirop-simple"
         ]
       },
       {
         "q": "3 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       }
     ],
@@ -1214,27 +1178,27 @@
     "ingredients": [
       {
         "q": "1½ oz",
-        "ids": [
-          "highseas",
-          "vvanille"
+        "types": [
+          "vodka-vanille",
+          "vodka"
         ]
       },
       {
         "q": "¾ oz",
-        "ids": [
-          "stgermain"
+        "types": [
+          "liqueur-sureau"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "citron"
         ]
       },
       {
         "q": "3 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       }
     ],
@@ -1253,19 +1217,19 @@
       },
       {
         "q": "1 oz",
-        "ids": [
-          "aperol"
+        "types": [
+          "amer-orange"
         ]
       },
       {
         "q": "3 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "citron"
         ],
         "facultatif": true
@@ -1287,14 +1251,14 @@
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       },
       {
         "q": "4 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       }
     ],
@@ -1308,21 +1272,20 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "patron",
-          "casamigos"
+        "types": [
+          "tequila-blanche"
         ]
       },
       {
         "q": "½ oz",
-        "ids": [
+        "types": [
           "lime"
         ]
       },
       {
         "q": "4 oz",
-        "ids": [
-          "clubsoda"
+        "types": [
+          "eau-petillante"
         ]
       }
     ],
@@ -1336,16 +1299,14 @@
     "ingredients": [
       {
         "q": "2 oz",
-        "ids": [
-          "highseas"
+        "types": [
+          "vodka"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
-          "cafe_liq",
-          "espresso_liq",
-          "tiamaria"
+        "types": [
+          "liqueur-cafe"
         ]
       }
     ],
@@ -1359,30 +1320,27 @@
     "ingredients": [
       {
         "q": "1 oz",
-        "ids": [
-          "gretzky",
-          "auchen"
+        "types": [
+          "whisky"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
-          "brugal",
-          "appleton",
-          "cihuatan"
+        "types": [
+          "rhum-vieux"
         ]
       },
       {
         "q": "¼ oz",
-        "ids": [
-          "gv"
+        "types": [
+          "whisky-erable"
         ]
       },
       {
         "q": "2 traits",
-        "ids": [
-          "angostura",
-          "orangebit"
+        "types": [
+          "amers-aromatiques",
+          "amers-orange"
         ]
       }
     ],
@@ -1396,14 +1354,14 @@
     "ingredients": [
       {
         "q": "¾ oz",
-        "ids": [
-          "gv"
+        "types": [
+          "whisky-erable"
         ]
       },
       {
         "q": "¼ oz",
-        "ids": [
-          "fireball"
+        "types": [
+          "liqueur-cannelle"
         ]
       }
     ],
@@ -1416,10 +1374,8 @@
     "ingredients": [
       {
         "q": "½ oz",
-        "ids": [
-          "cafe_liq",
-          "espresso_liq",
-          "tiamaria"
+        "types": [
+          "liqueur-cafe"
         ]
       },
       {
@@ -1430,8 +1386,8 @@
       },
       {
         "q": "½ oz",
-        "ids": [
-          "grandmarnier"
+        "types": [
+          "liqueur-orange"
         ]
       }
     ],
@@ -1444,20 +1400,19 @@
     "ingredients": [
       {
         "q": "1 oz",
-        "ids": [
-          "amaretto_miel",
-          "amaretto_erable"
+        "types": [
+          "amaretto"
         ]
       },
       {
         "q": "5 oz",
-        "ids": [
+        "types": [
           "cafe"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
+        "types": [
           "creme"
         ],
         "facultatif": true
@@ -1472,21 +1427,19 @@
     "ingredients": [
       {
         "q": "1 oz",
-        "ids": [
-          "olmeca"
+        "types": [
+          "liqueur-chocolat"
         ]
       },
       {
         "q": "1 oz",
-        "ids": [
-          "cafe_liq",
-          "espresso_liq",
-          "tiamaria"
+        "types": [
+          "liqueur-cafe"
         ]
       },
       {
         "q": "4 oz",
-        "ids": [
+        "types": [
           "cafe"
         ]
       }

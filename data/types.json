@@ -1,0 +1,339 @@
+{
+  "familles": [
+    "Tequila",
+    "Rhum",
+    "Whisky",
+    "Gin",
+    "Vodka",
+    "Liqueurs",
+    "Amers et sirops",
+    "Pour allonger",
+    "Garde-manger"
+  ],
+  "types": [
+    {
+      "id": "tequila-blanche",
+      "nom": "Tequila blanche",
+      "famille": "Tequila",
+      "exemples": "Patrón Silver, Casamigos, Don Julio Blanco"
+    },
+    {
+      "id": "tequila-reposado",
+      "nom": "Tequila reposado",
+      "famille": "Tequila",
+      "exemples": "Casamigos Reposado, Espolòn Reposado"
+    },
+    {
+      "id": "tequila-anejo",
+      "nom": "Tequila añejo",
+      "famille": "Tequila",
+      "exemples": "Don Julio Añejo, Herradura Añejo"
+    },
+    {
+      "id": "mezcal",
+      "nom": "Mezcal",
+      "famille": "Tequila",
+      "exemples": "Del Maguey, Montelobos"
+    },
+    {
+      "id": "rhum-blanc",
+      "nom": "Rhum blanc",
+      "famille": "Rhum",
+      "exemples": "Bacardí, Havana Club 3 ans"
+    },
+    {
+      "id": "rhum-vieux",
+      "nom": "Rhum vieux",
+      "famille": "Rhum",
+      "exemples": "Appleton Estate, Brugal Extra Viejo, Cihuatán"
+    },
+    {
+      "id": "rhum-brun",
+      "nom": "Rhum brun",
+      "famille": "Rhum",
+      "exemples": "Gosling’s, rhum brun fumé"
+    },
+    {
+      "id": "rhum-epice",
+      "nom": "Rhum épicé",
+      "famille": "Rhum",
+      "exemples": "Havana Club épicé, Captain Morgan"
+    },
+    {
+      "id": "whisky",
+      "nom": "Whisky",
+      "famille": "Whisky",
+      "exemples": "Gretzky No. 99, Auchentoshan, Jameson"
+    },
+    {
+      "id": "bourbon",
+      "nom": "Bourbon",
+      "famille": "Whisky",
+      "exemples": "Bulleit, Maker’s Mark"
+    },
+    {
+      "id": "whisky-erable",
+      "nom": "Whisky à l’érable",
+      "famille": "Whisky",
+      "exemples": "Grands Voyageurs, Sortilège"
+    },
+    {
+      "id": "gin",
+      "nom": "Gin",
+      "famille": "Gin",
+      "exemples": "Beefeater, Romeo’s, Ungava, Bombay"
+    },
+    {
+      "id": "vodka",
+      "nom": "Vodka",
+      "famille": "Vodka",
+      "exemples": "High Seas, Smirnoff, Absolut"
+    },
+    {
+      "id": "vodka-vanille",
+      "nom": "Vodka à la vanille",
+      "famille": "Vodka",
+      "exemples": "Absolut Vanilia, vodka à la vanille"
+    },
+    {
+      "id": "vodka-arachide",
+      "nom": "Vodka au beurre d’arachide",
+      "famille": "Vodka",
+      "exemples": "Skrewball, vodka beurre d’arachide"
+    },
+    {
+      "id": "alcool-piquant",
+      "nom": "Alcool piquant",
+      "famille": "Vodka",
+      "exemples": "Moonshine jalapeños, vodka au piment"
+    },
+    {
+      "id": "liqueur-sureau",
+      "nom": "Liqueur de sureau",
+      "famille": "Liqueurs",
+      "exemples": "St-Germain"
+    },
+    {
+      "id": "liqueur-orange",
+      "nom": "Liqueur d’orange",
+      "famille": "Liqueurs",
+      "exemples": "Grand Marnier, Cointreau, triple sec"
+    },
+    {
+      "id": "liqueur-vanille",
+      "nom": "Liqueur de vanille",
+      "famille": "Liqueurs",
+      "exemples": "Licor 43, Galliano vanille"
+    },
+    {
+      "id": "amaretto",
+      "nom": "Amaretto",
+      "famille": "Liqueurs",
+      "exemples": "Amaretto au miel, à l’érable, Disaronno"
+    },
+    {
+      "id": "liqueur-cafe",
+      "nom": "Liqueur de café",
+      "famille": "Liqueurs",
+      "exemples": "Tia Maria, Kahlúa, liqueur d’espresso"
+    },
+    {
+      "id": "liqueur-cafe-creme",
+      "nom": "Liqueur de café crémeuse",
+      "famille": "Liqueurs",
+      "exemples": "Sheridan’s, Baileys au café"
+    },
+    {
+      "id": "liqueur-creme",
+      "nom": "Liqueur crémeuse",
+      "famille": "Liqueurs",
+      "exemples": "Baileys, crème irlandaise"
+    },
+    {
+      "id": "liqueur-chocolat",
+      "nom": "Liqueur de chocolat",
+      "famille": "Liqueurs",
+      "exemples": "Olmeca chocolat noir, crème de cacao"
+    },
+    {
+      "id": "liqueur-banane",
+      "nom": "Liqueur de banane",
+      "famille": "Liqueurs",
+      "exemples": "Crème de banane, Giffard banane"
+    },
+    {
+      "id": "liqueur-caramel",
+      "nom": "Liqueur de caramel",
+      "famille": "Liqueurs",
+      "exemples": "Butterscotch, caramel"
+    },
+    {
+      "id": "liqueur-pomme",
+      "nom": "Liqueur de pomme",
+      "famille": "Liqueurs",
+      "exemples": "Dr. McGillicuddy’s tarte aux pommes"
+    },
+    {
+      "id": "liqueur-cannelle",
+      "nom": "Liqueur de cannelle",
+      "famille": "Liqueurs",
+      "exemples": "Fireball, Goldschläger"
+    },
+    {
+      "id": "liqueur-bleue",
+      "nom": "Liqueur bleue",
+      "famille": "Liqueurs",
+      "exemples": "Sourpuss bleu, curaçao bleu"
+    },
+    {
+      "id": "liqueur-fruitee",
+      "nom": "Liqueur fruitée",
+      "famille": "Liqueurs",
+      "exemples": "Flor del Fuego, Poisson rouge, Chambord"
+    },
+    {
+      "id": "amer-orange",
+      "nom": "Amer à l’orange",
+      "famille": "Liqueurs",
+      "exemples": "Aperol, Campari"
+    },
+    {
+      "id": "amer-herbes",
+      "nom": "Amer aux herbes",
+      "famille": "Liqueurs",
+      "exemples": "Jägermeister, Fernet-Branca"
+    },
+    {
+      "id": "amers-aromatiques",
+      "nom": "Amers aromatiques",
+      "famille": "Amers et sirops",
+      "exemples": "Angostura, Peychaud’s"
+    },
+    {
+      "id": "amers-orange",
+      "nom": "Amers à l’orange",
+      "famille": "Amers et sirops",
+      "exemples": "Regans’, amers à l’orange"
+    },
+    {
+      "id": "sirop-orgeat",
+      "nom": "Sirop d’orgeat",
+      "famille": "Amers et sirops",
+      "exemples": "Orgeat"
+    },
+    {
+      "id": "sirop-simple",
+      "nom": "Sirop simple",
+      "famille": "Amers et sirops",
+      "exemples": "Sirop simple, sucre"
+    },
+    {
+      "id": "sirop-agave",
+      "nom": "Sirop d’agave",
+      "famille": "Amers et sirops",
+      "exemples": "Sirop d’agave"
+    },
+    {
+      "id": "sirop-erable",
+      "nom": "Sirop d’érable",
+      "famille": "Amers et sirops",
+      "exemples": "Sirop d’érable"
+    },
+    {
+      "id": "puree-fruit",
+      "nom": "Purée de fruits",
+      "famille": "Amers et sirops",
+      "exemples": "Fruit de la passion, purée de mangue"
+    },
+    {
+      "id": "grenadine",
+      "nom": "Grenadine",
+      "famille": "Amers et sirops",
+      "exemples": "Grenadine"
+    },
+    {
+      "id": "poudre-scintillante",
+      "nom": "Poudre scintillante",
+      "famille": "Amers et sirops",
+      "exemples": "Shimmer dust"
+    },
+    {
+      "id": "eau-petillante",
+      "nom": "Eau pétillante",
+      "famille": "Pour allonger",
+      "exemples": "Club soda, Perrier"
+    },
+    {
+      "id": "tonic",
+      "nom": "Tonic",
+      "famille": "Pour allonger",
+      "exemples": "Schweppes, Fever-Tree"
+    },
+    {
+      "id": "ginger-beer",
+      "nom": "Ginger beer",
+      "famille": "Pour allonger",
+      "exemples": "Ginger beer, ginger ale"
+    },
+    {
+      "id": "cola",
+      "nom": "Cola",
+      "famille": "Pour allonger",
+      "exemples": "Coca-Cola, Pepsi"
+    },
+    {
+      "id": "jus-orange",
+      "nom": "Jus d’orange",
+      "famille": "Pour allonger",
+      "exemples": "Jus d’orange"
+    },
+    {
+      "id": "jus-canneberge",
+      "nom": "Jus de canneberge",
+      "famille": "Pour allonger",
+      "exemples": "Jus de canneberge"
+    },
+    {
+      "id": "lime",
+      "nom": "Limes",
+      "famille": "Garde-manger",
+      "exemples": "Limes fraîches"
+    },
+    {
+      "id": "citron",
+      "nom": "Citrons",
+      "famille": "Garde-manger",
+      "exemples": "Citrons frais"
+    },
+    {
+      "id": "oeuf",
+      "nom": "Œufs",
+      "famille": "Garde-manger",
+      "exemples": "Œufs (pour la mousse)"
+    },
+    {
+      "id": "cafe",
+      "nom": "Café",
+      "famille": "Garde-manger",
+      "exemples": "Café, espresso"
+    },
+    {
+      "id": "creme",
+      "nom": "Crème",
+      "famille": "Garde-manger",
+      "exemples": "Crème 35 %, crème à café"
+    },
+    {
+      "id": "lait",
+      "nom": "Lait",
+      "famille": "Garde-manger",
+      "exemples": "Lait, boisson végétale"
+    },
+    {
+      "id": "autre",
+      "nom": "Autre",
+      "famille": "Garde-manger",
+      "exemples": "Tout le reste"
+    }
+  ]
+}

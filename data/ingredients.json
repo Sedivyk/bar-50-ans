@@ -15,325 +15,379 @@
       "id": "patron",
       "nom": "Patrón Silver",
       "categorie": "Tequila",
-      "defaut": true
+      "defaut": true,
+      "type": "tequila-blanche"
     },
     {
       "id": "casamigos",
       "nom": "Casamigos",
       "categorie": "Tequila",
-      "defaut": true
+      "defaut": true,
+      "type": "tequila-blanche"
     },
     {
       "id": "olmeca",
       "nom": "Olmeca chocolat noir",
       "categorie": "Tequila",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-chocolat"
     },
     {
       "id": "cihuatan",
       "nom": "Cihuatán Indigo",
       "categorie": "Rhum",
-      "defaut": true
+      "defaut": true,
+      "type": "rhum-vieux"
     },
     {
       "id": "brugal",
       "nom": "Brugal Extra Viejo",
       "categorie": "Rhum",
-      "defaut": true
+      "defaut": true,
+      "type": "rhum-vieux"
     },
     {
       "id": "appleton",
       "nom": "Appleton Estate",
       "categorie": "Rhum",
-      "defaut": true
+      "defaut": true,
+      "type": "rhum-vieux"
     },
     {
       "id": "smoky",
       "nom": "Rhum brun fumé cubain",
       "categorie": "Rhum",
-      "defaut": true
+      "defaut": true,
+      "type": "rhum-brun"
     },
     {
       "id": "havana",
       "nom": "Havana Club épicé",
       "categorie": "Rhum",
-      "defaut": true
+      "defaut": true,
+      "type": "rhum-epice"
     },
     {
       "id": "gv",
       "nom": "Grands Voyageurs (érable)",
       "categorie": "Whisky",
-      "defaut": true
+      "defaut": true,
+      "type": "whisky-erable"
     },
     {
       "id": "gretzky",
       "nom": "Gretzky No. 99",
       "categorie": "Whisky",
-      "defaut": true
+      "defaut": true,
+      "type": "whisky"
     },
     {
       "id": "auchen",
       "nom": "Auchentoshan",
       "categorie": "Whisky",
-      "defaut": true
+      "defaut": true,
+      "type": "whisky"
     },
     {
       "id": "romeos",
       "nom": "Romeo’s Gin",
       "categorie": "Gin",
-      "defaut": true
+      "defaut": true,
+      "type": "gin"
     },
     {
       "id": "ungava",
       "nom": "Ungava",
       "categorie": "Gin",
-      "defaut": true
+      "defaut": true,
+      "type": "gin"
     },
     {
       "id": "beefeater",
       "nom": "Beefeater",
       "categorie": "Gin",
-      "defaut": true
+      "defaut": true,
+      "type": "gin"
     },
     {
       "id": "vvanille",
       "nom": "Vodka à la vanille",
       "categorie": "Vodka",
-      "defaut": true
+      "defaut": true,
+      "type": "vodka-vanille"
     },
     {
       "id": "highseas",
       "nom": "High Seas",
       "categorie": "Vodka",
-      "defaut": true
+      "defaut": true,
+      "type": "vodka"
     },
     {
       "id": "vpb",
       "nom": "Vodka beurre d’arachide",
       "categorie": "Vodka",
-      "defaut": true
+      "defaut": true,
+      "type": "vodka-arachide"
     },
     {
       "id": "moonshine",
       "nom": "Moonshine jalapeños",
       "categorie": "Vodka",
-      "defaut": true
+      "defaut": true,
+      "type": "alcool-piquant"
     },
     {
       "id": "stgermain",
       "nom": "St-Germain",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-sureau"
     },
     {
       "id": "licor43",
       "nom": "Licor 43",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-vanille"
     },
     {
       "id": "amaretto_miel",
       "nom": "Amaretto au miel",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "amaretto"
     },
     {
       "id": "amaretto_erable",
       "nom": "Amaretto à l’érable",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "amaretto"
     },
     {
       "id": "grandmarnier",
       "nom": "Grand Marnier",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-orange"
     },
     {
       "id": "aperol",
       "nom": "Aperol",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "amer-orange"
     },
     {
       "id": "cafe_liq",
       "nom": "Liqueur de café",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-cafe"
     },
     {
       "id": "espresso_liq",
       "nom": "Liqueur d’espresso",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-cafe"
     },
     {
       "id": "tiamaria",
       "nom": "Tia Maria",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-cafe"
     },
     {
       "id": "sheridans",
       "nom": "Sheridan’s",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-cafe-creme"
     },
     {
       "id": "butterscotch",
       "nom": "Butterscotch",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-caramel"
     },
     {
       "id": "galliano",
       "nom": "Galliano vanille",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-vanille"
     },
     {
       "id": "banane",
       "nom": "Liqueur de banane",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-banane"
     },
     {
       "id": "mcgilli",
       "nom": "Dr. McGillicuddy’s tarte aux pommes",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-pomme"
     },
     {
       "id": "fireball",
       "nom": "Fireball",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-cannelle"
     },
     {
       "id": "jager",
       "nom": "Jägermeister",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "amer-herbes"
     },
     {
       "id": "sourpuss",
       "nom": "Sourpuss bleu",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-bleue"
     },
     {
       "id": "flor",
       "nom": "Flor del Fuego",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-fruitee"
     },
     {
       "id": "poisson",
       "nom": "Poisson rouge",
       "categorie": "Liqueurs",
-      "defaut": true
+      "defaut": true,
+      "type": "liqueur-fruitee"
     },
     {
       "id": "angostura",
       "nom": "Angostura",
       "categorie": "Amers et sirops",
-      "defaut": true
+      "defaut": true,
+      "type": "amers-aromatiques"
     },
     {
       "id": "orangebit",
       "nom": "Amers à l’orange",
       "categorie": "Amers et sirops",
-      "defaut": true
+      "defaut": true,
+      "type": "amers-orange"
     },
     {
       "id": "orgeat",
       "nom": "Sirop d’orgeat",
       "categorie": "Amers et sirops",
-      "defaut": true
+      "defaut": true,
+      "type": "sirop-orgeat"
     },
     {
       "id": "passion",
       "nom": "Fruit de la passion",
       "categorie": "Amers et sirops",
-      "defaut": true
+      "defaut": true,
+      "type": "puree-fruit"
     },
     {
       "id": "shimmer",
       "nom": "Shimmer dust",
       "categorie": "Amers et sirops",
-      "defaut": true
+      "defaut": true,
+      "type": "poudre-scintillante"
     },
     {
       "id": "clubsoda",
       "nom": "Club soda",
       "categorie": "Pour allonger",
-      "defaut": true
+      "defaut": true,
+      "type": "eau-petillante"
     },
     {
       "id": "gingerbeer",
       "nom": "Ginger beer",
       "categorie": "Pour allonger",
-      "defaut": false
+      "defaut": false,
+      "type": "ginger-beer"
     },
     {
       "id": "cola",
       "nom": "Cola",
       "categorie": "Pour allonger",
-      "defaut": false
+      "defaut": false,
+      "type": "cola"
     },
     {
       "id": "jusorange",
       "nom": "Jus d’orange",
       "categorie": "Pour allonger",
-      "defaut": false
+      "defaut": false,
+      "type": "jus-orange"
     },
     {
       "id": "lime",
       "nom": "Limes",
       "categorie": "Garde-manger",
-      "defaut": true
+      "defaut": true,
+      "type": "lime"
     },
     {
       "id": "citron",
       "nom": "Citrons",
       "categorie": "Garde-manger",
-      "defaut": true
+      "defaut": true,
+      "type": "citron"
     },
     {
       "id": "sirop",
       "nom": "Sirop simple (ou sucre)",
       "categorie": "Garde-manger",
-      "defaut": true
+      "defaut": true,
+      "type": "sirop-simple"
     },
     {
       "id": "agave",
       "nom": "Sirop d’agave",
       "categorie": "Garde-manger",
-      "defaut": false
+      "defaut": false,
+      "type": "sirop-agave"
     },
     {
       "id": "oeuf",
       "nom": "Œufs",
       "categorie": "Garde-manger",
-      "defaut": true
+      "defaut": true,
+      "type": "oeuf"
     },
     {
       "id": "cafe",
       "nom": "Café ou espresso",
       "categorie": "Garde-manger",
-      "defaut": true
+      "defaut": true,
+      "type": "cafe"
     },
     {
       "id": "creme",
       "nom": "Crème",
       "categorie": "Garde-manger",
-      "defaut": false
+      "defaut": false,
+      "type": "creme"
     },
     {
       "id": "grenadine",
       "nom": "Grenadine",
       "categorie": "Garde-manger",
-      "defaut": false
+      "defaut": false,
+      "type": "grenadine"
     }
   ]
 }

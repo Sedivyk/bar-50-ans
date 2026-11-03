@@ -2,7 +2,7 @@
    Met le site, les données et les photos en cache pour un usage hors ligne.
    Bump VERSION à chaque déploiement pour forcer le renouvellement du cache. */
 
-const VERSION = "ton-bar-v3";
+const VERSION = "ton-bar-v4";
 const SHELL_CACHE = VERSION + "-shell";
 const RUNTIME_CACHE = VERSION + "-runtime";
 
@@ -12,8 +12,18 @@ const SHELL = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
+  "./app/main.js",
+  "./app/donnees.js",
+  "./app/stockage.js",
+  "./app/accords.js",
+  "./app/vues.js",
+  "./app/verres.js",
+  "./app/photos.js",
+  "./app/formulaires.js",
+  "./app/transfert.js",
   "./data/ingredients.json",
   "./data/recettes.json",
+  "./data/types.json",
   "./data/credits.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

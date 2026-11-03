@@ -53,7 +53,7 @@ h1,h2,.fifty,.sig-title{font-family:"Gloock",Georgia,"Times New Roman",serif;fon
 .tab{flex:1;font:inherit;font-weight:600;font-size:.92rem;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;padding:9px 6px;cursor:pointer;white-space:nowrap}
 .tab .n{font-weight:500;opacity:.8}
 .tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.tab:focus-visible,.chip input:focus-visible+span,summary:focus-visible,input[type=search]:focus-visible,.reset:focus-visible,.retry:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.tab:focus-visible,.chip input:focus-visible+span,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,label.fichier:focus-within{outline:2px solid var(--gold);outline-offset:2px}
 
 .search{width:100%;margin:16px 0 4px;font:inherit;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
 .hint{color:var(--muted);font-size:.88rem;margin:8px 0 14px}
@@ -65,59 +65,105 @@ summary{list-style:none;cursor:pointer;padding:12px 16px;display:flex;gap:12px;a
 summary::-webkit-details-marker{display:none}
 .st{flex:1;min-width:0}
 .rt{font-weight:700;font-size:1.04rem}
+.sig .rt{font-family:"Gloock",Georgia,serif;font-weight:400;font-size:1.3rem;color:var(--gold)}
+.rs{color:var(--muted);font-size:.86rem;margin-top:2px}
+.rs.missing{color:var(--miss);font-weight:600}
+.mine{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--gold);border:1px solid var(--gold-line);border-radius:999px;padding:1px 7px;vertical-align:middle;white-space:nowrap}
+.chev{flex:none;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .2s}
+details[open] .chev{transform:rotate(225deg)}
+.body{padding:0 16px 16px;border-top:1px solid var(--line)}
 
-/* vignette carrée à gauche du nom */
 .thumb{flex:none;width:54px;height:54px;border-radius:11px;overflow:hidden;background:var(--rose-soft);border:1px solid var(--line)}
 .thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .thumb .glass{width:100%;height:100%;padding:5px}
-
-/* grande photo en haut de la recette ouverte */
 .photo{margin:14px 0 0;border-radius:12px;overflow:hidden;background:var(--rose-soft);border:1px solid var(--line);aspect-ratio:16/10}
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
 .photo.noimg{display:flex;align-items:center;justify-content:center}
 .photo.noimg .glass{width:auto;height:82%}
 .credit{margin:6px 2px 0;font-size:.76rem;color:var(--muted)}
 .credit a{color:inherit;text-decoration:underline}
-.credit a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-
-/* verre dessiné, quand il n’y a pas de photo */
 .glass{display:block}
 .gl-out{fill:none;stroke:var(--gold-line);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 .gl-liq{fill:var(--rose);opacity:.38}
-.sig .rt{font-family:"Gloock",Georgia,serif;font-weight:400;font-size:1.3rem;color:var(--gold)}
-.rs{color:var(--muted);font-size:.86rem;margin-top:2px}
-.rs.missing{color:var(--miss);font-weight:600}
-.chev{flex:none;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .2s}
-details[open] .chev{transform:rotate(225deg)}
-.body{padding:0 16px 16px;border-top:1px solid var(--line)}
+
 .ing{list-style:none;margin:12px 0;padding:0}
 .ing li{display:flex;gap:10px;padding:5px 0;font-size:.95rem}
 .ing .q{flex:none;width:4.4em;color:var(--muted);font-variant-numeric:tabular-nums}
+.ing .in{flex:1;min-width:0}
+.ing .tq{color:var(--muted)}
 .ing .no{color:var(--miss);font-weight:600}
 .ing .opt{color:var(--muted);font-size:.85em}
+select.pick{display:block;margin-top:5px;max-width:100%;font:inherit;font-size:.88rem;padding:5px 8px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 .method{margin:6px 0 0;font-size:.95rem}
 .note{margin:10px 0 0;padding:10px 12px;border-radius:10px;background:var(--rose-soft);font-size:.9rem}
+.lien{margin:10px 0 0;font-size:.88rem}
+.lien a{color:var(--rose)}
+.actions{margin-top:14px;display:flex;gap:16px;align-items:center}
 
 .cat h2{font-size:1.35rem;margin:26px 0 10px}
+.sous{font-size:1.05rem;margin:18px 0 8px;font-family:"Gloock",Georgia,serif;font-weight:400}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip-rang{display:inline-flex;align-items:center;gap:2px}
 .chip{position:relative}
 .chip input{position:absolute;opacity:0;pointer-events:none}
 .chip span{display:inline-flex;align-items:center;gap:6px;padding:8px 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);font-size:.92rem;cursor:pointer;user-select:none}
 .chip input:checked+span{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .chip .box{font-size:.72rem;font-weight:700;color:var(--gold);border:1px solid var(--gold-line);border-radius:999px;padding:0 6px}
 .chip input:checked+span .box{color:var(--gold-line)}
+.fiche{font:inherit;font-size:1rem;line-height:1;background:var(--surface);color:var(--muted);border:1px solid var(--line);border-radius:999px;width:32px;height:32px;cursor:pointer;flex:none}
+
+.gros-boutons{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.gros{flex:1 1 46%;font:inherit;font-weight:600;font-size:.95rem;background:var(--ink);color:var(--bg);border:none;border-radius:12px;padding:13px 14px;cursor:pointer;text-align:center}
+.gros.doux{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+label.fichier{cursor:pointer}
 .reset{margin-top:28px;font:inherit;font-size:.9rem;background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;padding:6px 0}
+.lien-btn{font:inherit;font-size:.9rem;background:none;border:none;color:var(--rose);text-decoration:underline;cursor:pointer;padding:4px 0}
+.lien-btn.danger{color:var(--miss)}
 .empty{padding:28px 6px;color:var(--muted);text-align:center}
 
-/* Astuce « ajouter à l’écran d’accueil » (masquée une fois installée) */
 .install{margin:18px 0 4px;padding:14px 16px;border:1px solid var(--gold-line);border-radius:14px;background:var(--surface)}
 .install h2{font-size:1.15rem;margin:0 0 6px}
 .install p{margin:0;font-size:.9rem;color:var(--muted)}
 .install b{color:var(--ink);font-weight:600}
 
-/* Chargement et panne de chargement */
 .loading{padding:40px 6px;color:var(--muted);text-align:center;font-size:.95rem}
 .retry{margin-top:14px;font:inherit;font-size:.95rem;font-weight:600;background:var(--ink);color:var(--bg);border:none;border-radius:999px;padding:10px 20px;cursor:pointer}
+
+/* fenêtres */
+dialog#dlg{position:fixed;left:0;right:0;bottom:0;top:auto;margin:0 auto;width:100%;max-width:640px;
+  border:none;padding:0;background:var(--surface);color:var(--ink);
+  border-radius:18px 18px 0 0;box-shadow:0 -8px 40px rgba(0,0,0,.28);max-height:92vh;max-height:92dvh}
+dialog#dlg::backdrop{background:rgba(26,8,20,.55)}
+.feuille{display:flex;flex-direction:column;max-height:92vh;max-height:92dvh}
+.feuille header{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:16px 18px 10px;border-bottom:1px solid var(--line)}
+.feuille h2{margin:0;font-size:1.3rem}
+.fermer{font:inherit;font-size:1.1rem;line-height:1;background:none;border:none;color:var(--muted);cursor:pointer;padding:6px 8px}
+.contenu{overflow:auto;-webkit-overflow-scrolling:touch;padding:14px 18px calc(20px + env(safe-area-inset-bottom,0px))}
+.ch{display:block;margin:0 0 15px}
+.ch>span{display:block;font-weight:600;font-size:.9rem;margin-bottom:5px}
+.ch small{display:block;color:var(--muted);font-size:.8rem;margin-top:5px}
+.ch input[type=text],.ch input[type=url],.ch select,.ch textarea{
+  width:100%;font:inherit;padding:11px 12px;border-radius:11px;
+  border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.ch textarea{resize:vertical}
+.boutons{display:flex;flex-direction:column;gap:8px;align-items:center;margin-top:20px}
+.boutons .gros{width:100%;flex:none}
+.erreur{color:var(--miss);font-size:.9rem;font-weight:600;margin:0 0 6px}
+.fiche-liste{list-style:none;margin:0;padding:0}
+.fiche-liste li{padding:3px 0}
+
+.ing-ligne{display:grid;grid-template-columns:5.2em 1fr auto;gap:7px;align-items:center;margin-bottom:8px}
+.ing-ligne input[type=text]{width:100%;font:inherit;font-size:.92rem;padding:9px 10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.ing-opt{grid-column:2;font-size:.8rem;color:var(--muted);display:flex;align-items:center;gap:5px;margin-top:-3px}
+.ing-moins{grid-row:1;grid-column:3;font:inherit;font-size:1.2rem;line-height:1;width:34px;height:34px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--muted);cursor:pointer}
+.photo-apercu:not(:empty){margin-bottom:10px;border-radius:12px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10;background:var(--rose-soft)}
+.photo-apercu img{width:100%;height:100%;object-fit:cover;display:block}
+
+.message{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30;
+  max-width:616px;margin:0 auto;background:var(--ink);color:var(--bg);
+  padding:12px 16px;border-radius:12px;font-size:.92rem;box-shadow:0 6px 24px rgba(0,0,0,.24)}
+.message.probleme{background:var(--miss);color:#fff}
 
 footer{margin-top:40px;text-align:center;font-family:"Gloock",Georgia,serif;font-size:1.25rem;color:var(--rose)}
 @media (prefers-reduced-motion: reduce){.chev{transition:none}}
@@ -143,240 +189,9 @@ footer{margin-top:40px;text-align:center;font-family:"Gloock",Georgia,serif;font
   <footer>Joyeux 50ᵉ, et santé !</footer>
 </div>
 
-<script>
-"use strict";
+<dialog id="dlg" aria-label="Fenêtre"></dialog>
+<p class="message" id="message" role="status" hidden></p>
 
-/* ---------- données (chargées depuis data/) ---------- */
-let ING = {};   // id -> {id, nom, categorie, defaut, boite}
-let CATS = [];  // ordre d’affichage des catégories
-let R = [];     // recettes
-let CREDITS = {}; // slug -> {photographe, source, lien} ; sa présence = la photo existe
-let ready = false;
-
-/* ---------- verres dessinés (repli quand il n’y a pas de photo) ---------- */
-const GLASS = {
-  coupe: {
-    out:"M20 31 H80 M22 31 C22 50 34 61 50 61 C66 61 78 50 78 31 M50 61 V79 M34 81 H66",
-    liq:"M25 36 C27 49 37 56 50 56 C63 56 73 49 75 36 Z"
-  },
-  court: {
-    out:"M30 32 L33 77 Q33 82 38 82 H62 Q67 82 67 77 L70 32 Z",
-    liq:"M31.7 50 L33 77 Q33 82 38 82 H62 Q67 82 67 77 L68.3 50 Z"
-  },
-  grand: {
-    out:"M35 17 L37 78 Q37 83 42 83 H58 Q63 83 63 78 L65 17 Z",
-    liq:"M36.2 37 L37 78 Q37 83 42 83 H58 Q63 83 63 78 L63.8 37 Z"
-  },
-  shooter: {
-    out:"M37 45 L40 77 Q40 82 45 82 H55 Q60 82 60 77 L63 45 Z",
-    liq:"M38.2 57 L40 77 Q40 82 45 82 H55 Q60 82 60 77 L61.8 57 Z"
-  },
-  tasse: {
-    out:"M30 40 L33 77 Q33 83 39 83 H59 Q65 83 65 77 L68 40 Z M68 49 C79 49 79 67 68 67",
-    liq:"M30.6 48 L33 77 Q33 83 39 83 H59 Q65 83 65 77 L67.4 48 Z",
-    extra:"M43 30 C46 26 40 23 43 19 M56 30 C59 26 53 23 56 19"
-  }
-};
-const VERRE_NOM = {coupe:"une coupe", court:"un verre court", grand:"un grand verre", shooter:"un verre à shooter", tasse:"une tasse"};
-
-function glassSVG(verre){
-  const g = GLASS[verre] || GLASS.court;
-  const nom = VERRE_NOM[verre] || VERRE_NOM.court;
-  return `<svg class="glass" viewBox="0 0 100 100" role="img" aria-label="Se sert dans ${nom}" focusable="false">`
-    + (g.liq ? `<path class="gl-liq" d="${g.liq}"/>` : "")
-    + `<path class="gl-out" d="${g.out}"/>`
-    + (g.extra ? `<path class="gl-out" d="${g.extra}"/>` : "")
-    + `</svg>`;
-}
-
-function photoURL(r){ return CREDITS[r.id] ? "img/" + r.id + ".jpg" : null; }
-
-/* Une photo absente ou illisible est remplacée par le verre dessiné :
-   on ne montre jamais d’image brisée. */
-function swapGlass(img){
-  const box = img.parentElement;
-  if(!box) return;
-  const credit = box.nextElementSibling;
-  box.innerHTML = glassSVG(img.dataset.verre);
-  if(box.classList.contains("photo")) box.classList.add("noimg");
-  else box.setAttribute("aria-hidden","true");
-  if(credit && credit.classList.contains("credit")) credit.remove();
-}
-function guardImages(root){
-  root.querySelectorAll("img[data-verre]").forEach(img=>{
-    if(img.complete && img.naturalWidth === 0){ swapGlass(img); return; }
-    img.addEventListener("error", ()=>swapGlass(img), {once:true});
-  });
-}
-
-async function fetchJSON(url){
-  const res = await fetch(url, {credentials:"same-origin"});
-  if(!res.ok) throw new Error(url + " : " + res.status);
-  return res.json();
-}
-
-async function loadData(){
-  const [ingData, recData, credits] = await Promise.all([
-    fetchJSON("data/ingredients.json"),
-    fetchJSON("data/recettes.json"),
-    // les crédits sont facultatifs : sans eux, on dessine les verres
-    fetchJSON("data/credits.json").catch(() => ({}))
-  ]);
-  ING = {};
-  for(const i of ingData.ingredients) ING[i.id] = i;
-  CATS = ingData.categories.slice();
-  // on ignore une recette qui pointerait vers une bouteille disparue
-  R = recData.filter(r => r.ingredients.every(x => x.ids.some(id => id in ING)));
-  CREDITS = credits && typeof credits === "object" ? credits : {};
-}
-
-/* ---------- inventaire (localStorage) ---------- */
-const KEY = "ton-bar-50-v1";
-let have = {};
-function defaults(){ const h={}; for(const id in ING) h[id]=!!ING[id].defaut; return h; }
-function load(){
-  have = defaults();
-  try{ const s = localStorage.getItem(KEY); if(s){ const o = JSON.parse(s); for(const id in o) if(id in ING) have[id]=!!o[id]; } }catch(e){}
-}
-function save(){ try{ localStorage.setItem(KEY, JSON.stringify(have)); }catch(e){} }
-
-/* ---------- rendu ---------- */
-function evalRecipe(r){
-  const missing=[];
-  for(const x of r.ingredients){ if(!x.facultatif && !x.ids.some(id=>have[id])) missing.push(x.ids); }
-  return missing;
-}
-function label(ids){
-  const own = ids.find(id=>have[id]);
-  if(own) return ING[own].nom;
-  return ids.map(id=>ING[id].nom).join(" ou ");
-}
-function esc(s){ return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
-
-function recipeHTML(r, missing){
-  const ings = r.ingredients.map(x=>{
-    const ok = x.ids.some(id=>have[id]);
-    const cls = ok ? "" : (x.facultatif ? "" : "no");
-    const tag = x.facultatif ? ' <span class="opt">(facultatif)</span>' : (ok ? "" : " — à acheter");
-    return `<li><span class="q">${esc(x.q)}</span><span class="${cls}">${esc(label(x.ids))}${tag}</span></li>`;
-  }).join("");
-  const main = r.ingredients.filter(x=>!x.facultatif).slice(0,2).map(x=>label(x.ids)).join(", ");
-  const sub = missing.length ? `<div class="rs missing">Il manque : ${esc(missing.map(label).join(", "))}</div>` : `<div class="rs">${esc(main)}</div>`;
-
-  const src = photoURL(r);
-  const glass = glassSVG(r.verre);
-  const thumb = src
-    ? `<span class="thumb"><img src="${esc(src)}" alt="" loading="lazy" decoding="async" width="54" height="54" data-verre="${esc(r.verre)}"></span>`
-    : `<span class="thumb" aria-hidden="true">${glass}</span>`;
-
-  let photo;
-  if(src){
-    const c = CREDITS[r.id];
-    const qui = [c.photographe, c.source].filter(Boolean).join(" · ");
-    const credit = qui
-      ? `<p class="credit">Photo : ${c.lien ? `<a href="${esc(c.lien)}" target="_blank" rel="noopener noreferrer">${esc(qui)}</a>` : esc(qui)}</p>`
-      : "";
-    photo = `<div class="photo"><img src="${esc(src)}" alt="${esc(r.nom)}" loading="lazy" decoding="async" data-verre="${esc(r.verre)}"></div>${credit}`;
-  }else{
-    photo = `<div class="photo noimg">${glass}</div>`;
-  }
-
-  return `<details class="r${r.signature?" sig":""}" data-id="${esc(r.id)}"><summary>${thumb}<div class="st"><div class="rt">${esc(r.nom)}</div>${sub}</div><span class="chev" aria-hidden="true"></span></summary>
-  <div class="body">${photo}<ul class="ing">${ings}</ul><p class="method">${esc(r.methode)}</p>${r.note?`<p class="note">${esc(r.note)}</p>`:""}</div></details>`;
-}
-
-let view="ok", query="";
-function counts(){
-  let ok=0, near=0;
-  for(const r of R){ const m=evalRecipe(r).length; if(m===0) ok++; else if(m===1) near++; }
-  document.getElementById("n-ok").textContent = ok;
-  document.getElementById("n-near").textContent = near;
-}
-
-function isInstalled(){
-  try{
-    return window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
-  }catch(e){ return false; }
-}
-
-function render(){
-  if(!ready) return;
-  counts();
-  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected", t.dataset.view===view ? "true":"false"));
-  const main = document.getElementById("main");
-
-  if(view==="bar"){
-    let html = "";
-    if(!isInstalled()){
-      html += `<section class="install"><h2>Garde-le sur ton écran d’accueil</h2>
-        <p>Sur iPhone : touche <b>Partager</b> (le carré avec la flèche, en bas de Safari), puis <b>Sur l’écran d’accueil</b>. Ton bar s’ouvre alors comme une application, même sans réseau.</p></section>`;
-    }
-    html += `<p class="hint">Touche une bouteille pour l’ajouter ou la retirer.</p>`;
-    for(const c of CATS){
-      const ids = Object.keys(ING).filter(id=>ING[id].categorie===c);
-      if(!ids.length) continue;
-      html += `<section class="cat"><h2>${esc(c)}</h2><div class="chips">` + ids.map(id=>
-        `<label class="chip"><input type="checkbox" data-id="${esc(id)}" ${have[id]?"checked":""}><span>${esc(ING[id].nom)}${ING[id].boite?' <b class="box">boîte</b>':""}</span></label>`
-      ).join("") + `</div></section>`;
-    }
-    html += `<button class="reset" id="reset">Revenir à la liste de départ</button>`;
-    main.innerHTML = html;
-    main.querySelectorAll("input[type=checkbox]").forEach(cb=>cb.addEventListener("change",e=>{ have[e.target.dataset.id]=e.target.checked; save(); counts(); }));
-    document.getElementById("reset").addEventListener("click",()=>{ have=defaults(); save(); render(); });
-    return;
-  }
-
-  const q = query.trim().toLowerCase();
-  const list = R.map(r=>({r, m:evalRecipe(r)}))
-    .filter(x=> view==="ok" ? x.m.length===0 : x.m.length===1)
-    .filter(x=> !q || x.r.nom.toLowerCase().includes(q) || x.r.ingredients.some(y=>y.ids.some(id=>ING[id].nom.toLowerCase().includes(q))));
-  const hint = view==="ok" ? "Tout ce que tu peux préparer avec ce que tu as. Touche un cocktail pour la recette." : "Il ne manque qu’un ingrédient. Une petite course, et c’est prêt.";
-  main.innerHTML = `<input class="search" type="search" id="q" placeholder="Chercher un cocktail ou une bouteille" value="${esc(query)}" aria-label="Chercher">
-    <p class="hint">${hint}</p>
-    <div class="list">${list.length ? list.map(x=>recipeHTML(x.r,x.m)).join("") : `<p class="empty">${q ? "Aucun cocktail ne correspond. Essaie le nom d’une bouteille." : "Rien ici pour l’instant. Ajoute des bouteilles dans Mon bar."}</p>`}</div>`;
-  guardImages(main);
-  const input = document.getElementById("q");
-  input.addEventListener("input",e=>{ query=e.target.value; const pos=e.target.selectionStart; render(); const i2=document.getElementById("q"); i2.focus(); i2.setSelectionRange(pos,pos); });
-}
-
-document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{ view=t.dataset.view; render(); window.scrollTo({top:0}); }));
-
-/* ---------- démarrage ---------- */
-function showError(){
-  document.getElementById("main").innerHTML =
-    `<p class="loading">Les recettes n’ont pas pu être chargées.<br>Vérifie ta connexion, puis réessaie.<br>
-     <button class="retry" id="retry">Réessayer</button></p>`;
-  document.getElementById("retry").addEventListener("click", boot);
-}
-
-async function boot(){
-  document.getElementById("main").innerHTML = `<p class="loading">Un instant, on ouvre le bar…</p>`;
-  try{
-    await loadData();
-    load();
-    ready = true;
-    render();
-  }catch(e){
-    ready = false;
-    showError();
-  }
-}
-boot();
-
-/* ---------- service worker (hors ligne) ---------- */
-if("serviceWorker" in navigator && location.protocol !== "file:"){
-  window.addEventListener("load",()=>{
-    const hadController = !!navigator.serviceWorker.controller;
-    navigator.serviceWorker.register("sw.js").catch(()=>{});
-    let refreshing = false;
-    navigator.serviceWorker.addEventListener("controllerchange",()=>{
-      if(!hadController) return;  // toute première installation : rien à recharger
-      if(refreshing) return;      // une seule fois, pas de boucle de rechargement
-      refreshing = true;
-      location.reload();
-    });
-  });
-}
-</script>
+<script type="module" src="app/main.js"></script>
 </body>
 </html>

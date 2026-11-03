@@ -4,7 +4,9 @@
   "private": true,
   "description": "Ton bar · 50 ans — site statique (GitHub Pages). Playwright sert uniquement aux vérifications, le site n'a besoin d'aucun outil de build.",
   "scripts": {
-    "test": "node tests/check.mjs",
+    "test": "node tests/check.mjs && node tests/phase2.mjs",
+    "test:base": "node tests/check.mjs",
+    "test:perso": "node tests/phase2.mjs",
     "test:live": "node tests/check.mjs https://sedivyk.github.io/bar-50-ans/"
   },
   "repository": {

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "noel",
+    "nom": "C’est Noël",
+    "description": "Chaud, épicé, sucré à l’érable. De quoi tenir jusqu’aux cadeaux.",
+    "recettes": [
+      "cafe-cremeux",
+      "tasse-chocolat-cafe",
+      "cafe-a-l-amaretto",
+      "old-fashioned-a-l-erable",
+      "vieux-carre-d-erable",
+      "shooter-erable-cannelle",
+      "sidecar-a-l-erable",
+      "carajillo",
+      "godfather-sucre",
+      "espresso-martini-a-l-erable",
+      "tarte-aux-pommes-a-la-mode"
+    ]
+  },
+  {
+    "id": "piscine",
+    "nom": "Au bord de la piscine",
+    "description": "Long, froid, plein de lime. À boire les pieds dans l’eau.",
+    "recettes": [
+      "margarita-picante",
+      "margarita-classique",
+      "paloma-maison",
+      "mai-tai",
+      "daiquiri-classique",
+      "tequila-soda-lime",
+      "moscow-mule",
+      "aperol-soda",
+      "jardin-d-aperol",
+      "lagon-bleu",
+      "rhum-collins",
+      "spritz-flor-del-fuego",
+      "tequila-sunrise",
+      "gin-soda-boreal",
+      "tom-collins",
+      "poisson-rouge-soda"
+    ]
+  },
+  {
+    "id": "halloween",
+    "nom": "Halloween",
+    "description": "Sombre, orangé, un peu inquiétant. Les lumières tamisées aident.",
+    "recettes": [
+      "jagerita",
+      "jager-mule",
+      "black-russian",
+      "dark-n-stormy",
+      "espresso-martini-classique",
+      "tequila-sunrise",
+      "poisson-rouge-soda",
+      "spritz-flor-del-fuego",
+      "b-52-maison",
+      "shooter-banana-split",
+      "lagon-bleu"
+    ]
+  },
+  {
+    "id": "avec-mes-ados",
+    "nom": "Avec mes ados",
+    "description": "Sans une goutte d’alcool, et assez beaux pour qu’ils en redemandent.",
+    "recettes": [
+      "limonade-petillante",
+      "soda-a-l-orgeat",
+      "passion-petillante",
+      "cafe-frappe",
+      "shirley-temple",
+      "mule-sans-alcool"
+    ]
+  }
+]

@@ -159,6 +159,36 @@ function allerA(recetteId) {
   });
 }
 
+/* ------------------------------------------------------------ astuces déco */
+
+const ASTUCES = [
+  ["Faire des tranches de fruits séchés",
+    "Tranche les agrumes ou l’ananas à 3 ou 4 mm, pas plus mince : trop fines, elles brûlent. " +
+    "Étale-les sur une plaque, sans qu’elles se touchent. Four à 95 °C, de 2 à 3 heures, " +
+    "en les retournant à mi-cuisson. Elles sont prêtes quand elles ne collent plus au doigt. " +
+    "Laisse-les refroidir à l’air libre avant de les ranger dans un pot bien fermé : " +
+    "elles se gardent des semaines."],
+  ["Givrer le bord d’un verre",
+    "Passe un quartier de lime sur le bord du verre, à l’extérieur seulement. " +
+    "Verse le sucre, le sel ou le Tajín dans une petite assiette, puis tourne le verre dedans " +
+    "en l’inclinant. Tape doucement pour enlever le surplus. " +
+    "En ne givrant que l’extérieur, rien ne tombe dans le cocktail et le goût reste le même."],
+  ["Les perles et le shimmer dust",
+    "Le shimmer dust : une petite pincée suffit, ajoutée au shaker à la toute fin. " +
+    "Il brille surtout dans un verre clair et dans un cocktail pâle — la coupe du « 50 » " +
+    "est faite pour ça. Remue juste avant de servir, il redescend avec le temps.\n\n" +
+    "Les perles : une cuillère à thé au fond d’un verre droit, là où on les voit. " +
+    "Elles éclatent sous la dent. Évite-les dans un cocktail qu’on filtre."]
+];
+
+export function astucesDeco() {
+  ouvrir("Astuces déco",
+    ASTUCES.map(([titre, texte]) =>
+      `<section class="astuce"><h3>${esc(titre)}</h3>${texte.split("\n\n")
+        .map((p) => `<p>${esc(p)}</p>`).join("")}</section>`).join("")
+    + `<div class="boutons"><button type="button" class="gros doux" data-annuler>Fermer</button></div>`);
+}
+
 /* ----------------------------------------------- ajouter / modifier une recette */
 
 function listeBouteilles() {
@@ -217,6 +247,10 @@ export function ajouterRecette(recette = null) {
       </div>
       <button type="button" class="lien-btn" id="r-photo-retirer" hidden>Retirer la photo</button>
     </div>
+
+    <label class="ch"><span>Idées déco (facultatif)</span>
+      <textarea id="r-deco" rows="2" maxlength="300" placeholder="Une tranche de lime séchée">${esc(edition && Array.isArray(recette.deco) ? recette.deco.map((x) => x.texte).join("\n") : "")}</textarea>
+      <small>Une idée par ligne.</small></label>
 
     <label class="ch"><span>Note (facultatif)</span>
       <textarea id="r-note" rows="2" maxlength="300">${esc(edition ? recette.note || "" : "")}</textarea></label>
@@ -316,6 +350,8 @@ export function ajouterRecette(recette = null) {
         verre: d.querySelector("#r-verre").value,
         ingredients,
         methode: methode || "À toi de jouer.",
+        deco: d.querySelector("#r-deco").value.split("\n")
+          .map((t) => t.trim()).filter(Boolean).map((texte) => ({ texte })),
         note: d.querySelector("#r-note").value.trim() || undefined,
         lien: d.querySelector("#r-lien").value.trim() || undefined,
         photo: photoId || undefined,

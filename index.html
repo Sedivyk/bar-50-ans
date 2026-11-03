@@ -58,6 +58,15 @@ h1,h2,.fifty,.sig-title{font-family:"Gloock",Georgia,"Times New Roman",serif;fon
 .search{width:100%;margin:16px 0 4px;font:inherit;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
 .hint{color:var(--muted);font-size:.88rem;margin:8px 0 14px}
 
+/* ruban des occasions : Noël, la piscine, l’Halloween, les ados */
+.ambiances{display:flex;gap:7px;margin:12px 0 2px;padding-bottom:4px;overflow-x:auto;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ambiances::-webkit-scrollbar{display:none}
+.amb{flex:none;font:inherit;font-size:.86rem;font-weight:600;white-space:nowrap;cursor:pointer;
+  padding:7px 14px;border-radius:999px;border:1px solid var(--line);
+  background:var(--surface);color:var(--muted)}
+.amb.on{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+
 .list{display:flex;flex-direction:column;gap:10px}
 details.r{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 details.r.sig{border:1.5px solid var(--gold-line)}
@@ -69,6 +78,7 @@ summary::-webkit-details-marker{display:none}
 .rs{color:var(--muted);font-size:.86rem;margin-top:2px}
 .rs.missing{color:var(--miss);font-weight:600}
 .mine{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--gold);border:1px solid var(--gold-line);border-radius:999px;padding:1px 7px;vertical-align:middle;white-space:nowrap}
+.mine.doux{color:var(--muted);border-color:var(--line)}
 .chev{flex:none;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .2s}
 details[open] .chev{transform:rotate(225deg)}
 .body{padding:0 16px 16px;border-top:1px solid var(--line)}
@@ -96,6 +106,21 @@ details[open] .chev{transform:rotate(225deg)}
 select.pick{display:block;margin-top:5px;max-width:100%;font:inherit;font-size:.88rem;padding:5px 8px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 .method{margin:6px 0 0;font-size:.95rem}
 .note{margin:10px 0 0;padding:10px 12px;border-radius:10px;background:var(--rose-soft);font-size:.9rem}
+
+/* idées déco : celles qu’elle peut faire tout de suite sont mises en avant,
+   les autres restent là, sans être présentées comme manquantes */
+.deco{margin:14px 0 0;padding-top:12px;border-top:1px dashed var(--line)}
+.deco h3{margin:0 0 6px;font-family:"Gloock",Georgia,serif;font-weight:400;font-size:1.05rem;color:var(--gold)}
+.deco ul{list-style:none;margin:0;padding:0}
+.deco li{position:relative;padding:3px 0 3px 20px;font-size:.92rem;color:var(--muted)}
+.deco li.a-toi{color:var(--ink);font-weight:600}
+.deco li::before{content:"·";position:absolute;left:6px;color:var(--line)}
+.deco li.a-toi::before{content:none}
+.deco .coche{position:absolute;left:0;color:var(--gold);font-weight:700}
+
+.astuce{margin:0 0 20px}
+.astuce h3{margin:0 0 6px;font-family:"Gloock",Georgia,serif;font-weight:400;font-size:1.15rem;color:var(--gold)}
+.astuce p{margin:0 0 8px;font-size:.93rem}
 .lien{margin:10px 0 0;font-size:.88rem}
 .lien a{color:var(--rose)}
 .actions{margin-top:14px;display:flex;gap:16px;align-items:center}

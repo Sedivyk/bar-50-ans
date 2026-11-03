@@ -1,7 +1,8 @@
 # Ton bar · 50 ans
 
 Petite application pour savoir quoi préparer avec les bouteilles qu’on a sous la main.
-50 recettes, une par année. Site statique, sans outil de build, publié sur GitHub Pages :
+50 cocktails, un par année, plus 6 recettes sans alcool. Site statique,
+sans outil de build, publié sur GitHub Pages :
 <https://sedivyk.github.io/bar-50-ans/>
 
 ## Structure
@@ -10,7 +11,7 @@ Petite application pour savoir quoi préparer avec les bouteilles qu’on a sous
 | --- | --- |
 | `index.html` | Seul point d’entrée : la page et tous les styles |
 | `app/*.js` | Le code, en modules ES (aucune compilation, aucune dépendance) |
-| `data/*.json` | Bouteilles, recettes, types et crédits photo |
+| `data/*.json` | Bouteilles, recettes, types, ambiances et crédits photo |
 | `img/` | Une photo par recette, 800 × 500 |
 | `icons/` | Le « 50 » doré, en plusieurs tailles |
 | `manifest.webmanifest`, `sw.js` | PWA : installation et usage hors ligne |
@@ -46,6 +47,12 @@ Petite application pour savoir quoi préparer avec les bouteilles qu’on a sous
   `id`, `nom`, `categorie`, `type` et `defaut` (cochée au départ).
 - `data/credits.json` : photographe, source, licence et lien de chaque photo. La présence
   d’une entrée veut dire que `img/<slug>.jpg` existe ; sinon l’application dessine le verre.
+- `deco` sur chaque recette : une idée principale et deux ou trois variantes. Chaque idée
+  peut citer des garnitures (`ids`) ; celles qu’elle a cochées sont mises en avant.
+  **La déco ne bloque jamais une recette** : elle n’entre pas dans les ingrédients.
+- `data/ambiances.json` : les regroupements par occasion (Noël, la piscine, l’Halloween,
+  les ados). « Avec mes ados » ne contient que des recettes `sansAlcool`, et un test le
+  vérifie en remontant jusqu’au type de chaque ingrédient.
 
 ## Ses données à elle
 
@@ -64,9 +71,11 @@ est en modules : il faut donc le servir en HTTP, pas l’ouvrir en `file://`.
 
 ```sh
 npm install          # Playwright, pour les vérifications seulement
-npm test             # les deux séries ci-dessous
+npm test             # les quatre séries ci-dessous
 npm run test:base    # l'application : affichage, compteurs, PWA, hors ligne
 npm run test:perso   # ses ajouts : bouteille, recette, photo, export/import
+npm run test:deco    # garnitures, idées déco, astuces
+npm run test:ambiances  # les occasions, et l'absence d'alcool chez les ados
 npm run test:live    # teste l'adresse GitHub Pages
 ```
 
@@ -78,6 +87,8 @@ et écrivent des captures dans `captures/` (non versionné).
 ```sh
 node tools/ajouter-recettes.mjs           # ajoute des recettes, en validant tout
 node tools/ajouter-types.mjs              # (re)génère les types, idempotent
+node tools/ajouter-deco.mjs               # garnitures et idées déco, idempotent
+node tools/ajouter-ambiances.mjs          # occasions et recettes sans alcool
 set PEXAFY_KEY=...                        # clé d'API, jamais dans le dépôt
 py -3 tools/photos.py                     # cherche les photos manquantes
 py -3 tools/photos.py margarita-picante   # refait une photo

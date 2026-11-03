@@ -65,6 +65,17 @@
     "rang": 0,
     "source": "Unsplash"
   },
+  "cafe-frappe": {
+    "description": "The image shows a tall glass filled with a creamy beverage, likely a latte or cappuccino, sitting on a gray countertop. The drink is topped with a scoop of ice cream and a small piece of chocolate, adding to its visual appeal. Surrounding the glass are scattered coffee beans, suggesting that it migh",
+    "licence": "free",
+    "lien": "https://www.pexels.com/photo/cold-coffee-drink-in-clear-drinking-glass-4869289",
+    "photo_id": "019e20e0-18f3-79d4-92d7-d0fc59563ea7",
+    "photographe": "ROMAN ODINTSOV",
+    "photographe_lien": "https://www.pexels.com/@roman-odintsov",
+    "quete": "an iced coffee in a tall glass with ice and a swirl of cream",
+    "rang": 0,
+    "source": "Pexels"
+  },
   "carajillo": {
     "description": "The image shows a tall, slender glass filled with a dark liquid, likely a cocktail or a hot chocolate beverage. The drink is garnished with an orange slice and coffee beans scattered around it on a wooden table. In the blurred background, there are other tables and people present in what appears to ",
     "licence": "free",
@@ -252,6 +263,17 @@
     "rang": 0,
     "source": "Pexels"
   },
+  "limonade-petillante": {
+    "description": "The image shows a tall glass filled with a refreshing drink, likely lemonade or limeade, placed on a wooden table. The glass is adorned with two slices of lemon and a sprig of mint, adding a touch of color to the scene. The background appears blurred, drawing focus to the glass and its contents.",
+    "licence": "free",
+    "lien": "https://www.pexels.com/photo/refreshing-lemonade-served-with-lemon-and-mint-5472320",
+    "photo_id": "019e1ced-a3d9-753b-b5b4-40ae1d994dc2",
+    "photographe": "Ryutaro Tsukata",
+    "photographe_lien": "https://www.pexels.com/@Ryutaro",
+    "quete": "a tall glass of sparkling lemonade with ice, lemon slices and mint",
+    "rang": 0,
+    "source": "Pexels"
+  },
   "mai-tai": {
     "description": "The image shows a wooden bar counter with a tall, narrow tiki-style cup filled with a tropical drink. The cup is adorned with a carved design on its side and has a straw protruding from it. A slice of pineapple rests atop the drink in the cup, adding to the tropical theme. In the blurred background,",
     "licence": "free",
@@ -307,6 +329,17 @@
     "rang": 0,
     "source": "Unsplash"
   },
+  "mule-sans-alcool": {
+    "description": "The image shows a tall glass filled with a refreshing drink, likely lemonade or limeade, placed on a wooden table. The glass is adorned with a slice of lime and a sprig of mint, adding a touch of color to the scene. A green straw protrudes from the top of the glass, suggesting that it's ready for us",
+    "licence": "free",
+    "lien": "https://pixabay.com//photos/drink-lemon-mint-leaves-ice-glass-2299926/",
+    "photo_id": "019e184c-dc12-776e-8ef5-1188bf3b346e",
+    "photographe": "PangPohto",
+    "photographe_lien": "https://pixabay.com/users/pangpohto-5121800/",
+    "quete": "a tall glass of ginger beer with lime and plenty of ice, no alcohol",
+    "rang": 0,
+    "source": "Pixabay"
+  },
   "old-fashioned-a-l-erable": {
     "description": "The image shows a glass filled with a dark liquid, likely whiskey or rum, resting on a wooden table. The glass is adorned with an orange peel and a slice of lime, adding a pop of color to the scene. The background features a textured wood paneled wall, providing a rustic backdrop for the drink.",
     "licence": "free",
@@ -339,6 +372,17 @@
     "quete": "a paloma cocktail in a tall glass with grapefruit, lime and ice",
     "rang": 0,
     "source": "Pixabay"
+  },
+  "passion-petillante": {
+    "description": "The image shows a tall, slender glass filled with a vibrant yellow liquid, likely a cocktail or a refreshing beverage. The drink is garnished with a slice of orange and a sprig of mint, adding a pop of color to the scene. The glass is placed on a white tablecloth, which contrasts beautifully with th",
+    "licence": "free",
+    "lien": "https://www.pexels.com/photo/a-glass-of-drink-with-mint-leaves-and-pomegranate-8375043",
+    "photo_id": "019e1aa0-1493-73ba-bf7c-e99d0f75737f",
+    "photographe": "Denys Gromov",
+    "photographe_lien": "https://www.pexels.com/@jdgromov",
+    "quete": "a tall glass of sparkling passion fruit drink with ice",
+    "rang": 0,
+    "source": "Pexels"
   },
   "poisson-rouge-soda": {
     "description": "The image shows a tall glass filled with a pinkish-red liquid, likely a cocktail or soda, resting on a white marble countertop. The glass is adorned with a slice of lime and ice cubes, adding a pop of color to the drink. A small wedge of lime is positioned at the top right corner of the glass, sugge",
@@ -384,6 +428,17 @@
     "rang": 0,
     "source": "Pixabay"
   },
+  "shirley-temple": {
+    "description": "The image shows a tall, slender glass filled with a pinkish-red liquid and topped with a small cherry on top. The glass is placed on a wooden table against a white wall backdrop.",
+    "licence": "free",
+    "lien": "https://pixabay.com//photos/drink-food-take-a-photo-eating-5960454/",
+    "photo_id": "019e2162-603a-7da8-8fb1-e0da6a64dc8c",
+    "photographe": "minhquanfoto",
+    "photographe_lien": "https://pixabay.com/users/minhquanfoto-1653179/",
+    "quete": "a tall pink Shirley Temple mocktail with ice and a cocktail cherry",
+    "rang": 0,
+    "source": "Pixabay"
+  },
   "shooter-banana-split": {
     "description": "The image presents a wooden tray holding four shot glasses filled with colorful drinks, each containing a different colored liquid - green, yellow, red, and brown. The shots are arranged in a straight line on the tray, creating an appealing visual display.",
     "licence": "free",
@@ -414,6 +469,17 @@
     "photographe": "ROMAN ODINTSOV",
     "photographe_lien": "https://www.pexels.com/@roman-odintsov",
     "quete": "a sidecar cocktail in a coupe glass with a sugar rim and an orange twist",
+    "rang": 0,
+    "source": "Pexels"
+  },
+  "soda-a-l-orgeat": {
+    "description": "The image shows a tall glass filled with ice cubes and slices of lime, placed on a brown coaster against a blue background. The glass is positioned slightly to the left of center, with the lime slices scattered around it.",
+    "licence": "free",
+    "lien": "https://www.pexels.com/photo/glass-of-lemonade-with-ice-24334860",
+    "photo_id": "019e1cec-adf0-7974-81e2-953ba132e022",
+    "photographe": "Markus Winkler",
+    "photographe_lien": "https://www.pexels.com/search/users/Markus%20Winkler/",
+    "quete": "a tall glass of creamy white almond soda with ice and a lime wheel",
     "rang": 0,
     "source": "Pexels"
   },

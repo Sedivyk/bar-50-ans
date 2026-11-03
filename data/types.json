@@ -8,7 +8,8 @@
     "Liqueurs",
     "Amers et sirops",
     "Pour allonger",
-    "Garde-manger"
+    "Garde-manger",
+    "Garnitures et déco"
   ],
   "types": [
     {
@@ -254,7 +255,7 @@
     {
       "id": "poudre-scintillante",
       "nom": "Poudre scintillante",
-      "famille": "Amers et sirops",
+      "famille": "Garnitures et déco",
       "exemples": "Shimmer dust"
     },
     {
@@ -334,6 +335,72 @@
       "nom": "Autre",
       "famille": "Garde-manger",
       "exemples": "Tout le reste"
+    },
+    {
+      "id": "fruit-seche",
+      "nom": "Fruit séché",
+      "famille": "Garnitures et déco",
+      "exemples": "Tranches d’orange, de lime, d’ananas séchées"
+    },
+    {
+      "id": "fruit-frais",
+      "nom": "Fruit frais",
+      "famille": "Garnitures et déco",
+      "exemples": "Orange, ananas, petits fruits"
+    },
+    {
+      "id": "herbe-fraiche",
+      "nom": "Herbe fraîche",
+      "famille": "Garnitures et déco",
+      "exemples": "Menthe, basilic, romarin"
+    },
+    {
+      "id": "perle-cocktail",
+      "nom": "Perles à cocktail",
+      "famille": "Garnitures et déco",
+      "exemples": "Perles de yuzu, perles de fruits"
+    },
+    {
+      "id": "cerise-cocktail",
+      "nom": "Cerises à cocktail",
+      "famille": "Garnitures et déco",
+      "exemples": "Luxardo, cerises au marasquin"
+    },
+    {
+      "id": "givrage",
+      "nom": "Pour givrer le bord",
+      "famille": "Garnitures et déco",
+      "exemples": "Sucre, sel, Tajín, sucre coloré"
+    },
+    {
+      "id": "fleur-comestible",
+      "nom": "Fleurs comestibles",
+      "famille": "Garnitures et déco",
+      "exemples": "Pensées, bourrache"
+    },
+    {
+      "id": "grain-cafe",
+      "nom": "Grains de café",
+      "famille": "Garnitures et déco",
+      "exemples": "Grains de café entiers"
+    },
+    {
+      "id": "epice-entiere",
+      "nom": "Épice entière",
+      "famille": "Garnitures et déco",
+      "exemples": "Bâton de cannelle, anis étoilé"
+    },
+    {
+      "id": "poudre-cacao",
+      "nom": "Cacao",
+      "famille": "Garnitures et déco",
+      "exemples": "Cacao en poudre"
+    },
+    {
+      "id": "zeste",
+      "nom": "Zeste d’agrumes",
+      "famille": "Garnitures et déco",
+      "exemples": "Zeste d’orange, de citron, de lime"
     }
   ]
 }

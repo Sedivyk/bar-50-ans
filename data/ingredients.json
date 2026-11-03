@@ -8,7 +8,8 @@
     "Liqueurs",
     "Amers et sirops",
     "Pour allonger",
-    "Garde-manger"
+    "Garde-manger",
+    "Garnitures et déco"
   ],
   "ingredients": [
     {
@@ -301,7 +302,7 @@
     {
       "id": "shimmer",
       "nom": "Shimmer dust",
-      "categorie": "Amers et sirops",
+      "categorie": "Garnitures et déco",
       "defaut": true,
       "type": "poudre-scintillante"
     },
@@ -388,6 +389,139 @@
       "categorie": "Garde-manger",
       "defaut": false,
       "type": "grenadine"
+    },
+    {
+      "id": "orange-sechee",
+      "nom": "Tranches d’orange séchées",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "fruit-seche"
+    },
+    {
+      "id": "citron-seche",
+      "nom": "Tranches de citron séchées",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "fruit-seche"
+    },
+    {
+      "id": "lime-sechee",
+      "nom": "Tranches de lime séchées",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "fruit-seche"
+    },
+    {
+      "id": "ananas-seche",
+      "nom": "Tranches d’ananas séchées",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "fruit-seche"
+    },
+    {
+      "id": "orange",
+      "nom": "Oranges",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "fruit-frais"
+    },
+    {
+      "id": "ananas",
+      "nom": "Ananas",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "fruit-frais"
+    },
+    {
+      "id": "petits-fruits",
+      "nom": "Petits fruits",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "fruit-frais"
+    },
+    {
+      "id": "menthe",
+      "nom": "Menthe fraîche",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "herbe-fraiche"
+    },
+    {
+      "id": "perles-cocktail",
+      "nom": "Perles à cocktail",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "perle-cocktail"
+    },
+    {
+      "id": "cerises-cocktail",
+      "nom": "Cerises à cocktail",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "cerise-cocktail"
+    },
+    {
+      "id": "sucre",
+      "nom": "Sucre",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "givrage"
+    },
+    {
+      "id": "sel",
+      "nom": "Sel",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "givrage"
+    },
+    {
+      "id": "tajin",
+      "nom": "Tajín",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "givrage"
+    },
+    {
+      "id": "sucre-colore",
+      "nom": "Sucre coloré",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "givrage"
+    },
+    {
+      "id": "fleurs-comestibles",
+      "nom": "Fleurs comestibles",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "fleur-comestible"
+    },
+    {
+      "id": "grains-cafe",
+      "nom": "Grains de café",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "grain-cafe"
+    },
+    {
+      "id": "baton-cannelle",
+      "nom": "Bâton de cannelle",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "epice-entiere"
+    },
+    {
+      "id": "cacao",
+      "nom": "Cacao",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "poudre-cacao"
+    },
+    {
+      "id": "zeste-agrumes",
+      "nom": "Zeste d’agrumes",
+      "categorie": "Garnitures et déco",
+      "defaut": false,
+      "type": "zeste"
     }
   ]
 }

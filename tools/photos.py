@@ -196,6 +196,26 @@ QUETES = {
     "tasse-chocolat-cafe": (
         "a hot chocolate coffee in a mug with cocoa dusted on top",
         ["chocolate", "coffee", "mug", "cocoa", "cup"]),
+
+    # --- les six recettes sans alcool ---
+    "limonade-petillante": (
+        "a tall glass of sparkling lemonade with ice, lemon slices and mint",
+        ["lemonade", "tall", "lemon", "ice", "mint", "sparkling", "clear"]),
+    "soda-a-l-orgeat": (
+        "a tall glass of creamy white almond soda with ice and a lime wheel",
+        ["tall", "white", "almond", "ice", "lime", "creamy"]),
+    "passion-petillante": (
+        "a tall glass of sparkling passion fruit drink with ice",
+        ["passion fruit", "tall", "orange", "yellow", "ice", "sparkling"]),
+    "cafe-frappe": (
+        "an iced coffee in a tall glass with ice and a swirl of cream",
+        ["iced coffee", "tall", "ice", "cream", "brown"]),
+    "shirley-temple": (
+        "a tall pink Shirley Temple mocktail with ice and a cocktail cherry",
+        ["pink", "red", "tall", "cherry", "ice", "mocktail"]),
+    "mule-sans-alcool": (
+        "a tall glass of ginger beer with lime and plenty of ice, no alcohol",
+        ["ginger", "tall", "lime", "ice", "golden"]),
 }
 
 

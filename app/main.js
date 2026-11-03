@@ -6,7 +6,7 @@ import {
 import { vue, rendre, compter } from "./vues.js";
 import {
   brancher, ajouterBouteille, ajouterRecette, ficheBouteille,
-  modifierRecette, supprimerRecette
+  modifierRecette, supprimerRecette, astucesDeco
 } from "./formulaires.js";
 import { exporter, importer } from "./transfert.js";
 
@@ -20,8 +20,16 @@ brancher(rafraichir);
 function surClic(e) {
   const cible = (sel) => e.target.closest(sel);
 
+  const amb = cible("[data-amb]");
+  if (amb) {
+    vue.ambiance = amb.dataset.amb === vue.ambiance ? "" : amb.dataset.amb;
+    rendre();
+    return;
+  }
+
   if (cible("#ajouter-bouteille")) return ajouterBouteille();
   if (cible("#ajouter-recette")) return ajouterRecette();
+  if (cible("#astuces-deco")) return astucesDeco();
 
   const fiche = cible("[data-fiche]");
   if (fiche) { e.preventDefault(); return ficheBouteille(fiche.dataset.fiche); }

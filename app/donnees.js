@@ -14,6 +14,7 @@ export const etat = {
   TYPES: {},       // id -> {id, nom, famille, exemples}
   FAMILLES: [],
   R: [],           // recettes (du dépôt et les siennes)
+  AMBIANCES: [],   // regroupements par occasion
   CREDITS: {},
   parType: {},     // type -> [ids de bouteilles]
   have: {},        // id -> cochée
@@ -33,11 +34,12 @@ async function json(url, defaut) {
 }
 
 export async function charger() {
-  const [ing, rec, typ, cred] = await Promise.all([
+  const [ing, rec, typ, cred, amb] = await Promise.all([
     json("data/ingredients.json"),
     json("data/recettes.json"),
     json("data/types.json", { familles: [], types: [] }),
-    json("data/credits.json", {})
+    json("data/credits.json", {}),
+    json("data/ambiances.json", [])
   ]);
 
   etat.CATS = ing.categories.slice();
@@ -49,6 +51,7 @@ export async function charger() {
   for (const b of ing.ingredients) etat.ING[b.id] = b;
 
   etat.CREDITS = cred && typeof cred === "object" ? cred : {};
+  etat.AMBIANCES = Array.isArray(amb) ? amb : [];
   etat.R = rec.slice();
 
   await fusionner();

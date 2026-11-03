@@ -32,7 +32,28 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
-    "note": "Ton cocktail signature : ta Patrón, ton St-Germain et un peu d’éclat."
+    "note": "Ton cocktail signature : ta Patrón, ton St-Germain et un peu d’éclat.",
+    "deco": [
+      {
+        "texte": "Une pincée de shimmer dust, juste avant de servir",
+        "ids": [
+          "shimmer"
+        ]
+      },
+      {
+        "texte": "Un zeste de lime en spirale",
+        "ids": [
+          "zeste-agrumes",
+          "lime"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible posée sur la mousse",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      }
+    ]
   },
   {
     "id": "margarita-st-germain",
@@ -65,7 +86,27 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
-    "note": "Ta tequila, ta liqueur préférée et ton Grand Marnier, réunis."
+    "note": "Ta tequila, ta liqueur préférée et ton Grand Marnier, réunis.",
+    "deco": [
+      {
+        "texte": "Une tranche de lime sur le bord",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "texte": "Un bord de sucre fin",
+        "ids": [
+          "sucre"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      }
+    ]
   },
   {
     "id": "margarita-picante",
@@ -105,7 +146,28 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe. Sers sur glace.",
-    "note": "Moins piquant ? Commence avec ¼ oz de moonshine et goûte."
+    "note": "Moins piquant ? Commence avec ¼ oz de moonshine et goûte.",
+    "deco": [
+      {
+        "texte": "Un bord de Tajín et un quartier de lime",
+        "ids": [
+          "tajin",
+          "lime"
+        ]
+      },
+      {
+        "texte": "Un bord de sel",
+        "ids": [
+          "sel"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
   },
   {
     "id": "old-fashioned-tequila-erable",
@@ -134,7 +196,28 @@
         ]
       }
     ],
-    "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon."
+    "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon.",
+    "deco": [
+      {
+        "texte": "Un grand zeste d’orange, tordu au-dessus du verre",
+        "ids": [
+          "zeste-agrumes",
+          "orange"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      },
+      {
+        "texte": "Une cerise à cocktail",
+        "ids": [
+          "cerises-cocktail"
+        ]
+      }
+    ]
   },
   {
     "id": "old-fashioned-a-l-erable",
@@ -161,7 +244,28 @@
         ]
       }
     ],
-    "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon."
+    "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon.",
+    "deco": [
+      {
+        "texte": "Un zeste d’orange et une cerise",
+        "ids": [
+          "zeste-agrumes",
+          "cerises-cocktail"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      },
+      {
+        "texte": "Un bâton de cannelle",
+        "ids": [
+          "baton-cannelle"
+        ]
+      }
+    ]
   },
   {
     "id": "mai-tai",
@@ -199,7 +303,28 @@
         ]
       }
     ],
-    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe. Sers sur glace pilée."
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe. Sers sur glace pilée.",
+    "deco": [
+      {
+        "texte": "Une tranche d’ananas et une branche de menthe",
+        "ids": [
+          "ananas",
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Une tranche d’ananas séchée",
+        "ids": [
+          "ananas-seche"
+        ]
+      },
+      {
+        "texte": "Une cerise à cocktail",
+        "ids": [
+          "cerises-cocktail"
+        ]
+      }
+    ]
   },
   {
     "id": "daiquiri-banane",
@@ -226,7 +351,27 @@
         ]
       }
     ],
-    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "deco": [
+      {
+        "texte": "Une tranche de lime sur le bord",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "texte": "Un peu de cacao râpé",
+        "ids": [
+          "cacao"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      }
+    ]
   },
   {
     "id": "pornstar-martini",
@@ -259,7 +404,27 @@
         "facultatif": true
       }
     ],
-    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "deco": [
+      {
+        "texte": "Une demi-passion posée sur le dessus",
+        "ids": [
+          "passion"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      },
+      {
+        "texte": "Des perles à cocktail au fond du verre",
+        "ids": [
+          "perles-cocktail"
+        ]
+      }
+    ]
   },
   {
     "id": "espresso-martini-a-l-erable",
@@ -286,7 +451,27 @@
         ]
       }
     ],
-    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "deco": [
+      {
+        "texte": "Trois grains de café sur la mousse",
+        "ids": [
+          "grains-cafe"
+        ]
+      },
+      {
+        "texte": "Un voile de cacao",
+        "ids": [
+          "cacao"
+        ]
+      },
+      {
+        "texte": "Un zeste d’orange",
+        "ids": [
+          "zeste-agrumes"
+        ]
+      }
+    ]
   },
   {
     "id": "carajillo",
@@ -306,7 +491,28 @@
         ]
       }
     ],
-    "methode": "Verse la Licor 43 sur glace, puis l’espresso chaud par-dessus."
+    "methode": "Verse la Licor 43 sur glace, puis l’espresso chaud par-dessus.",
+    "deco": [
+      {
+        "texte": "Un zeste d’orange et quelques grains de café",
+        "ids": [
+          "zeste-agrumes",
+          "grains-cafe"
+        ]
+      },
+      {
+        "texte": "Un bâton de cannelle",
+        "ids": [
+          "baton-cannelle"
+        ]
+      },
+      {
+        "texte": "Un voile de cacao",
+        "ids": [
+          "cacao"
+        ]
+      }
+    ]
   },
   {
     "id": "sour-amande-vanille",
@@ -339,7 +545,27 @@
         "facultatif": true
       }
     ],
-    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "deco": [
+      {
+        "texte": "Une fleur comestible posée sur la mousse",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      },
+      {
+        "texte": "Trois gouttes d’amers, tirées en dessin",
+        "ids": [
+          "angostura"
+        ]
+      },
+      {
+        "texte": "Une pincée de shimmer dust",
+        "ids": [
+          "shimmer"
+        ]
+      }
+    ]
   },
   {
     "id": "amaretto-sour",
@@ -372,7 +598,28 @@
         "facultatif": true
       }
     ],
-    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "deco": [
+      {
+        "texte": "Une cerise et une tranche d’orange séchée",
+        "ids": [
+          "cerises-cocktail",
+          "orange-sechee"
+        ]
+      },
+      {
+        "texte": "Un zeste d’orange",
+        "ids": [
+          "zeste-agrumes"
+        ]
+      },
+      {
+        "texte": "Trois gouttes d’amers sur la mousse",
+        "ids": [
+          "angostura"
+        ]
+      }
+    ]
   },
   {
     "id": "godfather-sucre",
@@ -392,7 +639,27 @@
         ]
       }
     ],
-    "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon."
+    "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon.",
+    "deco": [
+      {
+        "texte": "Un zeste d’orange",
+        "ids": [
+          "zeste-agrumes"
+        ]
+      },
+      {
+        "texte": "Une cerise à cocktail",
+        "ids": [
+          "cerises-cocktail"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      }
+    ]
   },
   {
     "id": "gin-soda-boreal",
@@ -418,7 +685,28 @@
         ]
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Une tranche de citron et une branche de menthe",
+        "ids": [
+          "citron",
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Des petits fruits au fond du verre",
+        "ids": [
+          "petits-fruits"
+        ]
+      },
+      {
+        "texte": "Une tranche de citron séchée",
+        "ids": [
+          "citron-seche"
+        ]
+      }
+    ]
   },
   {
     "id": "collins-au-sureau",
@@ -450,7 +738,28 @@
         ]
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Une tranche de citron et une cerise",
+        "ids": [
+          "citron",
+          "cerises-cocktail"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      },
+      {
+        "texte": "Une tranche de citron séchée",
+        "ids": [
+          "citron-seche"
+        ]
+      }
+    ]
   },
   {
     "id": "tom-collins",
@@ -482,7 +791,28 @@
         ]
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Une tranche de citron et une cerise",
+        "ids": [
+          "citron",
+          "cerises-cocktail"
+        ]
+      },
+      {
+        "texte": "Une tranche de citron séchée",
+        "ids": [
+          "citron-seche"
+        ]
+      },
+      {
+        "texte": "Une branche de menthe",
+        "ids": [
+          "menthe"
+        ]
+      }
+    ]
   },
   {
     "id": "jardin-d-aperol",
@@ -520,7 +850,28 @@
         ]
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Une tranche d’orange et une branche de menthe",
+        "ids": [
+          "orange",
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      },
+      {
+        "texte": "Des petits fruits",
+        "ids": [
+          "petits-fruits"
+        ]
+      }
+    ]
   },
   {
     "id": "aperol-soda",
@@ -547,7 +898,27 @@
         "facultatif": true
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Une tranche d’orange",
+        "ids": [
+          "orange"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      },
+      {
+        "texte": "Un zeste d’orange",
+        "ids": [
+          "zeste-agrumes"
+        ]
+      }
+    ]
   },
   {
     "id": "lagon-bleu",
@@ -573,7 +944,28 @@
         ]
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Une tranche de lime et une cerise",
+        "ids": [
+          "lime",
+          "cerises-cocktail"
+        ]
+      },
+      {
+        "texte": "Du sucre coloré sur le bord",
+        "ids": [
+          "sucre-colore"
+        ]
+      },
+      {
+        "texte": "Des perles à cocktail au fond",
+        "ids": [
+          "perles-cocktail"
+        ]
+      }
+    ]
   },
   {
     "id": "moscow-mule",
@@ -599,7 +991,28 @@
         ]
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Un quartier de lime et une grosse branche de menthe",
+        "ids": [
+          "lime",
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      },
+      {
+        "texte": "Des petits fruits",
+        "ids": [
+          "petits-fruits"
+        ]
+      }
+    ]
   },
   {
     "id": "dark-n-stormy",
@@ -626,7 +1039,27 @@
         ]
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Un quartier de lime",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "texte": "Un bâton de cannelle",
+        "ids": [
+          "baton-cannelle"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
   },
   {
     "id": "jager-mule",
@@ -652,7 +1085,28 @@
         ]
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Un quartier de lime et de la menthe",
+        "ids": [
+          "lime",
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      },
+      {
+        "texte": "Un zeste d’orange",
+        "ids": [
+          "zeste-agrumes"
+        ]
+      }
+    ]
   },
   {
     "id": "rhum-epice-cola",
@@ -679,7 +1133,27 @@
         "facultatif": true
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Un quartier de lime",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "texte": "Un bâton de cannelle",
+        "ids": [
+          "baton-cannelle"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
   },
   {
     "id": "tequila-sunrise",
@@ -706,7 +1180,28 @@
       }
     ],
     "methode": "Verse la tequila et le jus sur glace, puis laisse couler la grenadine au fond.",
-    "note": "Le classique des années 70, l’époque de tes débuts."
+    "note": "Le classique des années 70, l’époque de tes débuts.",
+    "deco": [
+      {
+        "texte": "Une tranche d’orange et une cerise",
+        "ids": [
+          "orange",
+          "cerises-cocktail"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      },
+      {
+        "texte": "Une pincée de shimmer dust",
+        "ids": [
+          "shimmer"
+        ]
+      }
+    ]
   },
   {
     "id": "harvey-wallbanger",
@@ -733,7 +1228,28 @@
         ]
       }
     ],
-    "methode": "Verse la vodka et le jus sur glace, puis le Galliano par-dessus."
+    "methode": "Verse la vodka et le jus sur glace, puis le Galliano par-dessus.",
+    "deco": [
+      {
+        "texte": "Une tranche d’orange et une cerise",
+        "ids": [
+          "orange",
+          "cerises-cocktail"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      },
+      {
+        "texte": "Un zeste d’orange",
+        "ids": [
+          "zeste-agrumes"
+        ]
+      }
+    ]
   },
   {
     "id": "shooter-banana-split",
@@ -759,7 +1275,27 @@
         ]
       }
     ],
-    "methode": "Verse dans l’ordre, doucement, dans un verre à shooter."
+    "methode": "Verse dans l’ordre, doucement, dans un verre à shooter.",
+    "deco": [
+      {
+        "texte": "Une cerise à cocktail piquée sur le verre",
+        "ids": [
+          "cerises-cocktail"
+        ]
+      },
+      {
+        "texte": "Un peu de cacao",
+        "ids": [
+          "cacao"
+        ]
+      },
+      {
+        "texte": "Du sucre coloré sur le bord",
+        "ids": [
+          "sucre-colore"
+        ]
+      }
+    ]
   },
   {
     "id": "tarte-aux-pommes-a-la-mode",
@@ -786,7 +1322,27 @@
         "facultatif": true
       }
     ],
-    "methode": "Secoue avec de la glace et sers en shooter."
+    "methode": "Secoue avec de la glace et sers en shooter.",
+    "deco": [
+      {
+        "texte": "Une râpée de cannelle sur le dessus",
+        "ids": [
+          "baton-cannelle"
+        ]
+      },
+      {
+        "texte": "Un bord de sucre",
+        "ids": [
+          "sucre"
+        ]
+      },
+      {
+        "texte": "Un peu de cacao",
+        "ids": [
+          "cacao"
+        ]
+      }
+    ]
   },
   {
     "id": "tasse-au-beurre-d-arachide",
@@ -812,7 +1368,27 @@
         ]
       }
     ],
-    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "deco": [
+      {
+        "texte": "Un voile de cacao",
+        "ids": [
+          "cacao"
+        ]
+      },
+      {
+        "texte": "Trois grains de café",
+        "ids": [
+          "grains-cafe"
+        ]
+      },
+      {
+        "texte": "Un bord de sucre",
+        "ids": [
+          "sucre"
+        ]
+      }
+    ]
   },
   {
     "id": "cafe-cremeux",
@@ -839,7 +1415,27 @@
         ]
       }
     ],
-    "methode": "Verse dans une tasse de café chaud et remue."
+    "methode": "Verse dans une tasse de café chaud et remue.",
+    "deco": [
+      {
+        "texte": "Un voile de cacao sur la crème",
+        "ids": [
+          "cacao"
+        ]
+      },
+      {
+        "texte": "Un bâton de cannelle",
+        "ids": [
+          "baton-cannelle"
+        ]
+      },
+      {
+        "texte": "Trois grains de café",
+        "ids": [
+          "grains-cafe"
+        ]
+      }
+    ]
   },
   {
     "id": "margarita-classique",
@@ -866,7 +1462,28 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
-    "note": "La vraie, la simple. Un bord de sel si le cœur t’en dit."
+    "note": "La vraie, la simple. Un bord de sel si le cœur t’en dit.",
+    "deco": [
+      {
+        "texte": "Un bord de sel et un quartier de lime",
+        "ids": [
+          "sel",
+          "lime"
+        ]
+      },
+      {
+        "texte": "Un bord de Tajín",
+        "ids": [
+          "tajin"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
   },
   {
     "id": "daiquiri-classique",
@@ -893,7 +1510,27 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
-    "note": "Trois ingrédients, rien à cacher : c’est le test d’un bon rhum."
+    "note": "Trois ingrédients, rien à cacher : c’est le test d’un bon rhum.",
+    "deco": [
+      {
+        "texte": "Une tranche de lime sur le bord",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      }
+    ]
   },
   {
     "id": "whisky-sour",
@@ -927,7 +1564,28 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
-    "note": "Le blanc d’œuf n’ajoute aucun goût : il donne la mousse."
+    "note": "Le blanc d’œuf n’ajoute aucun goût : il donne la mousse.",
+    "deco": [
+      {
+        "texte": "Une cerise et un zeste d’orange",
+        "ids": [
+          "cerises-cocktail",
+          "zeste-agrumes"
+        ]
+      },
+      {
+        "texte": "Trois gouttes d’amers sur la mousse",
+        "ids": [
+          "angostura"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      }
+    ]
   },
   {
     "id": "gimlet-au-sureau",
@@ -954,7 +1612,27 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
-    "note": "Le gimlet classique, en plus floral."
+    "note": "Le gimlet classique, en plus floral.",
+    "deco": [
+      {
+        "texte": "Une tranche de lime sur le bord",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
   },
   {
     "id": "sour-a-l-orgeat",
@@ -988,7 +1666,27 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
-    "note": "L’orgeat du Mai Tai, mais tout en douceur."
+    "note": "L’orgeat du Mai Tai, mais tout en douceur.",
+    "deco": [
+      {
+        "texte": "Une tranche de citron séchée posée sur la mousse",
+        "ids": [
+          "citron-seche"
+        ]
+      },
+      {
+        "texte": "Trois gouttes d’amers",
+        "ids": [
+          "angostura"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      }
+    ]
   },
   {
     "id": "sidecar-a-l-erable",
@@ -1021,7 +1719,28 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
-    "note": "Un sidecar qui a passé l’hiver au Québec."
+    "note": "Un sidecar qui a passé l’hiver au Québec.",
+    "deco": [
+      {
+        "texte": "Un bord de sucre et un zeste d’orange",
+        "ids": [
+          "sucre",
+          "zeste-agrumes"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      },
+      {
+        "texte": "Une cerise à cocktail",
+        "ids": [
+          "cerises-cocktail"
+        ]
+      }
+    ]
   },
   {
     "id": "jagerita",
@@ -1048,7 +1767,28 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
-    "note": "Oui, vraiment : le Jäger et la lime vont étonnamment bien ensemble."
+    "note": "Oui, vraiment : le Jäger et la lime vont étonnamment bien ensemble.",
+    "deco": [
+      {
+        "texte": "Un quartier de lime et une branche de menthe",
+        "ids": [
+          "lime",
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Un bord de sel",
+        "ids": [
+          "sel"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
   },
   {
     "id": "ciel-bleu",
@@ -1075,7 +1815,28 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
-    "note": "La couleur fait la moitié du travail."
+    "note": "La couleur fait la moitié du travail.",
+    "deco": [
+      {
+        "texte": "Un zeste de citron en spirale",
+        "ids": [
+          "zeste-agrumes",
+          "citron"
+        ]
+      },
+      {
+        "texte": "Du sucre coloré sur le bord",
+        "ids": [
+          "sucre-colore"
+        ]
+      },
+      {
+        "texte": "Des perles à cocktail",
+        "ids": [
+          "perles-cocktail"
+        ]
+      }
+    ]
   },
   {
     "id": "espresso-martini-classique",
@@ -1103,7 +1864,27 @@
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
-    "note": "Secoue plus fort que tu penses : c’est ce qui fait la mousse."
+    "note": "Secoue plus fort que tu penses : c’est ce qui fait la mousse.",
+    "deco": [
+      {
+        "texte": "Trois grains de café sur la mousse",
+        "ids": [
+          "grains-cafe"
+        ]
+      },
+      {
+        "texte": "Un voile de cacao",
+        "ids": [
+          "cacao"
+        ]
+      },
+      {
+        "texte": "Une pincée de shimmer dust",
+        "ids": [
+          "shimmer"
+        ]
+      }
+    ]
   },
   {
     "id": "paloma-maison",
@@ -1137,7 +1918,28 @@
       }
     ],
     "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
-    "note": "Le cocktail de tous les jours au Mexique."
+    "note": "Le cocktail de tous les jours au Mexique.",
+    "deco": [
+      {
+        "texte": "Un bord de sel et une tranche de lime",
+        "ids": [
+          "sel",
+          "lime"
+        ]
+      },
+      {
+        "texte": "Une branche de menthe",
+        "ids": [
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
   },
   {
     "id": "rhum-collins",
@@ -1169,7 +1971,28 @@
         ]
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Une tranche de lime et de la menthe",
+        "ids": [
+          "lime",
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Une tranche de citron séchée",
+        "ids": [
+          "citron-seche"
+        ]
+      },
+      {
+        "texte": "Des petits fruits",
+        "ids": [
+          "petits-fruits"
+        ]
+      }
+    ]
   },
   {
     "id": "vodka-soda-au-sureau",
@@ -1202,7 +2025,28 @@
         ]
       }
     ],
-    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Un zeste de citron et une fleur comestible",
+        "ids": [
+          "zeste-agrumes",
+          "fleurs-comestibles"
+        ]
+      },
+      {
+        "texte": "Des petits fruits au fond du verre",
+        "ids": [
+          "petits-fruits"
+        ]
+      },
+      {
+        "texte": "Une tranche de citron séchée",
+        "ids": [
+          "citron-seche"
+        ]
+      }
+    ]
   },
   {
     "id": "spritz-flor-del-fuego",
@@ -1236,7 +2080,27 @@
       }
     ],
     "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
-    "note": "Pour sortir enfin la Flor del Fuego de la tablette."
+    "note": "Pour sortir enfin la Flor del Fuego de la tablette.",
+    "deco": [
+      {
+        "texte": "Une tranche d’orange",
+        "ids": [
+          "orange"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      },
+      {
+        "texte": "Des petits fruits",
+        "ids": [
+          "petits-fruits"
+        ]
+      }
+    ]
   },
   {
     "id": "poisson-rouge-soda",
@@ -1263,7 +2127,28 @@
       }
     ],
     "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
-    "note": "Simple et rose, comme il se doit."
+    "note": "Simple et rose, comme il se doit.",
+    "deco": [
+      {
+        "texte": "Un quartier de lime et des petits fruits",
+        "ids": [
+          "lime",
+          "petits-fruits"
+        ]
+      },
+      {
+        "texte": "Du sucre coloré sur le bord",
+        "ids": [
+          "sucre-colore"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      }
+    ]
   },
   {
     "id": "tequila-soda-lime",
@@ -1290,7 +2175,27 @@
       }
     ],
     "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
-    "note": "Le plus léger du lot. Parfait quand la soirée est longue."
+    "note": "Le plus léger du lot. Parfait quand la soirée est longue.",
+    "deco": [
+      {
+        "texte": "Deux quartiers de lime",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "texte": "Un bord de sel",
+        "ids": [
+          "sel"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
   },
   {
     "id": "black-russian",
@@ -1311,7 +2216,27 @@
       }
     ],
     "methode": "Verse sur un gros glaçon et remue doucement.",
-    "note": "Deux ingrédients, et il traverse les décennies."
+    "note": "Deux ingrédients, et il traverse les décennies.",
+    "deco": [
+      {
+        "texte": "Un zeste d’orange",
+        "ids": [
+          "zeste-agrumes"
+        ]
+      },
+      {
+        "texte": "Trois grains de café",
+        "ids": [
+          "grains-cafe"
+        ]
+      },
+      {
+        "texte": "Une cerise à cocktail",
+        "ids": [
+          "cerises-cocktail"
+        ]
+      }
+    ]
   },
   {
     "id": "vieux-carre-d-erable",
@@ -1345,7 +2270,28 @@
       }
     ],
     "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon.",
-    "note": "Le whisky et le rhum ensemble : plus rond que l’un ou l’autre."
+    "note": "Le whisky et le rhum ensemble : plus rond que l’un ou l’autre.",
+    "deco": [
+      {
+        "texte": "Un zeste d’orange et une cerise",
+        "ids": [
+          "zeste-agrumes",
+          "cerises-cocktail"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      },
+      {
+        "texte": "Un bâton de cannelle",
+        "ids": [
+          "baton-cannelle"
+        ]
+      }
+    ]
   },
   {
     "id": "shooter-erable-cannelle",
@@ -1365,7 +2311,27 @@
         ]
       }
     ],
-    "methode": "Verse le Grands Voyageurs, puis le Fireball par-dessus. Sers bien froid."
+    "methode": "Verse le Grands Voyageurs, puis le Fireball par-dessus. Sers bien froid.",
+    "deco": [
+      {
+        "texte": "Une râpée de cannelle sur le dessus",
+        "ids": [
+          "baton-cannelle"
+        ]
+      },
+      {
+        "texte": "Un bord de sucre",
+        "ids": [
+          "sucre"
+        ]
+      },
+      {
+        "texte": "Une pincée de shimmer dust",
+        "ids": [
+          "shimmer"
+        ]
+      }
+    ]
   },
   {
     "id": "b-52-maison",
@@ -1391,7 +2357,27 @@
         ]
       }
     ],
-    "methode": "Verse dans l’ordre, doucement sur le dos d’une cuillère, pour garder les trois étages."
+    "methode": "Verse dans l’ordre, doucement sur le dos d’une cuillère, pour garder les trois étages.",
+    "deco": [
+      {
+        "texte": "Un voile de cacao",
+        "ids": [
+          "cacao"
+        ]
+      },
+      {
+        "texte": "Trois grains de café",
+        "ids": [
+          "grains-cafe"
+        ]
+      },
+      {
+        "texte": "Du sucre coloré sur le bord",
+        "ids": [
+          "sucre-colore"
+        ]
+      }
+    ]
   },
   {
     "id": "cafe-a-l-amaretto",
@@ -1418,7 +2404,27 @@
         "facultatif": true
       }
     ],
-    "methode": "Verse l’amaretto dans un café chaud et remue."
+    "methode": "Verse l’amaretto dans un café chaud et remue.",
+    "deco": [
+      {
+        "texte": "Un bâton de cannelle dans la tasse",
+        "ids": [
+          "baton-cannelle"
+        ]
+      },
+      {
+        "texte": "Un voile de cacao",
+        "ids": [
+          "cacao"
+        ]
+      },
+      {
+        "texte": "Un zeste d’orange",
+        "ids": [
+          "zeste-agrumes"
+        ]
+      }
+    ]
   },
   {
     "id": "tasse-chocolat-cafe",
@@ -1445,6 +2451,309 @@
       }
     ],
     "methode": "Verse dans une tasse de café chaud et remue.",
-    "note": "L’Olmeca chocolat noir prend tout son sens ici."
+    "note": "L’Olmeca chocolat noir prend tout son sens ici.",
+    "deco": [
+      {
+        "texte": "Un voile de cacao sur la crème",
+        "ids": [
+          "cacao"
+        ]
+      },
+      {
+        "texte": "Trois grains de café",
+        "ids": [
+          "grains-cafe"
+        ]
+      },
+      {
+        "texte": "Un bâton de cannelle",
+        "ids": [
+          "baton-cannelle"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limonade-petillante",
+    "nom": "Limonade pétillante",
+    "verre": "grand",
+    "sansAlcool": true,
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "citron"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "sirop"
+        ]
+      },
+      {
+        "q": "5 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur beaucoup de glace dans un grand verre et remue doucement.",
+    "note": "La base de tout. Ajoute des petits fruits ou de la menthe si tu en as.",
+    "deco": [
+      {
+        "texte": "Une branche de menthe et des petits fruits",
+        "ids": [
+          "menthe",
+          "petits-fruits"
+        ]
+      },
+      {
+        "texte": "Une tranche de citron séchée",
+        "ids": [
+          "citron-seche"
+        ]
+      },
+      {
+        "texte": "Du sucre coloré sur le bord",
+        "ids": [
+          "sucre-colore"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "soda-a-l-orgeat",
+    "nom": "Soda à l’orgeat",
+    "verre": "grand",
+    "sansAlcool": true,
+    "ingredients": [
+      {
+        "q": "¾ oz",
+        "ids": [
+          "orgeat"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "5 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur beaucoup de glace dans un grand verre et remue doucement.",
+    "note": "L’orgeat du Mai Tai, tout seul : doux, avec un fond d’amande.",
+    "deco": [
+      {
+        "texte": "Un quartier de lime",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "texte": "Une cerise à cocktail",
+        "ids": [
+          "cerises-cocktail"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "passion-petillante",
+    "nom": "Passion pétillante",
+    "verre": "grand",
+    "sansAlcool": true,
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "passion"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur beaucoup de glace dans un grand verre et remue doucement.",
+    "deco": [
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      },
+      {
+        "texte": "Des petits fruits au fond du verre",
+        "ids": [
+          "petits-fruits"
+        ]
+      },
+      {
+        "texte": "Un quartier de lime",
+        "ids": [
+          "lime"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cafe-frappe",
+    "nom": "Café frappé",
+    "verre": "grand",
+    "sansAlcool": true,
+    "ingredients": [
+      {
+        "q": "4 oz",
+        "ids": [
+          "cafe"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "sirop"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "creme"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Secoue le café froid avec le sirop et beaucoup de glace, puis verse dans un grand verre.",
+    "deco": [
+      {
+        "texte": "Trois grains de café",
+        "ids": [
+          "grains-cafe"
+        ]
+      },
+      {
+        "texte": "Un voile de cacao",
+        "ids": [
+          "cacao"
+        ]
+      },
+      {
+        "texte": "Un bâton de cannelle",
+        "ids": [
+          "baton-cannelle"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shirley-temple",
+    "nom": "Shirley Temple",
+    "verre": "grand",
+    "sansAlcool": true,
+    "ingredients": [
+      {
+        "q": "¾ oz",
+        "ids": [
+          "grenadine"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "5 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur beaucoup de glace dans un grand verre et remue doucement.",
+    "note": "Le classique des enfants depuis les années 1930. La cerise n’est pas facultative.",
+    "deco": [
+      {
+        "texte": "Une cerise à cocktail",
+        "ids": [
+          "cerises-cocktail"
+        ]
+      },
+      {
+        "texte": "Un quartier de lime",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "texte": "Du sucre coloré sur le bord",
+        "ids": [
+          "sucre-colore"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mule-sans-alcool",
+    "nom": "Mule sans alcool",
+    "verre": "grand",
+    "sansAlcool": true,
+    "ingredients": [
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "5 oz",
+        "ids": [
+          "gingerbeer"
+        ]
+      }
+    ],
+    "methode": "Verse sur beaucoup de glace dans un grand verre et remue doucement.",
+    "note": "Tout le piquant du Moscow Mule, sans la vodka.",
+    "deco": [
+      {
+        "texte": "Un quartier de lime et de la menthe",
+        "ids": [
+          "lime",
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      },
+      {
+        "texte": "Des petits fruits",
+        "ids": [
+          "petits-fruits"
+        ]
+      }
+    ]
   }
 ]

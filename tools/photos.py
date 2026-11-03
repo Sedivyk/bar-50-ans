@@ -216,6 +216,41 @@ QUETES = {
     "mule-sans-alcool": (
         "a tall glass of ginger beer with lime and plenty of ice, no alcohol",
         ["ginger", "tall", "lime", "ice", "golden"]),
+
+    # --- pour ses grands et pour sa belle-soeur ---
+    "mojito": (
+        "a classic mojito in a tall glass with lots of fresh mint, lime and crushed ice",
+        ["mojito", "mint", "lime", "tall", "ice", "green"]),
+    "mojito-au-yuzu": (
+        "a pale yellow mojito with fresh mint and lime in a tall glass with crushed ice",
+        ["mojito", "mint", "lime", "tall", "ice", "yellow", "pale"]),
+    "margarita-au-yuzu": (
+        "a pale yellow citrus margarita in a coupe glass with a salt rim",
+        ["margarita", "coupe", "yellow", "salt", "citrus", "martini glass"]),
+    "gin-yuzu-soda": (
+        "a clear sparkling citrus highball with ice and a lemon twist",
+        ["highball", "tall", "clear", "sparkling", "lemon", "ice"]),
+    "michelada": (
+        "a michelada, beer in a tall glass with a chili salt rim and a lime wedge",
+        ["beer", "michelada", "tall", "lime", "salt", "rim", "chili"]),
+    "shandy-au-citron": (
+        "a beer shandy with lemon in a tall glass on a terrace",
+        ["beer", "shandy", "lemon", "tall", "golden"]),
+    "shooter-au-yuzu": (
+        "a bright yellow citrus shot in a shot glass on a bar",
+        ["shot glass", "yellow", "citrus", "shooter"]),
+    "shooter-bleu": (
+        "a vivid blue curacao shot in a small shot glass, bright blue liquid",
+        ["shot glass", "blue", "shooter", "bright", "vivid"]),
+    "spritz-au-sureau": (
+        "a pale clear sparkling cocktail in a tall glass with ice and a lemon twist, light and refreshing",
+        ["tall", "pale", "clear", "white", "sparkling", "ice", "lemon", "highball"]),
+    "passion-sureau-petillant": (
+        "a sparkling passion fruit cocktail in a tall glass with ice and a flower",
+        ["passion fruit", "tall", "sparkling", "ice", "orange", "yellow", "flower"]),
+    "mojito-au-sureau": (
+        "a pale floral mojito with fresh mint and lime in a tall glass with crushed ice",
+        ["mojito", "mint", "lime", "tall", "ice", "pale", "clear"]),
 }
 
 

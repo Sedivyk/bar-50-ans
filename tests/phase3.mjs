@@ -43,19 +43,34 @@ for (const r of rec) {
 }
 check("toutes les garnitures citées existent", mauvaises.length === 0, mauvaises.slice(0, 3).join(" | "));
 
-// la déco ne doit jamais entrer dans les ingrédients d'une recette du dépôt
-const idsGarnitures = new Set(garnitures.map((b) => b.id));
-const bloquantes = [];
+/* Une garniture peut très bien être un vrai ingrédient : la menthe d'un
+   mojito en est une. Ce qui doit rester vrai, c'est que le champ « deco »
+   n'entre jamais dans le calcul de ce qui manque. On sépare donc les
+   garnitures qui ne servent qu'à décorer : ce sont elles qui ne doivent
+   avoir aucun effet sur les compteurs. */
+const typesIngredients = new Set();
+const idsIngredients = new Set();
 for (const r of rec) {
   for (const x of r.ingredients) {
-    if (x.facultatif) continue;
-    const seulementDeco = (x.ids || []).length
-      && (x.ids || []).every((id) => idsGarnitures.has(id)) && !(x.types || []).length;
-    if (seulementDeco) bloquantes.push(`${r.id} : ${x.ids.join(",")}`);
+    for (const t of x.types || []) typesIngredients.add(t);
+    for (const id of x.ids || []) idsIngredients.add(id);
   }
 }
-check("aucune garniture n’est un ingrédient obligatoire", bloquantes.length === 0,
-  bloquantes.join(" | "));
+const decoSeulement = garnitures.filter(
+  (b) => !idsIngredients.has(b.id) && !typesIngredients.has(b.type));
+const aussiIngredient = garnitures.filter(
+  (b) => idsIngredients.has(b.id) || typesIngredients.has(b.type));
+
+check(`${decoSeulement.length} garnitures ne servent qu’à décorer`,
+  decoSeulement.length >= 15);
+check(`${aussiIngredient.length} garnitures sont aussi de vrais ingrédients`,
+  aussiIngredient.length > 0, aussiIngredient.map((b) => b.nom).join(", "));
+
+// aucune idée déco ne cite une garniture comme si elle manquait
+const citeesEnDeco = new Set();
+for (const r of rec) for (const idee of r.deco || []) for (const id of idee.ids || []) citeesEnDeco.add(id);
+check("les idées déco ne citent que des choses qui existent",
+  [...citeesEnDeco].every((id) => connus.has(id)));
 
 /* ------------------------------------------------- ensuite, l'application */
 
@@ -131,18 +146,33 @@ await page.waitForTimeout(200);
 check("décocher le sel retire la mise en avant",
   await page.locator('details.r[data-id="margarita-classique"] .deco li.a-toi').count() === 0);
 
-/* toutes les garnitures cochées : toujours aucun effet sur les compteurs */
+/* Cocher toutes les garnitures qui ne servent qu'à décorer ne doit rien
+   changer aux compteurs : c'est la promesse « la déco n'empêche jamais
+   un cocktail d'apparaître », prise par l'autre bout. */
 await page.locator("#t-bar").click();
 await page.waitForSelector(".chip input");
-const aCocher = garnitures.filter((b) => !b.defaut).map((b) => b.id);
-for (const id of aCocher) {
-  const chip = page.locator(`.chip:has(input[data-id="${id}"]) span`);
+for (const b of decoSeulement.filter((x) => !x.defaut)) {
+  const chip = page.locator(`.chip:has(input[data-id="${b.id}"]) span`);
   if (await chip.count()) { await chip.click(); await page.waitForTimeout(40); }
 }
 const okTout = Number(await page.locator("#n-ok").textContent());
 const presqueTout = Number(await page.locator("#n-near").textContent());
-check(`toutes les garnitures cochées : compteurs toujours ${okAvant}/${presqueAvant}`,
+check(`les ${decoSeulement.length} garnitures de pure déco cochées : compteurs toujours ${okAvant}/${presqueAvant}`,
   okTout === okAvant && presqueTout === presqueAvant, `${okTout}/${presqueTout}`);
+
+/* En revanche, une garniture qui est un vrai ingrédient doit compter :
+   la menthe débloque les mojitos. */
+const menthe = page.locator('.chip:has(input[data-id="menthe"]) span');
+if (await menthe.count()) {
+  await menthe.click();
+  await page.waitForTimeout(150);
+  const okMenthe = Number(await page.locator("#n-ok").textContent());
+  check(`cocher la menthe débloque des recettes (${okAvant} → ${okMenthe})`, okMenthe > okAvant);
+  await menthe.click();
+  await page.waitForTimeout(150);
+  check("et la décocher les remet où elles étaient",
+    Number(await page.locator("#n-ok").textContent()) === okAvant);
+}
 
 /* la page « Astuces déco » */
 await page.locator("#astuces-deco").scrollIntoViewIfNeeded();

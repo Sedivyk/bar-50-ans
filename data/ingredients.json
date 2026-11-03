@@ -522,6 +522,34 @@
       "categorie": "Garnitures et déco",
       "defaut": false,
       "type": "zeste"
+    },
+    {
+      "id": "biere_blonde",
+      "nom": "Bière blonde",
+      "categorie": "Pour allonger",
+      "defaut": false,
+      "type": "biere"
+    },
+    {
+      "id": "biere_mex",
+      "nom": "Bière mexicaine",
+      "categorie": "Pour allonger",
+      "defaut": false,
+      "type": "biere"
+    },
+    {
+      "id": "yuzu",
+      "nom": "Yuzu (jus ou sirop)",
+      "categorie": "Amers et sirops",
+      "defaut": false,
+      "type": "yuzu"
+    },
+    {
+      "id": "montellier",
+      "nom": "Montellier",
+      "categorie": "Pour allonger",
+      "defaut": false,
+      "type": "eau-petillante"
     }
   ]
 }

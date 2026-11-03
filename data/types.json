@@ -401,6 +401,18 @@
       "nom": "Zeste d’agrumes",
       "famille": "Garnitures et déco",
       "exemples": "Zeste d’orange, de citron, de lime"
+    },
+    {
+      "id": "biere",
+      "nom": "Bière",
+      "famille": "Pour allonger",
+      "exemples": "Bière blonde, bière mexicaine"
+    },
+    {
+      "id": "yuzu",
+      "nom": "Yuzu",
+      "famille": "Amers et sirops",
+      "exemples": "Jus ou sirop de yuzu"
     }
   ]
 }

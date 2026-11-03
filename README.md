@@ -1,7 +1,7 @@
 # Ton bar · 50 ans
 
 Petite application pour savoir quoi préparer avec les bouteilles qu’on a sous la main.
-50 cocktails, un par année, plus 6 recettes sans alcool. Site statique,
+Une soixantaine de cocktails, dont 6 sans alcool. Site statique,
 sans outil de build, publié sur GitHub Pages :
 <https://sedivyk.github.io/bar-50-ans/>
 
@@ -50,9 +50,10 @@ sans outil de build, publié sur GitHub Pages :
 - `deco` sur chaque recette : une idée principale et deux ou trois variantes. Chaque idée
   peut citer des garnitures (`ids`) ; celles qu’elle a cochées sont mises en avant.
   **La déco ne bloque jamais une recette** : elle n’entre pas dans les ingrédients.
-- `data/ambiances.json` : les regroupements par occasion (Noël, la piscine, l’Halloween,
-  les ados). « Avec mes ados » ne contient que des recettes `sansAlcool`, et un test le
-  vérifie en remontant jusqu’au type de chaque ingrédient.
+- `data/ambiances.json` : les regroupements par occasion — « C’est Noël », « Au bord de
+  la piscine », « Avec mes grands », « Avec ma belle-sœur » et « Sans alcool ».
+  Cette dernière ne contient que des recettes `sansAlcool`, et un test le vérifie en
+  remontant jusqu’au type de chaque ingrédient, sans se fier à l’étiquette.
 
 ## Ses données à elle
 
@@ -89,6 +90,7 @@ node tools/ajouter-recettes.mjs           # ajoute des recettes, en validant tou
 node tools/ajouter-types.mjs              # (re)génère les types, idempotent
 node tools/ajouter-deco.mjs               # garnitures et idées déco, idempotent
 node tools/ajouter-ambiances.mjs          # occasions et recettes sans alcool
+node tools/ajouter-grands.mjs             # bière, yuzu, mojitos, et les ambiances
 set PEXAFY_KEY=...                        # clé d'API, jamais dans le dépôt
 py -3 tools/photos.py                     # cherche les photos manquantes
 py -3 tools/photos.py margarita-picante   # refait une photo

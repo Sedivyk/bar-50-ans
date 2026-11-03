@@ -22,6 +22,8 @@
     "nom": "Au bord de la piscine",
     "description": "Long, froid, plein de lime. À boire les pieds dans l’eau.",
     "recettes": [
+      "mojito",
+      "mojito-au-yuzu",
       "margarita-picante",
       "margarita-classique",
       "paloma-maison",
@@ -37,31 +39,62 @@
       "tequila-sunrise",
       "gin-soda-boreal",
       "tom-collins",
-      "poisson-rouge-soda"
-    ]
-  },
-  {
-    "id": "halloween",
-    "nom": "Halloween",
-    "description": "Sombre, orangé, un peu inquiétant. Les lumières tamisées aident.",
-    "recettes": [
-      "jagerita",
-      "jager-mule",
-      "black-russian",
-      "dark-n-stormy",
-      "espresso-martini-classique",
-      "tequila-sunrise",
       "poisson-rouge-soda",
-      "spritz-flor-del-fuego",
-      "b-52-maison",
-      "shooter-banana-split",
-      "lagon-bleu"
+      "michelada",
+      "shandy-au-citron",
+      "gin-yuzu-soda"
     ]
   },
   {
-    "id": "avec-mes-ados",
-    "nom": "Avec mes ados",
-    "description": "Sans une goutte d’alcool, et assez beaux pour qu’ils en redemandent.",
+    "id": "avec-mes-grands",
+    "nom": "Avec mes grands",
+    "description": "Des shots, du yuzu, des mojitos et tout ce qui est coloré. Et une bière bien froide pour celui qui préfère ça.",
+    "recettes": [
+      "mojito",
+      "mojito-au-yuzu",
+      "margarita-au-yuzu",
+      "gin-yuzu-soda",
+      "shooter-au-yuzu",
+      "shooter-bleu",
+      "shooter-banana-split",
+      "b-52-maison",
+      "tarte-aux-pommes-a-la-mode",
+      "shooter-erable-cannelle",
+      "michelada",
+      "shandy-au-citron",
+      "lagon-bleu",
+      "ciel-bleu",
+      "poisson-rouge-soda",
+      "tequila-sunrise",
+      "margarita-picante"
+    ]
+  },
+  {
+    "id": "avec-ma-belle-soeur",
+    "nom": "Avec ma belle-sœur",
+    "description": "Des mojitos, du St-Germain, du fruit de la passion et beaucoup de bulles. Léger, et ça se boit longtemps.",
+    "recettes": [
+      "mojito-au-sureau",
+      "mojito",
+      "spritz-au-sureau",
+      "passion-sureau-petillant",
+      "le-50",
+      "margarita-st-germain",
+      "gimlet-au-sureau",
+      "collins-au-sureau",
+      "gin-soda-boreal",
+      "vodka-soda-au-sureau",
+      "jardin-d-aperol",
+      "pornstar-martini",
+      "passion-petillante",
+      "aperol-soda",
+      "tequila-soda-lime"
+    ]
+  },
+  {
+    "id": "sans-alcool",
+    "nom": "Sans alcool",
+    "description": "Pour celle ou celui qui conduit, et pour les après-midis.",
     "recettes": [
       "limonade-petillante",
       "soda-a-l-orgeat",

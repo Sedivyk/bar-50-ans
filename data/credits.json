@@ -186,6 +186,17 @@
     "rang": 0,
     "source": "Pexels"
   },
+  "gin-yuzu-soda": {
+    "description": "The image shows a tall, clear glass filled with water sitting on a wooden table. The glass is adorned with a slice of lemon and an orange floating on top, adding a pop of color to the otherwise transparent liquid. In the background, there are two blurred figures - one person seated at a round table ",
+    "licence": "free",
+    "lien": "https://www.pexels.com/photo/refreshing-lemon-water-in-elegant-glass-34989175",
+    "photo_id": "019e1fba-b02e-71c0-bf9f-bce16fb1dbb2",
+    "photographe": "Szymon Shields",
+    "photographe_lien": "https://www.pexels.com/search/users/Szymon%20Shields/",
+    "quete": "a clear sparkling citrus highball with ice and a lemon twist",
+    "rang": 0,
+    "source": "Pexels"
+  },
   "godfather-sucre": {
     "description": "The image shows a glass filled with an amber-colored liquid, possibly whiskey or rum, resting on a white surface. The glass is adorned with a diamond pattern and has a small ice cube floating on top of it.",
     "licence": "free",
@@ -285,6 +296,17 @@
     "rang": 0,
     "source": "Unsplash"
   },
+  "margarita-au-yuzu": {
+    "description": "The image shows a martini glass filled with a pale yellow liquid, likely a cocktail or a type of alcohol. The glass is adorned with a black rim and has a small black ring around its base. The glass appears to be placed on a table, possibly in a bar setting.",
+    "licence": "free",
+    "lien": "https://www.pexels.com/photo/close-up-shot-of-a-glass-of-liquor-12411871",
+    "photo_id": "019e26e4-63a3-7a7e-b088-473a0d3bda25",
+    "photographe": "coco HACHE",
+    "photographe_lien": "https://www.pexels.com/search/users/coco%20HACHE/",
+    "quete": "a pale yellow citrus margarita in a coupe glass with a salt rim",
+    "rang": 0,
+    "source": "Pexels"
+  },
   "margarita-classique": {
     "description": "The image shows a close-up view of a martini glass filled with a white drink, likely a cocktail or a type of alcoholic beverage called a \"martini\". The drink is garnished with a lemon wedge on top and has a small amount of salt sprinkled around the rim of the glass. This garnish adds a touch of colo",
     "licence": "free",
@@ -317,6 +339,50 @@
     "quete": "a margarita served in a coupe glass with a lime wedge",
     "rang": 0,
     "source": "Unsplash"
+  },
+  "michelada": {
+    "description": "The image shows a tall glass filled with a red liquid, likely a cocktail or tea, topped with a slice of lime and garnished with a sprig of rosemary. The glass is placed on a wooden tray, which rests on a table covered in white salt. In the blurred background, there are buildings visible through a wi",
+    "licence": "free",
+    "lien": "https://pixabay.com//photos/drink-mocktail-beverage-refreshment-7154538/",
+    "photo_id": "019e2271-2125-7ffb-be4f-0f5f787388df",
+    "photographe": "Khai0201",
+    "photographe_lien": "https://pixabay.com/users/khai0201-26983574/",
+    "quete": "a michelada, beer in a tall glass with a chili salt rim and a lime wedge",
+    "rang": 0,
+    "source": "Pixabay"
+  },
+  "mojito": {
+    "description": "The image shows a tall glass filled with a refreshing drink, likely a cocktail or a mojito. The drink is garnished with a lime wedge and mint leaves on top, adding a pop of color to the clear liquid inside the glass. The glass is placed on a white tablecloth, which contrasts nicely with the vibrant ",
+    "licence": "free",
+    "lien": "https://www.pexels.com/photo/a-lemonade-drink-with-mint-leaves-8375044",
+    "photo_id": "019e1c05-a1a7-7010-858d-1be9b659ce60",
+    "photographe": "Denys Gromov",
+    "photographe_lien": "https://www.pexels.com/@jdgromov",
+    "quete": "a classic mojito in a tall glass with lots of fresh mint, lime and crushed ice",
+    "rang": 0,
+    "source": "Pexels"
+  },
+  "mojito-au-sureau": {
+    "description": "The image shows a tall glass filled with a refreshing drink, likely a mojito or similar cocktail. The drink is garnished with a sprig of mint and a slice of lime, adding a pop of color to the clear liquid inside the glass. The glass is placed on a brown coaster that rests on a white tablecloth.",
+    "licence": "free",
+    "lien": "https://www.pexels.com/photo/a-close-up-shot-of-a-mojito-8375036",
+    "photo_id": "019e1c05-3eba-7e09-a0d6-b5f60063959a",
+    "photographe": "Denys Gromov",
+    "photographe_lien": "https://www.pexels.com/@jdgromov",
+    "quete": "a pale floral mojito with fresh mint and lime in a tall glass with crushed ice",
+    "rang": 0,
+    "source": "Pexels"
+  },
+  "mojito-au-yuzu": {
+    "description": "The image shows a tall glass filled with ice cubes and a slice of lime, garnished with a sprig of mint. The glass is placed on a bed of crushed ice, which adds texture to the scene. The background is dark, providing a stark contrast that makes the vibrant colors of the drink stand out.",
+    "licence": "free",
+    "lien": "https://www.pexels.com/photo/close-up-shot-of-ice-in-the-drinking-glass-7259054",
+    "photo_id": "019e1b8b-9533-753f-bcf4-826a9d375353",
+    "photographe": "Aram Diseño",
+    "photographe_lien": "https://www.pexels.com/search/users/Aram%20Dise%C3%B1o/",
+    "quete": "a pale yellow mojito with fresh mint and lime in a tall glass with crushed ice",
+    "rang": 0,
+    "source": "Pexels"
   },
   "moscow-mule": {
     "description": "The image shows a copper-colored copper mug filled with a refreshing drink, likely a cocktail or smoothie. The drink is garnished with a lime wedge and mint leaves, adding a pop of color to the beverage. A silver straw is inserted into the drink, ready for use. In the background, there are two green",
@@ -384,6 +450,17 @@
     "rang": 0,
     "source": "Pexels"
   },
+  "passion-sureau-petillant": {
+    "description": "The image shows a tall glass filled with a yellowish-orange liquid, likely a cocktail or a milkshake, resting on a brown woven placemat. The glass is adorned with a single flower, possibly a rose, which has been carefully placed atop the drink. A straw protrudes from the top of the glass, adding to ",
+    "licence": "free",
+    "lien": "https://pixabay.com//photos/fruit-juice-juice-drink-travel-921931/",
+    "photo_id": "019e2161-d924-7c30-b974-c8dfe8aa2de6",
+    "photographe": "sharonang",
+    "photographe_lien": "https://pixabay.com/users/sharonang-99559/",
+    "quete": "a sparkling passion fruit cocktail in a tall glass with ice and a flower",
+    "rang": 0,
+    "source": "Pixabay"
+  },
   "poisson-rouge-soda": {
     "description": "The image shows a tall glass filled with a pinkish-red liquid, likely a cocktail or soda, resting on a white marble countertop. The glass is adorned with a slice of lime and ice cubes, adding a pop of color to the drink. A small wedge of lime is positioned at the top right corner of the glass, sugge",
     "licence": "free",
@@ -428,6 +505,17 @@
     "rang": 0,
     "source": "Pixabay"
   },
+  "shandy-au-citron": {
+    "description": "The image shows two glasses filled with a golden liquid, possibly beer or wine, placed on a table outdoors. The glass on the left is taller and has a black straw protruding from it, while the glass on the right is shorter and also contains a similar golden liquid. Both glasses are situated in front ",
+    "licence": "free",
+    "lien": "https://pixabay.com//photos/lemonade-orange-apple-juice-drink-4340174/",
+    "photo_id": "019e1d3a-4af3-7cee-8cb5-a52683d740f9",
+    "photographe": "Llfecycles",
+    "photographe_lien": "https://pixabay.com/users/llfecycles-7160902/",
+    "quete": "a beer shandy with lemon in a tall glass on a terrace",
+    "rang": 0,
+    "source": "Pixabay"
+  },
   "shirley-temple": {
     "description": "The image shows a tall, slender glass filled with a pinkish-red liquid and topped with a small cherry on top. The glass is placed on a wooden table against a white wall backdrop.",
     "licence": "free",
@@ -439,6 +527,17 @@
     "rang": 0,
     "source": "Pixabay"
   },
+  "shooter-au-yuzu": {
+    "description": "The image shows a small glass cup filled with bright yellow liquid, likely orange juice or lemonade, placed on a wooden table. The cup is positioned slightly off-center to the left and appears to be empty. The background is blurred, drawing attention to the cup of juice in the foreground.",
+    "licence": "free",
+    "lien": "https://unsplash.com/photos/a-glass-of-orange-juice-on-a-wooden-table-9tEk--d0Nig",
+    "photo_id": "019e1d34-9d88-7392-95fe-d7c7cac1c135",
+    "photographe": "Yuheng Ouyang",
+    "photographe_lien": "https://unsplash.com/@govizlora",
+    "quete": "a bright yellow citrus shot in a shot glass on a bar",
+    "rang": 0,
+    "source": "Unsplash"
+  },
   "shooter-banana-split": {
     "description": "The image presents a wooden tray holding four shot glasses filled with colorful drinks, each containing a different colored liquid - green, yellow, red, and brown. The shots are arranged in a straight line on the tray, creating an appealing visual display.",
     "licence": "free",
@@ -449,6 +548,17 @@
     "quete": "colourful layered shooters in shot glasses lined up on a bar",
     "rang": 0,
     "source": "Pexels"
+  },
+  "shooter-bleu": {
+    "description": "The image shows a collection of nine shot glasses, each filled with a vibrant blue liquid and capped with a white lid. The glasses are arranged in two rows on a black speckled table surface, creating an interesting visual contrast between the dark background and the bright colors of the drinks.",
+    "licence": "free",
+    "lien": "https://pixabay.com//photos/beverages-alcohol-shot-glasses-2503894/",
+    "photo_id": "019e227d-9fd8-76ce-a60f-3617f971b459",
+    "photographe": "420494",
+    "photographe_lien": "https://pixabay.com/",
+    "quete": "a vivid blue curacao shot in a small shot glass, bright blue liquid",
+    "rang": 0,
+    "source": "Pixabay"
   },
   "shooter-erable-cannelle": {
     "description": "The image shows a shot glass filled with a dark liquid, possibly whiskey or another type of alcohol, placed on a black surface such as a bar countertop or table. In the background, there is an open bottle of the same dark liquid, suggesting that it might be a popular drink at this establishment. The",
@@ -504,6 +614,17 @@
     "quete": "a creamy sour cocktail with thick egg white foam in a coupe glass",
     "rang": 0,
     "source": "Unsplash"
+  },
+  "spritz-au-sureau": {
+    "description": "The image shows a tall, slender glass filled with a white liquid, likely champagne or wine, placed on a wooden table. The glass is positioned slightly to the left and has a small slice of lemon resting at the bottom. In the blurred background, there are two people sitting in chairs, suggesting that ",
+    "licence": "free",
+    "lien": "https://pixabay.com//photos/french-75-cocktail-craft-gin-4333820/",
+    "photo_id": "019e1ddb-fb79-726d-af75-afe02172a023",
+    "photographe": "Ernest_Roy",
+    "photographe_lien": "https://pixabay.com/users/ernest_roy-1284978/",
+    "quete": "a pale clear sparkling cocktail in a tall glass with ice and a lemon twist, light and refreshing",
+    "rang": 0,
+    "source": "Pixabay"
   },
   "spritz-flor-del-fuego": {
     "description": "The image shows a tall, slender glass filled with a pinkish-red liquid and topped with a slice of orange. The glass is placed on a wooden table against a blurred background that appears to be a window or a door. A straw protrudes from the top of the glass, adding an element of elegance to the scene.",

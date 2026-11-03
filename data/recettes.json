@@ -2755,5 +2755,584 @@
         ]
       }
     ]
+  },
+  {
+    "id": "mojito",
+    "nom": "Mojito",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "types": [
+          "rhum-blanc",
+          "rhum-vieux"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "types": [
+          "lime"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "sirop-simple"
+        ]
+      },
+      {
+        "q": "8 feuilles",
+        "types": [
+          "herbe-fraiche"
+        ]
+      },
+      {
+        "q": "3 oz",
+        "types": [
+          "eau-petillante"
+        ]
+      }
+    ],
+    "methode": "Écrase doucement la menthe avec la lime et le sirop, ajoute le rhum et beaucoup de glace pilée, puis complète avec le soda.",
+    "note": "N’écrase pas trop la menthe : on la presse, on ne la déchire pas.",
+    "deco": [
+      {
+        "texte": "Une grosse branche de menthe et un quartier de lime",
+        "ids": [
+          "menthe",
+          "lime"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      },
+      {
+        "texte": "Des petits fruits au fond du verre",
+        "ids": [
+          "petits-fruits"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mojito-au-yuzu",
+    "nom": "Mojito au yuzu",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "types": [
+          "rhum-blanc",
+          "rhum-vieux"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "types": [
+          "yuzu"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "lime"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "sirop-simple"
+        ]
+      },
+      {
+        "q": "8 feuilles",
+        "types": [
+          "herbe-fraiche"
+        ]
+      },
+      {
+        "q": "3 oz",
+        "types": [
+          "eau-petillante"
+        ]
+      }
+    ],
+    "methode": "Écrase la menthe avec la lime et le sirop, ajoute le yuzu, le rhum et de la glace pilée, puis complète avec le soda.",
+    "note": "Le yuzu est plus floral que la lime : il porte la menthe encore mieux.",
+    "deco": [
+      {
+        "texte": "Des perles de yuzu au fond du verre",
+        "ids": [
+          "perles-cocktail"
+        ]
+      },
+      {
+        "texte": "Une grosse branche de menthe",
+        "ids": [
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Un quartier de lime",
+        "ids": [
+          "lime"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "margarita-au-yuzu",
+    "nom": "Margarita au yuzu",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "types": [
+          "tequila-blanche"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "types": [
+          "yuzu"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "liqueur-orange"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "lime"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "deco": [
+      {
+        "texte": "Des perles de yuzu au fond du verre",
+        "ids": [
+          "perles-cocktail"
+        ]
+      },
+      {
+        "texte": "Un bord de sel",
+        "ids": [
+          "sel"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gin-yuzu-soda",
+    "nom": "Gin yuzu soda",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "types": [
+          "gin"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "types": [
+          "yuzu"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "types": [
+          "eau-petillante"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "deco": [
+      {
+        "texte": "Des perles de yuzu",
+        "ids": [
+          "perles-cocktail"
+        ]
+      },
+      {
+        "texte": "Une tranche de citron et de la menthe",
+        "ids": [
+          "citron",
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "michelada",
+    "nom": "Michelada",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1 bouteille",
+        "types": [
+          "biere"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "types": [
+          "lime"
+        ]
+      }
+    ],
+    "methode": "Givre le bord au Tajín, remplis le verre de glace, ajoute le jus de lime, puis verse la bière tout doucement.",
+    "note": "La bière mexicaine est faite pour ça, mais n’importe quelle blonde fait l’affaire.",
+    "deco": [
+      {
+        "texte": "Un bord de Tajín et un quartier de lime",
+        "ids": [
+          "tajin",
+          "lime"
+        ]
+      },
+      {
+        "texte": "Un bord de sel",
+        "ids": [
+          "sel"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shandy-au-citron",
+    "nom": "Shandy au citron",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "5 oz",
+        "types": [
+          "biere"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "types": [
+          "citron"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "sirop-simple"
+        ]
+      },
+      {
+        "q": "2 oz",
+        "types": [
+          "eau-petillante"
+        ]
+      }
+    ],
+    "methode": "Mélange le citron et le sirop au fond du verre, ajoute de la glace, puis la bière et le soda.",
+    "note": "Moitié bière, moitié limonade : le plus léger de tout le livre.",
+    "deco": [
+      {
+        "texte": "Une tranche de citron et de la menthe",
+        "ids": [
+          "citron",
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Une tranche de citron séchée",
+        "ids": [
+          "citron-seche"
+        ]
+      },
+      {
+        "texte": "Des petits fruits",
+        "ids": [
+          "petits-fruits"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shooter-au-yuzu",
+    "nom": "Shooter au yuzu",
+    "verre": "shooter",
+    "ingredients": [
+      {
+        "q": "¾ oz",
+        "types": [
+          "vodka",
+          "vodka-vanille"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "yuzu"
+        ]
+      },
+      {
+        "q": "¼ oz",
+        "types": [
+          "sirop-simple"
+        ]
+      }
+    ],
+    "methode": "Secoue avec de la glace et filtre dans un verre à shooter bien froid.",
+    "deco": [
+      {
+        "texte": "Des perles de yuzu au fond",
+        "ids": [
+          "perles-cocktail"
+        ]
+      },
+      {
+        "texte": "Un bord de sucre",
+        "ids": [
+          "sucre"
+        ]
+      },
+      {
+        "texte": "Un quartier de lime",
+        "ids": [
+          "lime"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shooter-bleu",
+    "nom": "Shooter bleu",
+    "verre": "shooter",
+    "ingredients": [
+      {
+        "q": "¾ oz",
+        "types": [
+          "liqueur-bleue"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "vodka",
+          "vodka-vanille"
+        ]
+      },
+      {
+        "q": "¼ oz",
+        "types": [
+          "lime"
+        ]
+      }
+    ],
+    "methode": "Secoue avec de la glace et filtre dans un verre à shooter.",
+    "note": "Bleu électrique. C’est tout l’intérêt.",
+    "deco": [
+      {
+        "texte": "Du sucre coloré sur le bord",
+        "ids": [
+          "sucre-colore"
+        ]
+      },
+      {
+        "texte": "Des perles à cocktail au fond",
+        "ids": [
+          "perles-cocktail"
+        ]
+      },
+      {
+        "texte": "Une cerise à cocktail",
+        "ids": [
+          "cerises-cocktail"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "spritz-au-sureau",
+    "nom": "Spritz au sureau",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "types": [
+          "liqueur-sureau"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "citron"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "types": [
+          "eau-petillante"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "note": "Le plus léger des apéros : du sureau et des bulles, rien d’autre.",
+    "deco": [
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      },
+      {
+        "texte": "Une tranche de citron et de la menthe",
+        "ids": [
+          "citron",
+          "menthe"
+        ]
+      },
+      {
+        "texte": "Une tranche de citron séchée",
+        "ids": [
+          "citron-seche"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "passion-sureau-petillant",
+    "nom": "Passion-sureau pétillant",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "types": [
+          "puree-fruit"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "types": [
+          "liqueur-sureau"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "lime"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "types": [
+          "eau-petillante"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement.",
+    "note": "Les deux à la fois : le fruit de la passion et le St-Germain.",
+    "deco": [
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      },
+      {
+        "texte": "Des perles à cocktail",
+        "ids": [
+          "perles-cocktail"
+        ]
+      },
+      {
+        "texte": "Une branche de menthe",
+        "ids": [
+          "menthe"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mojito-au-sureau",
+    "nom": "Mojito au sureau",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "types": [
+          "rhum-blanc",
+          "rhum-vieux"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "types": [
+          "liqueur-sureau"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "lime"
+        ]
+      },
+      {
+        "q": "8 feuilles",
+        "types": [
+          "herbe-fraiche"
+        ]
+      },
+      {
+        "q": "3 oz",
+        "types": [
+          "eau-petillante"
+        ]
+      }
+    ],
+    "methode": "Écrase doucement la menthe avec la lime, ajoute le rhum, le St-Germain et de la glace pilée, puis complète avec les bulles.",
+    "note": "Un mojito, mais floral. Celui-là est pour elle.",
+    "deco": [
+      {
+        "texte": "Une grosse branche de menthe et un quartier de lime",
+        "ids": [
+          "menthe",
+          "lime"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      },
+      {
+        "texte": "Une tranche de lime séchée",
+        "ids": [
+          "lime-sechee"
+        ]
+      }
+    ]
   }
 ]

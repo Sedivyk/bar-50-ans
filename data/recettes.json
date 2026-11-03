@@ -1,0 +1,864 @@
+[
+  {
+    "id": "le-50",
+    "nom": "Le 50",
+    "verre": "coupe",
+    "signature": true,
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "patron",
+          "casamigos"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "stgermain"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "1 pincée",
+        "ids": [
+          "shimmer"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "Ton cocktail signature : ta Patrón, ton St-Germain et un peu d’éclat."
+  },
+  {
+    "id": "margarita-st-germain",
+    "nom": "Margarita St-Germain",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "patron",
+          "casamigos"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "stgermain"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "grandmarnier"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "lime"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "Ta tequila, ta liqueur préférée et ton Grand Marnier, réunis."
+  },
+  {
+    "id": "margarita-picante",
+    "nom": "Margarita picante",
+    "verre": "court",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "patron",
+          "casamigos"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "moonshine"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "grandmarnier"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "agave",
+          "sirop"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe. Sers sur glace.",
+    "note": "Moins piquant ? Commence avec ¼ oz de moonshine et goûte."
+  },
+  {
+    "id": "old-fashioned-tequila-erable",
+    "nom": "Old Fashioned tequila-érable",
+    "verre": "court",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "patron",
+          "casamigos"
+        ]
+      },
+      {
+        "q": "¼ oz",
+        "ids": [
+          "gv",
+          "agave",
+          "sirop"
+        ]
+      },
+      {
+        "q": "2 traits",
+        "ids": [
+          "angostura",
+          "orangebit"
+        ]
+      }
+    ],
+    "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon."
+  },
+  {
+    "id": "old-fashioned-a-l-erable",
+    "nom": "Old Fashioned à l’érable",
+    "verre": "court",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "gretzky",
+          "auchen"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "gv"
+        ]
+      },
+      {
+        "q": "2 traits",
+        "ids": [
+          "angostura",
+          "orangebit"
+        ]
+      }
+    ],
+    "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon."
+  },
+  {
+    "id": "mai-tai",
+    "nom": "Mai Tai",
+    "verre": "court",
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "appleton"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "brugal",
+          "cihuatan"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "grandmarnier"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "orgeat"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "lime"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe. Sers sur glace pilée."
+  },
+  {
+    "id": "daiquiri-banane",
+    "nom": "Daïquiri banane",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "brugal",
+          "appleton",
+          "cihuatan",
+          "havana"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "banane"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "lime"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+  },
+  {
+    "id": "pornstar-martini",
+    "nom": "Pornstar Martini",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "vvanille"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "passion"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "¼ oz",
+        "ids": [
+          "sirop"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+  },
+  {
+    "id": "espresso-martini-a-l-erable",
+    "nom": "Espresso Martini à l’érable",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "highseas",
+          "vvanille"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "gv"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "cafe"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+  },
+  {
+    "id": "carajillo",
+    "nom": "Carajillo",
+    "verre": "court",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "licor43"
+        ]
+      },
+      {
+        "q": "1½ oz",
+        "ids": [
+          "cafe"
+        ]
+      }
+    ],
+    "methode": "Verse la Licor 43 sur glace, puis l’espresso chaud par-dessus."
+  },
+  {
+    "id": "sour-amande-vanille",
+    "nom": "Sour amande-vanille",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "amaretto_miel",
+          "amaretto_erable"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "licor43"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "citron"
+        ]
+      },
+      {
+        "q": "1 blanc",
+        "ids": [
+          "oeuf"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+  },
+  {
+    "id": "amaretto-sour",
+    "nom": "Amaretto Sour",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "amaretto_miel",
+          "amaretto_erable"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "citron"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "sirop"
+        ]
+      },
+      {
+        "q": "1 blanc",
+        "ids": [
+          "oeuf"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+  },
+  {
+    "id": "godfather-sucre",
+    "nom": "Godfather sucré",
+    "verre": "court",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "gretzky",
+          "auchen"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "amaretto_miel",
+          "amaretto_erable"
+        ]
+      }
+    ],
+    "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon."
+  },
+  {
+    "id": "gin-soda-boreal",
+    "nom": "Gin soda boréal",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "ungava"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "stgermain"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "collins-au-sureau",
+    "nom": "Collins au sureau",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "beefeater",
+          "romeos",
+          "ungava"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "stgermain"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "citron"
+        ]
+      },
+      {
+        "q": "3 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "tom-collins",
+    "nom": "Tom Collins",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "beefeater",
+          "romeos"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "citron"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "sirop"
+        ]
+      },
+      {
+        "q": "3 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "jardin-d-aperol",
+    "nom": "Jardin d’Aperol",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "beefeater",
+          "romeos",
+          "ungava"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "aperol"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "stgermain"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "citron"
+        ]
+      },
+      {
+        "q": "2 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "aperol-soda",
+    "nom": "Aperol soda",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "aperol"
+        ]
+      },
+      {
+        "q": "3 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "citron"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "lagon-bleu",
+    "nom": "Lagon bleu",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "highseas"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "sourpuss"
+        ]
+      },
+      {
+        "q": "3 oz",
+        "ids": [
+          "clubsoda"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "moscow-mule",
+    "nom": "Moscow Mule",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "highseas"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "gingerbeer"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "dark-n-stormy",
+    "nom": "Dark ’n’ Stormy",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "smoky",
+          "havana"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "gingerbeer"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "jager-mule",
+    "nom": "Jäger Mule",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "jager"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "gingerbeer"
+        ]
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "rhum-epice-cola",
+    "nom": "Rhum épicé cola",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "havana"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "cola"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "lime"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Verse sur glace dans un grand verre, complète et remue doucement."
+  },
+  {
+    "id": "tequila-sunrise",
+    "nom": "Tequila Sunrise",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "ids": [
+          "patron",
+          "casamigos"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "jusorange"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "grenadine"
+        ]
+      }
+    ],
+    "methode": "Verse la tequila et le jus sur glace, puis laisse couler la grenadine au fond.",
+    "note": "Le classique des années 70, l’époque de tes débuts."
+  },
+  {
+    "id": "harvey-wallbanger",
+    "nom": "Harvey Wallbanger",
+    "verre": "grand",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "highseas",
+          "vvanille"
+        ]
+      },
+      {
+        "q": "4 oz",
+        "ids": [
+          "jusorange"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "galliano"
+        ]
+      }
+    ],
+    "methode": "Verse la vodka et le jus sur glace, puis le Galliano par-dessus."
+  },
+  {
+    "id": "shooter-banana-split",
+    "nom": "Shooter banana split",
+    "verre": "shooter",
+    "ingredients": [
+      {
+        "q": "½ oz",
+        "ids": [
+          "olmeca"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "banane"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "sheridans"
+        ]
+      }
+    ],
+    "methode": "Verse dans l’ordre, doucement, dans un verre à shooter."
+  },
+  {
+    "id": "tarte-aux-pommes-a-la-mode",
+    "nom": "Tarte aux pommes à la mode",
+    "verre": "shooter",
+    "ingredients": [
+      {
+        "q": "¾ oz",
+        "ids": [
+          "mcgilli"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "ids": [
+          "butterscotch"
+        ]
+      },
+      {
+        "q": "¼ oz",
+        "ids": [
+          "fireball"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Secoue avec de la glace et sers en shooter."
+  },
+  {
+    "id": "tasse-au-beurre-d-arachide",
+    "nom": "Tasse au beurre d’arachide",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "1 oz",
+        "ids": [
+          "vpb"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "olmeca"
+        ]
+      },
+      {
+        "q": "1 oz",
+        "ids": [
+          "creme"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe."
+  },
+  {
+    "id": "cafe-cremeux",
+    "nom": "Café crémeux",
+    "verre": "tasse",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "ids": [
+          "sheridans"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "ids": [
+          "cafe_liq",
+          "espresso_liq",
+          "tiamaria"
+        ],
+        "facultatif": true
+      },
+      {
+        "q": "5 oz",
+        "ids": [
+          "cafe"
+        ]
+      }
+    ],
+    "methode": "Verse dans une tasse de café chaud et remue."
+  }
+]

@@ -1,0 +1,8 @@
+node_modules/
+test-results/
+captures/
+*.log
+
+# Le plan décrit l'utilisatrice : il reste local, le dépôt est public.
+PLAN.md
+plan.md

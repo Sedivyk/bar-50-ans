@@ -3,7 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
 <title>Ton bar · 50 ans</title>
+<meta name="description" content="Coche ce que tu as, et vois tout ce que tu peux préparer ce soir.">
+<meta name="theme-color" content="#FBEFF2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B0915" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ton bar">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,7 +41,7 @@
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
-.wrap{max-width:640px;margin:0 auto;padding:0 18px 48px}
+.wrap{max-width:640px;margin:0 auto;padding:0 18px 48px;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
 h1,h2,.fifty,.sig-title{font-family:"Gloock",Georgia,"Times New Roman",serif;font-weight:400}
 
 .hero{display:flex;align-items:flex-end;gap:16px;padding:28px 0 20px}
@@ -42,7 +53,7 @@ h1,h2,.fifty,.sig-title{font-family:"Gloock",Georgia,"Times New Roman",serif;fon
 .tab{flex:1;font:inherit;font-weight:600;font-size:.92rem;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;padding:9px 6px;cursor:pointer;white-space:nowrap}
 .tab .n{font-weight:500;opacity:.8}
 .tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.tab:focus-visible,.chip input:focus-visible+span,summary:focus-visible,input[type=search]:focus-visible,.reset:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.tab:focus-visible,.chip input:focus-visible+span,summary:focus-visible,input[type=search]:focus-visible,.reset:focus-visible,.retry:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
 .search{width:100%;margin:16px 0 4px;font:inherit;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
 .hint{color:var(--muted);font-size:.88rem;margin:8px 0 14px}
@@ -77,6 +88,17 @@ details[open] .chev{transform:rotate(225deg)}
 .chip input:checked+span .box{color:var(--gold-line)}
 .reset{margin-top:28px;font:inherit;font-size:.9rem;background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;padding:6px 0}
 .empty{padding:28px 6px;color:var(--muted);text-align:center}
+
+/* Astuce « ajouter à l’écran d’accueil » (masquée une fois installée) */
+.install{margin:18px 0 4px;padding:14px 16px;border:1px solid var(--gold-line);border-radius:14px;background:var(--surface)}
+.install h2{font-size:1.15rem;margin:0 0 6px}
+.install p{margin:0;font-size:.9rem;color:var(--muted)}
+.install b{color:var(--ink);font-weight:600}
+
+/* Chargement et panne de chargement */
+.loading{padding:40px 6px;color:var(--muted);text-align:center;font-size:.95rem}
+.retry{margin-top:14px;font:inherit;font-size:.95rem;font-weight:600;background:var(--ink);color:var(--bg);border:none;border-radius:999px;padding:10px 20px;cursor:pointer}
+
 footer{margin-top:40px;text-align:center;font-family:"Gloock",Georgia,serif;font-size:1.25rem;color:var(--rose)}
 @media (prefers-reduced-motion: reduce){.chev{transition:none}}
 </style>
@@ -97,101 +119,71 @@ footer{margin-top:40px;text-align:center;font-family:"Gloock",Georgia,serif;font
     <button class="tab" role="tab" id="t-bar" aria-selected="false" data-view="bar">Mon bar</button>
   </nav>
 
-  <main id="main"></main>
+  <main id="main" aria-live="polite"><p class="loading">Un instant, on ouvre le bar…</p></main>
   <footer>Joyeux 50ᵉ, et santé !</footer>
 </div>
 
 <script>
-// [nom, catégorie, présent au départ, dans la boîte]
-const ING = {
-  patron:["Patrón Silver","Tequila",1], casamigos:["Casamigos","Tequila",1], olmeca:["Olmeca chocolat noir","Tequila",1],
-  cihuatan:["Cihuatán Indigo","Rhum",1], brugal:["Brugal Extra Viejo","Rhum",1], appleton:["Appleton Estate","Rhum",1], smoky:["Rhum brun fumé cubain","Rhum",1], havana:["Havana Club épicé","Rhum",1],
-  gv:["Grands Voyageurs (érable)","Whisky",1], gretzky:["Gretzky No. 99","Whisky",1], auchen:["Auchentoshan","Whisky",1],
-  romeos:["Romeo’s Gin","Gin",1], ungava:["Ungava","Gin",1], beefeater:["Beefeater","Gin",1],
-  vvanille:["Vodka à la vanille","Vodka",1], highseas:["High Seas","Vodka",1], vpb:["Vodka beurre d’arachide","Vodka",1], moonshine:["Moonshine jalapeños","Vodka",1],
-  stgermain:["St-Germain","Liqueurs",1], licor43:["Licor 43","Liqueurs",1], amaretto_miel:["Amaretto au miel","Liqueurs",1], amaretto_erable:["Amaretto à l’érable","Liqueurs",1],
-  grandmarnier:["Grand Marnier","Liqueurs",1], aperol:["Aperol","Liqueurs",1], cafe_liq:["Liqueur de café","Liqueurs",1], espresso_liq:["Liqueur d’espresso","Liqueurs",1], tiamaria:["Tia Maria","Liqueurs",1],
-  sheridans:["Sheridan’s","Liqueurs",1], butterscotch:["Butterscotch","Liqueurs",1], galliano:["Galliano vanille","Liqueurs",1], banane:["Liqueur de banane","Liqueurs",1],
-  mcgilli:["Dr. McGillicuddy’s tarte aux pommes","Liqueurs",1], fireball:["Fireball","Liqueurs",1], jager:["Jägermeister","Liqueurs",1], sourpuss:["Sourpuss bleu","Liqueurs",1],
-  flor:["Flor del Fuego","Liqueurs",1], poisson:["Poisson rouge","Liqueurs",1],
-  angostura:["Angostura","Amers et sirops",1], orangebit:["Amers à l’orange","Amers et sirops",1],
-  orgeat:["Sirop d’orgeat","Amers et sirops",1], passion:["Fruit de la passion","Amers et sirops",1], shimmer:["Shimmer dust","Amers et sirops",1],
-  clubsoda:["Club soda","Pour allonger",1], gingerbeer:["Ginger beer","Pour allonger",0], cola:["Cola","Pour allonger",0], jusorange:["Jus d’orange","Pour allonger",0],
-  lime:["Limes","Garde-manger",1], citron:["Citrons","Garde-manger",1],
-  sirop:["Sirop simple (ou sucre)","Garde-manger",1], agave:["Sirop d’agave","Garde-manger",0], oeuf:["Œufs","Garde-manger",1], cafe:["Café ou espresso","Garde-manger",1],
-  creme:["Crème","Garde-manger",0], grenadine:["Grenadine","Garde-manger",0]
-};
-const CATS = ["Tequila","Rhum","Whisky","Gin","Vodka","Liqueurs","Amers et sirops","Pour allonger","Garde-manger"];
-const TEQ = ["patron","casamigos"], RUM = ["brugal","appleton","cihuatan"], AMA = ["amaretto_miel","amaretto_erable"], COFL = ["cafe_liq","espresso_liq","tiamaria"];
-const SHAKE = "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.";
-const BUILD = "Verse sur glace dans un grand verre, complète et remue doucement.";
-const STIR = "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon.";
+"use strict";
 
-// i: [quantité, [ids possibles], optionnel]
-const R = [
-  {n:"Le 50", sig:1, i:[["2 oz",["patron","casamigos"]],["¾ oz",["stgermain"]],["½ oz",["lime"]],["1 pincée",["shimmer"],1]], m:SHAKE, note:"Ton cocktail signature : ta Patrón, ton St-Germain et un peu d’éclat."},
-  {n:"Margarita St-Germain", i:[["2 oz",["patron","casamigos"]],["¾ oz",["stgermain"]],["½ oz",["grandmarnier"]],["¾ oz",["lime"]]], m:SHAKE, note:"Ta tequila, ta liqueur préférée et ton Grand Marnier, réunis."},
-  {n:"Margarita picante", i:[["1½ oz",TEQ],["½ oz",["moonshine"]],["¾ oz",["grandmarnier"]],["1 oz",["lime"]],["½ oz",["agave","sirop"]]], m:SHAKE+" Sers sur glace.", note:"Moins piquant ? Commence avec ¼ oz de moonshine et goûte."},
-  {n:"Old Fashioned tequila-érable", i:[["2 oz",TEQ],["¼ oz",["gv","agave","sirop"]],["2 traits",["angostura","orangebit"]]], m:STIR},
-  {n:"Old Fashioned à l’érable", i:[["2 oz",["gretzky","auchen"]],["½ oz",["gv"]],["2 traits",["angostura","orangebit"]]], m:STIR},
-  {n:"Mai Tai", i:[["1 oz",["appleton"]],["1 oz",["brugal","cihuatan"]],["½ oz",["grandmarnier"]],["½ oz",["orgeat"]],["¾ oz",["lime"]]], m:SHAKE+" Sers sur glace pilée."},
-  {n:"Daïquiri banane", i:[["2 oz",RUM.concat(["havana"])],["½ oz",["banane"]],["¾ oz",["lime"]]], m:SHAKE},
-  {n:"Pornstar Martini", i:[["1½ oz",["vvanille"]],["1 oz",["passion"]],["½ oz",["lime"]],["¼ oz",["sirop"],1]], m:SHAKE},
-  {n:"Espresso Martini à l’érable", i:[["1½ oz",["highseas","vvanille"]],["1 oz",["gv"]],["1 oz",["cafe"]]], m:SHAKE},
-  {n:"Carajillo", i:[["2 oz",["licor43"]],["1½ oz",["cafe"]]], m:"Verse la Licor 43 sur glace, puis l’espresso chaud par-dessus."},
-  {n:"Sour amande-vanille", i:[["1 oz",AMA],["¾ oz",["licor43"]],["1 oz",["citron"]],["1 blanc",["oeuf"],1]], m:SHAKE},
-  {n:"Amaretto Sour", i:[["2 oz",AMA],["1 oz",["citron"]],["½ oz",["sirop"]],["1 blanc",["oeuf"],1]], m:SHAKE},
-  {n:"Godfather sucré", i:[["1½ oz",["gretzky","auchen"]],["¾ oz",AMA]], m:STIR},
-  {n:"Gin soda boréal", i:[["1½ oz",["ungava"]],["½ oz",["stgermain"]],["4 oz",["clubsoda"]]], m:BUILD},
-  {n:"Collins au sureau", i:[["1½ oz",["beefeater","romeos","ungava"]],["¾ oz",["stgermain"]],["¾ oz",["citron"]],["3 oz",["clubsoda"]]], m:BUILD},
-  {n:"Tom Collins", i:[["2 oz",["beefeater","romeos"]],["1 oz",["citron"]],["½ oz",["sirop"]],["3 oz",["clubsoda"]]], m:BUILD},
-  {n:"Jardin d’Aperol", i:[["1 oz",["beefeater","romeos","ungava"]],["1 oz",["aperol"]],["½ oz",["stgermain"]],["½ oz",["citron"]],["2 oz",["clubsoda"]]], m:BUILD},
-  {n:"Aperol soda", i:[["2 oz",["aperol"]],["3 oz",["clubsoda"]],["½ oz",["citron"],1]], m:BUILD},
-  {n:"Lagon bleu", i:[["1 oz",["highseas"]],["1 oz",["sourpuss"]],["3 oz",["clubsoda"]]], m:BUILD},
-  {n:"Moscow Mule", i:[["1½ oz",["highseas"]],["½ oz",["lime"]],["4 oz",["gingerbeer"]]], m:BUILD},
-  {n:"Dark ’n’ Stormy", i:[["2 oz",["smoky","havana"]],["½ oz",["lime"]],["4 oz",["gingerbeer"]]], m:BUILD},
-  {n:"Jäger Mule", i:[["1½ oz",["jager"]],["½ oz",["lime"]],["4 oz",["gingerbeer"]]], m:BUILD},
-  {n:"Rhum épicé cola", i:[["2 oz",["havana"]],["4 oz",["cola"]],["½ oz",["lime"],1]], m:BUILD},
-  {n:"Tequila Sunrise", i:[["2 oz",TEQ],["4 oz",["jusorange"]],["½ oz",["grenadine"]]], m:"Verse la tequila et le jus sur glace, puis laisse couler la grenadine au fond.", note:"Le classique des années 70, l’époque de tes débuts."},
-  {n:"Harvey Wallbanger", i:[["1½ oz",["highseas","vvanille"]],["4 oz",["jusorange"]],["½ oz",["galliano"]]], m:"Verse la vodka et le jus sur glace, puis le Galliano par-dessus."},
-  {n:"Shooter banana split", i:[["½ oz",["olmeca"]],["½ oz",["banane"]],["½ oz",["sheridans"]]], m:"Verse dans l’ordre, doucement, dans un verre à shooter."},
-  {n:"Tarte aux pommes à la mode", i:[["¾ oz",["mcgilli"]],["¾ oz",["butterscotch"]],["¼ oz",["fireball"],1]], m:"Secoue avec de la glace et sers en shooter."},
-  {n:"Tasse au beurre d’arachide", i:[["1 oz",["vpb"]],["1 oz",["olmeca"]],["1 oz",["creme"]]], m:SHAKE},
-  {n:"Café crémeux", i:[["1½ oz",["sheridans"]],["½ oz",COFL,1],["5 oz",["cafe"]]], m:"Verse dans une tasse de café chaud et remue."}
-];
+/* ---------- données (chargées depuis data/) ---------- */
+let ING = {};   // id -> {id, nom, categorie, defaut, boite}
+let CATS = [];  // ordre d’affichage des catégories
+let R = [];     // recettes
+let ready = false;
 
+async function fetchJSON(url){
+  const res = await fetch(url, {credentials:"same-origin"});
+  if(!res.ok) throw new Error(url + " : " + res.status);
+  return res.json();
+}
+
+async function loadData(){
+  const [ingData, recData] = await Promise.all([
+    fetchJSON("data/ingredients.json"),
+    fetchJSON("data/recettes.json")
+  ]);
+  ING = {};
+  for(const i of ingData.ingredients) ING[i.id] = i;
+  CATS = ingData.categories.slice();
+  // on ignore une recette qui pointerait vers une bouteille disparue
+  R = recData.filter(r => r.ingredients.every(x => x.ids.some(id => id in ING)));
+}
+
+/* ---------- inventaire (localStorage) ---------- */
 const KEY = "ton-bar-50-v1";
 let have = {};
-function defaults(){ const h={}; for(const id in ING) h[id]=!!ING[id][2]; return h; }
+function defaults(){ const h={}; for(const id in ING) h[id]=!!ING[id].defaut; return h; }
 function load(){
   have = defaults();
   try{ const s = localStorage.getItem(KEY); if(s){ const o = JSON.parse(s); for(const id in o) if(id in ING) have[id]=!!o[id]; } }catch(e){}
 }
 function save(){ try{ localStorage.setItem(KEY, JSON.stringify(have)); }catch(e){} }
 
+/* ---------- rendu ---------- */
 function evalRecipe(r){
   const missing=[];
-  for(const [q,ids,opt] of r.i){ if(!opt && !ids.some(id=>have[id])) missing.push(ids); }
+  for(const x of r.ingredients){ if(!x.facultatif && !x.ids.some(id=>have[id])) missing.push(x.ids); }
   return missing;
 }
 function label(ids){
   const own = ids.find(id=>have[id]);
-  if(own) return ING[own][0];
-  return ids.map(id=>ING[id][0]).join(" ou ");
+  if(own) return ING[own].nom;
+  return ids.map(id=>ING[id].nom).join(" ou ");
 }
-function esc(s){ return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function esc(s){ return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 
 function recipeHTML(r, missing){
-  const ings = r.i.map(([q,ids,opt])=>{
-    const ok = ids.some(id=>have[id]);
-    const cls = ok ? "" : (opt ? "" : "no");
-    const tag = opt ? ' <span class="opt">(facultatif)</span>' : (ok ? "" : " — à acheter");
-    return `<li><span class="q">${esc(q)}</span><span class="${cls}">${esc(label(ids))}${tag}</span></li>`;
+  const ings = r.ingredients.map(x=>{
+    const ok = x.ids.some(id=>have[id]);
+    const cls = ok ? "" : (x.facultatif ? "" : "no");
+    const tag = x.facultatif ? ' <span class="opt">(facultatif)</span>' : (ok ? "" : " — à acheter");
+    return `<li><span class="q">${esc(x.q)}</span><span class="${cls}">${esc(label(x.ids))}${tag}</span></li>`;
   }).join("");
-  const main = r.i.filter(x=>!x[2]).slice(0,2).map(x=>label(x[1])).join(", ");
+  const main = r.ingredients.filter(x=>!x.facultatif).slice(0,2).map(x=>label(x.ids)).join(", ");
   const sub = missing.length ? `<div class="rs missing">Il manque : ${esc(missing.map(label).join(", "))}</div>` : `<div class="rs">${esc(main)}</div>`;
-  return `<details class="r${r.sig?" sig":""}"><summary><div><div class="rt">${esc(r.n)}</div>${sub}</div><span class="chev" aria-hidden="true"></span></summary>
-  <div class="body"><ul class="ing">${ings}</ul><p class="method">${esc(r.m)}</p>${r.note?`<p class="note">${esc(r.note)}</p>`:""}</div></details>`;
+  return `<details class="r${r.signature?" sig":""}" data-id="${esc(r.id)}"><summary><div><div class="rt">${esc(r.nom)}</div>${sub}</div><span class="chev" aria-hidden="true"></span></summary>
+  <div class="body"><ul class="ing">${ings}</ul><p class="method">${esc(r.methode)}</p>${r.note?`<p class="note">${esc(r.note)}</p>`:""}</div></details>`;
 }
 
 let view="ok", query="";
@@ -201,16 +193,31 @@ function counts(){
   document.getElementById("n-ok").textContent = ok;
   document.getElementById("n-near").textContent = near;
 }
+
+function isInstalled(){
+  try{
+    return window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  }catch(e){ return false; }
+}
+
 function render(){
+  if(!ready) return;
   counts();
   document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected", t.dataset.view===view ? "true":"false"));
   const main = document.getElementById("main");
+
   if(view==="bar"){
-    let html = `<p class="hint">Touche une bouteille pour l’ajouter ou la retirer.</p>`;
+    let html = "";
+    if(!isInstalled()){
+      html += `<section class="install"><h2>Garde-le sur ton écran d’accueil</h2>
+        <p>Sur iPhone : touche <b>Partager</b> (le carré avec la flèche, en bas de Safari), puis <b>Sur l’écran d’accueil</b>. Ton bar s’ouvre alors comme une application, même sans réseau.</p></section>`;
+    }
+    html += `<p class="hint">Touche une bouteille pour l’ajouter ou la retirer.</p>`;
     for(const c of CATS){
-      const ids = Object.keys(ING).filter(id=>ING[id][1]===c);
-      html += `<section class="cat"><h2>${c}</h2><div class="chips">` + ids.map(id=>
-        `<label class="chip"><input type="checkbox" data-id="${id}" ${have[id]?"checked":""}><span>${esc(ING[id][0])}${ING[id][3]?' <b class="box">boîte</b>':""}</span></label>`
+      const ids = Object.keys(ING).filter(id=>ING[id].categorie===c);
+      if(!ids.length) continue;
+      html += `<section class="cat"><h2>${esc(c)}</h2><div class="chips">` + ids.map(id=>
+        `<label class="chip"><input type="checkbox" data-id="${esc(id)}" ${have[id]?"checked":""}><span>${esc(ING[id].nom)}${ING[id].boite?' <b class="box">boîte</b>':""}</span></label>`
       ).join("") + `</div></section>`;
     }
     html += `<button class="reset" id="reset">Revenir à la liste de départ</button>`;
@@ -219,10 +226,11 @@ function render(){
     document.getElementById("reset").addEventListener("click",()=>{ have=defaults(); save(); render(); });
     return;
   }
+
   const q = query.trim().toLowerCase();
   const list = R.map(r=>({r, m:evalRecipe(r)}))
     .filter(x=> view==="ok" ? x.m.length===0 : x.m.length===1)
-    .filter(x=> !q || x.r.n.toLowerCase().includes(q) || x.r.i.some(([_,ids])=>ids.some(id=>ING[id][0].toLowerCase().includes(q))));
+    .filter(x=> !q || x.r.nom.toLowerCase().includes(q) || x.r.ingredients.some(y=>y.ids.some(id=>ING[id].nom.toLowerCase().includes(q))));
   const hint = view==="ok" ? "Tout ce que tu peux préparer avec ce que tu as. Touche un cocktail pour la recette." : "Il ne manque qu’un ingrédient. Une petite course, et c’est prêt.";
   main.innerHTML = `<input class="search" type="search" id="q" placeholder="Chercher un cocktail ou une bouteille" value="${esc(query)}" aria-label="Chercher">
     <p class="hint">${hint}</p>
@@ -230,8 +238,45 @@ function render(){
   const input = document.getElementById("q");
   input.addEventListener("input",e=>{ query=e.target.value; const pos=e.target.selectionStart; render(); const i2=document.getElementById("q"); i2.focus(); i2.setSelectionRange(pos,pos); });
 }
+
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{ view=t.dataset.view; render(); window.scrollTo({top:0}); }));
-load(); render();
+
+/* ---------- démarrage ---------- */
+function showError(){
+  document.getElementById("main").innerHTML =
+    `<p class="loading">Les recettes n’ont pas pu être chargées.<br>Vérifie ta connexion, puis réessaie.<br>
+     <button class="retry" id="retry">Réessayer</button></p>`;
+  document.getElementById("retry").addEventListener("click", boot);
+}
+
+async function boot(){
+  document.getElementById("main").innerHTML = `<p class="loading">Un instant, on ouvre le bar…</p>`;
+  try{
+    await loadData();
+    load();
+    ready = true;
+    render();
+  }catch(e){
+    ready = false;
+    showError();
+  }
+}
+boot();
+
+/* ---------- service worker (hors ligne) ---------- */
+if("serviceWorker" in navigator && location.protocol !== "file:"){
+  window.addEventListener("load",()=>{
+    const hadController = !!navigator.serviceWorker.controller;
+    navigator.serviceWorker.register("sw.js").catch(()=>{});
+    let refreshing = false;
+    navigator.serviceWorker.addEventListener("controllerchange",()=>{
+      if(!hadController) return;  // toute première installation : rien à recharger
+      if(refreshing) return;      // une seule fois, pas de boucle de rechargement
+      refreshing = true;
+      location.reload();
+    });
+  });
+}
 </script>
 </body>
 </html>

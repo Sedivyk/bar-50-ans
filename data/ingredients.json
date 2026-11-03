@@ -1,0 +1,339 @@
+{
+  "categories": [
+    "Tequila",
+    "Rhum",
+    "Whisky",
+    "Gin",
+    "Vodka",
+    "Liqueurs",
+    "Amers et sirops",
+    "Pour allonger",
+    "Garde-manger"
+  ],
+  "ingredients": [
+    {
+      "id": "patron",
+      "nom": "Patrón Silver",
+      "categorie": "Tequila",
+      "defaut": true
+    },
+    {
+      "id": "casamigos",
+      "nom": "Casamigos",
+      "categorie": "Tequila",
+      "defaut": true
+    },
+    {
+      "id": "olmeca",
+      "nom": "Olmeca chocolat noir",
+      "categorie": "Tequila",
+      "defaut": true
+    },
+    {
+      "id": "cihuatan",
+      "nom": "Cihuatán Indigo",
+      "categorie": "Rhum",
+      "defaut": true
+    },
+    {
+      "id": "brugal",
+      "nom": "Brugal Extra Viejo",
+      "categorie": "Rhum",
+      "defaut": true
+    },
+    {
+      "id": "appleton",
+      "nom": "Appleton Estate",
+      "categorie": "Rhum",
+      "defaut": true
+    },
+    {
+      "id": "smoky",
+      "nom": "Rhum brun fumé cubain",
+      "categorie": "Rhum",
+      "defaut": true
+    },
+    {
+      "id": "havana",
+      "nom": "Havana Club épicé",
+      "categorie": "Rhum",
+      "defaut": true
+    },
+    {
+      "id": "gv",
+      "nom": "Grands Voyageurs (érable)",
+      "categorie": "Whisky",
+      "defaut": true
+    },
+    {
+      "id": "gretzky",
+      "nom": "Gretzky No. 99",
+      "categorie": "Whisky",
+      "defaut": true
+    },
+    {
+      "id": "auchen",
+      "nom": "Auchentoshan",
+      "categorie": "Whisky",
+      "defaut": true
+    },
+    {
+      "id": "romeos",
+      "nom": "Romeo’s Gin",
+      "categorie": "Gin",
+      "defaut": true
+    },
+    {
+      "id": "ungava",
+      "nom": "Ungava",
+      "categorie": "Gin",
+      "defaut": true
+    },
+    {
+      "id": "beefeater",
+      "nom": "Beefeater",
+      "categorie": "Gin",
+      "defaut": true
+    },
+    {
+      "id": "vvanille",
+      "nom": "Vodka à la vanille",
+      "categorie": "Vodka",
+      "defaut": true
+    },
+    {
+      "id": "highseas",
+      "nom": "High Seas",
+      "categorie": "Vodka",
+      "defaut": true
+    },
+    {
+      "id": "vpb",
+      "nom": "Vodka beurre d’arachide",
+      "categorie": "Vodka",
+      "defaut": true
+    },
+    {
+      "id": "moonshine",
+      "nom": "Moonshine jalapeños",
+      "categorie": "Vodka",
+      "defaut": true
+    },
+    {
+      "id": "stgermain",
+      "nom": "St-Germain",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "licor43",
+      "nom": "Licor 43",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "amaretto_miel",
+      "nom": "Amaretto au miel",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "amaretto_erable",
+      "nom": "Amaretto à l’érable",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "grandmarnier",
+      "nom": "Grand Marnier",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "aperol",
+      "nom": "Aperol",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "cafe_liq",
+      "nom": "Liqueur de café",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "espresso_liq",
+      "nom": "Liqueur d’espresso",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "tiamaria",
+      "nom": "Tia Maria",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "sheridans",
+      "nom": "Sheridan’s",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "butterscotch",
+      "nom": "Butterscotch",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "galliano",
+      "nom": "Galliano vanille",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "banane",
+      "nom": "Liqueur de banane",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "mcgilli",
+      "nom": "Dr. McGillicuddy’s tarte aux pommes",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "fireball",
+      "nom": "Fireball",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "jager",
+      "nom": "Jägermeister",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "sourpuss",
+      "nom": "Sourpuss bleu",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "flor",
+      "nom": "Flor del Fuego",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "poisson",
+      "nom": "Poisson rouge",
+      "categorie": "Liqueurs",
+      "defaut": true
+    },
+    {
+      "id": "angostura",
+      "nom": "Angostura",
+      "categorie": "Amers et sirops",
+      "defaut": true
+    },
+    {
+      "id": "orangebit",
+      "nom": "Amers à l’orange",
+      "categorie": "Amers et sirops",
+      "defaut": true
+    },
+    {
+      "id": "orgeat",
+      "nom": "Sirop d’orgeat",
+      "categorie": "Amers et sirops",
+      "defaut": true
+    },
+    {
+      "id": "passion",
+      "nom": "Fruit de la passion",
+      "categorie": "Amers et sirops",
+      "defaut": true
+    },
+    {
+      "id": "shimmer",
+      "nom": "Shimmer dust",
+      "categorie": "Amers et sirops",
+      "defaut": true
+    },
+    {
+      "id": "clubsoda",
+      "nom": "Club soda",
+      "categorie": "Pour allonger",
+      "defaut": true
+    },
+    {
+      "id": "gingerbeer",
+      "nom": "Ginger beer",
+      "categorie": "Pour allonger",
+      "defaut": false
+    },
+    {
+      "id": "cola",
+      "nom": "Cola",
+      "categorie": "Pour allonger",
+      "defaut": false
+    },
+    {
+      "id": "jusorange",
+      "nom": "Jus d’orange",
+      "categorie": "Pour allonger",
+      "defaut": false
+    },
+    {
+      "id": "lime",
+      "nom": "Limes",
+      "categorie": "Garde-manger",
+      "defaut": true
+    },
+    {
+      "id": "citron",
+      "nom": "Citrons",
+      "categorie": "Garde-manger",
+      "defaut": true
+    },
+    {
+      "id": "sirop",
+      "nom": "Sirop simple (ou sucre)",
+      "categorie": "Garde-manger",
+      "defaut": true
+    },
+    {
+      "id": "agave",
+      "nom": "Sirop d’agave",
+      "categorie": "Garde-manger",
+      "defaut": false
+    },
+    {
+      "id": "oeuf",
+      "nom": "Œufs",
+      "categorie": "Garde-manger",
+      "defaut": true
+    },
+    {
+      "id": "cafe",
+      "nom": "Café ou espresso",
+      "categorie": "Garde-manger",
+      "defaut": true
+    },
+    {
+      "id": "creme",
+      "nom": "Crème",
+      "categorie": "Garde-manger",
+      "defaut": false
+    },
+    {
+      "id": "grenadine",
+      "nom": "Grenadine",
+      "categorie": "Garde-manger",
+      "defaut": false
+    }
+  ]
+}

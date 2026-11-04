@@ -83,6 +83,13 @@
         "types": [
           "lime"
         ]
+      },
+      {
+        "q": "2 traits",
+        "types": [
+          "amers-floraux"
+        ],
+        "facultatif": true
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
@@ -349,6 +356,13 @@
         "types": [
           "lime"
         ]
+      },
+      {
+        "q": "2 traits",
+        "types": [
+          "amers-fruites"
+        ],
+        "facultatif": true
       }
     ],
     "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
@@ -400,6 +414,13 @@
         "q": "¼ oz",
         "types": [
           "sirop-simple"
+        ],
+        "facultatif": true
+      },
+      {
+        "q": "1 pincée",
+        "types": [
+          "poudre-scintillante"
         ],
         "facultatif": true
       }
@@ -1273,6 +1294,13 @@
         "types": [
           "liqueur-cafe-creme"
         ]
+      },
+      {
+        "q": "1 trait",
+        "types": [
+          "amers-fruites"
+        ],
+        "facultatif": true
       }
     ],
     "methode": "Verse dans l’ordre, doucement, dans un verre à shooter.",
@@ -3331,6 +3359,230 @@
         "texte": "Une tranche de lime séchée",
         "ids": [
           "lime-sechee"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sakura-sour",
+    "nom": "Sakura Sour",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "types": [
+          "gin"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "types": [
+          "citron"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "sirop-simple"
+        ]
+      },
+      {
+        "q": "3 traits",
+        "types": [
+          "amers-floraux"
+        ]
+      },
+      {
+        "q": "1 blanc",
+        "types": [
+          "oeuf"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "Les amers Sakura sentent la fleur de cerisier : trois traits suffisent, c’est très parfumé.",
+    "deco": [
+      {
+        "texte": "Une fleur comestible posée sur la mousse",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      },
+      {
+        "texte": "Une pincée de poudre d’or",
+        "ids": [
+          "poudre-or"
+        ]
+      },
+      {
+        "texte": "Une cerise à cocktail",
+        "ids": [
+          "cerises-cocktail"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fleur-de-cerisier",
+    "nom": "Fleur de cerisier",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "1½ oz",
+        "types": [
+          "vodka",
+          "vodka-vanille"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "types": [
+          "liqueur-sureau"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "citron"
+        ]
+      },
+      {
+        "q": "2 traits",
+        "types": [
+          "amers-floraux"
+        ]
+      },
+      {
+        "q": "1 pincée",
+        "types": [
+          "poudre-scintillante"
+        ],
+        "facultatif": true
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "Le Sakura et le St-Germain sont deux fleurs. Ensemble, c’est un bouquet.",
+    "deco": [
+      {
+        "texte": "Une pincée de poudre d’or",
+        "ids": [
+          "poudre-or"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
+        ]
+      },
+      {
+        "texte": "Des perles de yuzu au fond du verre",
+        "ids": [
+          "perles-cocktail"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "old-fashioned-banane-bergamote",
+    "nom": "Old Fashioned banane-bergamote",
+    "verre": "court",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "types": [
+          "whisky",
+          "bourbon"
+        ]
+      },
+      {
+        "q": "¼ oz",
+        "types": [
+          "sirop-simple",
+          "whisky-erable"
+        ]
+      },
+      {
+        "q": "3 traits",
+        "types": [
+          "amers-fruites"
+        ]
+      }
+    ],
+    "methode": "Remue 20 secondes avec de la glace, puis verse sur un gros glaçon.",
+    "note": "La bergamote relève le whisky comme un zeste, la banane l’arrondit.",
+    "deco": [
+      {
+        "texte": "Un grand zeste d’orange",
+        "ids": [
+          "zeste-agrumes"
+        ]
+      },
+      {
+        "texte": "Une tranche d’orange séchée",
+        "ids": [
+          "orange-sechee"
+        ]
+      },
+      {
+        "texte": "Une cerise à cocktail",
+        "ids": [
+          "cerises-cocktail"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "daiquiri-a-la-bergamote",
+    "nom": "Daïquiri à la bergamote",
+    "verre": "coupe",
+    "ingredients": [
+      {
+        "q": "2 oz",
+        "types": [
+          "rhum-blanc",
+          "rhum-vieux"
+        ]
+      },
+      {
+        "q": "¾ oz",
+        "types": [
+          "lime"
+        ]
+      },
+      {
+        "q": "½ oz",
+        "types": [
+          "sirop-simple"
+        ]
+      },
+      {
+        "q": "3 traits",
+        "types": [
+          "amers-fruites"
+        ]
+      }
+    ],
+    "methode": "Secoue fort avec beaucoup de glace, puis filtre dans une coupe.",
+    "note": "Trois traits transforment un daïquiri classique en quelque chose qu’on ne replace pas tout de suite.",
+    "deco": [
+      {
+        "texte": "Une tranche de lime",
+        "ids": [
+          "lime"
+        ]
+      },
+      {
+        "texte": "Une pincée de poudre d’or",
+        "ids": [
+          "poudre-or"
+        ]
+      },
+      {
+        "texte": "Une fleur comestible",
+        "ids": [
+          "fleurs-comestibles"
         ]
       }
     ]

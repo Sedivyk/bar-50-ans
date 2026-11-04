@@ -448,9 +448,9 @@
     },
     {
       "id": "perles-cocktail",
-      "nom": "Perles à cocktail",
+      "nom": "Perles de yuzu",
       "categorie": "Garnitures et déco",
-      "defaut": false,
+      "defaut": true,
       "type": "perle-cocktail"
     },
     {
@@ -550,6 +550,27 @@
       "categorie": "Pour allonger",
       "defaut": false,
       "type": "eau-petillante"
+    },
+    {
+      "id": "sakura_bitters",
+      "nom": "Amers Sakura (fleur de cerisier)",
+      "categorie": "Amers et sirops",
+      "defaut": true,
+      "type": "amers-floraux"
+    },
+    {
+      "id": "bitters_banane_bergamote",
+      "nom": "Amers banane-bergamote",
+      "categorie": "Amers et sirops",
+      "defaut": true,
+      "type": "amers-fruites"
+    },
+    {
+      "id": "poudre-or",
+      "nom": "Poudre d’or comestible",
+      "categorie": "Garnitures et déco",
+      "defaut": true,
+      "type": "poudre-scintillante"
     }
   ]
 }

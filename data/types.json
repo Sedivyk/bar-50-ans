@@ -413,6 +413,18 @@
       "nom": "Yuzu",
       "famille": "Amers et sirops",
       "exemples": "Jus ou sirop de yuzu"
+    },
+    {
+      "id": "amers-floraux",
+      "nom": "Amers floraux",
+      "famille": "Amers et sirops",
+      "exemples": "Sakura (fleur de cerisier), lavande, hibiscus"
+    },
+    {
+      "id": "amers-fruites",
+      "nom": "Amers fruités",
+      "famille": "Amers et sirops",
+      "exemples": "Banane-bergamote, pêche, pamplemousse"
     }
   ]
 }

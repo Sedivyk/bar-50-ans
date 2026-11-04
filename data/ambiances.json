@@ -4,6 +4,7 @@
     "nom": "C’est Noël",
     "description": "Chaud, épicé, sucré à l’érable. De quoi tenir jusqu’aux cadeaux.",
     "recettes": [
+      "old-fashioned-banane-bergamote",
       "cafe-cremeux",
       "tasse-chocolat-cafe",
       "cafe-a-l-amaretto",
@@ -22,6 +23,7 @@
     "nom": "Au bord de la piscine",
     "description": "Long, froid, plein de lime. À boire les pieds dans l’eau.",
     "recettes": [
+      "daiquiri-a-la-bergamote",
       "mojito",
       "mojito-au-yuzu",
       "margarita-picante",
@@ -74,6 +76,8 @@
     "nom": "Avec ma belle-sœur",
     "description": "Des mojitos, du St-Germain, du fruit de la passion et beaucoup de bulles. Léger, et ça se boit longtemps.",
     "recettes": [
+      "sakura-sour",
+      "fleur-de-cerisier",
       "mojito-au-sureau",
       "mojito",
       "spritz-au-sureau",

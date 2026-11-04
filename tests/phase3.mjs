@@ -20,9 +20,13 @@ const garnitures = ing.ingredients.filter((b) => b.categorie === CAT);
 check(`la catégorie « ${CAT} » existe`, ing.categories.includes(CAT));
 check(`elle contient ${garnitures.length} garnitures`, garnitures.length >= 19);
 
-const cochees = garnitures.filter((b) => b.defaut);
-check("une seule est cochée au départ : le shimmer dust",
-  cochees.length === 1 && cochees[0].id === "shimmer", cochees.map((b) => b.nom).join(", "));
+/* Cochées au départ : le shimmer dust qu'elle avait déjà, plus la poudre
+   d'or et les perles de yuzu achetées le 3 novembre. Tout le reste est à
+   acheter, et doit rester décoché. */
+const ATTENDUES = ["shimmer", "poudre-or", "perles-cocktail"];
+const cochees = garnitures.filter((b) => b.defaut).map((b) => b.id).sort();
+check(`${cochees.length} garnitures cochées au départ, les bonnes`,
+  cochees.join(",") === ATTENDUES.slice().sort().join(","), cochees.join(", "));
 
 const sansDeco = rec.filter((r) => !Array.isArray(r.deco) || !r.deco.length);
 check(`les ${rec.length} recettes ont au moins une idée déco`, sansDeco.length === 0,

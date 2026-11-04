@@ -251,6 +251,20 @@ QUETES = {
     "mojito-au-sureau": (
         "a pale floral mojito with fresh mint and lime in a tall glass with crushed ice",
         ["mojito", "mint", "lime", "tall", "ice", "pale", "clear"]),
+
+    # --- les achats du 3 novembre ---
+    "sakura-sour": (
+        "a pale pink sour cocktail with thick white foam in a coupe glass, topped with a flower",
+        ["sour", "foam", "coupe", "pink", "pale", "flower", "martini glass"]),
+    "fleur-de-cerisier": (
+        "a delicate pale pink floral cocktail in a coupe glass with an edible flower on top",
+        ["coupe", "pink", "pale", "flower", "floral", "martini glass", "delicate"]),
+    "old-fashioned-banane-bergamote": (
+        "a dark amber stirred whiskey cocktail in a crystal rocks glass with an orange zest",
+        ["amber", "rocks", "whiskey", "whisky", "orange", "crystal", "short"]),
+    "daiquiri-a-la-bergamote": (
+        "a clear pale daiquiri in a coupe glass with a lime wheel, dark moody bar",
+        ["daiquiri", "coupe", "clear", "pale", "lime", "martini glass"]),
 }
 
 

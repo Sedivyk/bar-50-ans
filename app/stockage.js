@@ -5,6 +5,7 @@
 
 export const CLE_INVENTAIRE = "ton-bar-50-v1";
 export const CLE_CHOIX = "ton-bar-choix-v1";
+export const CLE_NOTES = "ton-bar-notes-v1";
 
 const NOM_BASE = "ton-bar";
 const VERSION_BASE = 1;
@@ -95,4 +96,28 @@ export function lireChoix() {
 
 export function ecrireChoix(choix) {
   try { localStorage.setItem(CLE_CHOIX, JSON.stringify(choix)); } catch (e) {}
+}
+
+/** Une note de 0,5 à 5, par demi-étoile ; tout le reste est ignoré. */
+export function noteValide(v) {
+  const n = Number(v);
+  if (v === null || v === "" || !Number.isFinite(n)) return null;
+  const arrondie = Math.round(n * 2) / 2;
+  return arrondie >= 0.5 && arrondie <= 5 ? arrondie : null;
+}
+
+export function lireNotes() {
+  const notes = {};
+  try {
+    const o = JSON.parse(localStorage.getItem(CLE_NOTES) || "{}") || {};
+    for (const [id, v] of Object.entries(o)) {
+      const n = noteValide(v);
+      if (n !== null) notes[id] = n;
+    }
+  } catch (e) {}
+  return notes;
+}
+
+export function ecrireNotes(notes) {
+  try { localStorage.setItem(CLE_NOTES, JSON.stringify(notes)); } catch (e) {}
 }

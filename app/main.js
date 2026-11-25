@@ -1,19 +1,25 @@
 /* Démarrage, onglets, et les gestes dans la page. */
 
 import {
-  etat, charger, chargerInventaire, enregistrerInventaire, enregistrerChoix
+  etat, charger, chargerInventaire, enregistrerInventaire, enregistrerChoix,
+  enregistrerNotes
 } from "./donnees.js";
+import { noteValide } from "./stockage.js";
 import { vue, rendre, compter } from "./vues.js";
 import {
   brancher, ajouterBouteille, ajouterRecette, ficheBouteille,
   modifierRecette, supprimerRecette, astucesDeco
 } from "./formulaires.js";
 import { exporter, importer } from "./transfert.js";
+import {
+  brancherIdees, chargerIdees, basculer, viderSelection, inventer, garder, oublier
+} from "./idees.js";
 
 let pret = false;
 
 function rafraichir() { if (pret) rendre(); }
 brancher(rafraichir);
+brancherIdees(() => { if (pret) rendreEnGardantOuvertes(); });
 
 /* ------------------------------------------------------------- les gestes */
 
@@ -26,6 +32,46 @@ function surClic(e) {
     rendre();
     return;
   }
+
+  const filtre = cible("[data-filtre-note]");
+  if (filtre) {
+    vue.note = filtre.dataset.filtreNote === vue.note ? "" : filtre.dataset.filtreNote;
+    rendre();
+    return;
+  }
+
+  const etoile = cible("[data-note-r]");
+  if (etoile) {
+    const id = etoile.dataset.noteR;
+    const n = noteValide(etoile.dataset.note);
+    // retoucher la note qu’elle a déjà donnée l’efface
+    if (n === null || etat.notes[id] === n) delete etat.notes[id];
+    else etat.notes[id] = n;
+    enregistrerNotes();
+    rendreEnGardantOuvertes();
+    return;
+  }
+
+  const taille = cible("button[data-taille]");
+  if (taille) {
+    const t = taille.dataset.taille;
+    if (t === "normal") delete document.documentElement.dataset.taille;
+    else document.documentElement.dataset.taille = t;
+    try { localStorage.setItem("ton-bar-taille-v1", t); } catch (err) {}
+    return rendre();
+  }
+
+  if (cible("#inventer")) return inventer();
+  if (cible("#idees-vider")) { viderSelection(); return rendre(); }
+  if (cible("#idees-voir")) {
+    const res = document.getElementById("idees-resultats");
+    if (res) res.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+  const garde = cible("[data-garder]");
+  if (garde) return garder(garde.dataset.garder);
+  const non = cible("[data-oublier-idee]");
+  if (non) return oublier(non.dataset.oublierIdee);
 
   if (cible("#ajouter-bouteille")) return ajouterBouteille();
   if (cible("#ajouter-recette")) return ajouterRecette();
@@ -76,6 +122,12 @@ async function surFichier(e) {
 }
 
 function surChangement(e) {
+  const sel = e.target.closest("input[data-sel]");
+  if (sel) {
+    basculer(sel.dataset.sel, sel.checked);
+    rendreEnGardantOuvertes();
+    return;
+  }
   const cb = e.target.closest(".chip input[type=checkbox]");
   if (cb) {
     etat.have[cb.dataset.id] = cb.checked;
@@ -87,16 +139,21 @@ function surChangement(e) {
   if (pick) {
     etat.choix[pick.dataset.r + ":" + pick.dataset.k] = pick.value;
     enregistrerChoix();
-    // on redessine la carte ouverte pour que le résumé suive
-    const ouvertes = [...document.querySelectorAll("details.r[open]")].map((d) => d.dataset.id);
-    rendre();
-    for (const id of ouvertes) {
-      const d = document.querySelector(`details.r[data-id="${CSS.escape(id)}"]`);
-      if (d) d.open = true;
-    }
+    rendreEnGardantOuvertes();
     return;
   }
   if (e.target.id === "fichier-import") surFichier(e);
+}
+
+/* On redessine, mais les recettes ouvertes le restent, pour que le résumé
+   et les étoiles suivent sans refermer ce qu’elle regarde. */
+function rendreEnGardantOuvertes() {
+  const ouvertes = [...document.querySelectorAll("details.r[open]")].map((d) => d.dataset.id);
+  rendre();
+  for (const id of ouvertes) {
+    const d = document.querySelector(`details.r[data-id="${CSS.escape(id)}"]`);
+    if (d) d.open = true;
+  }
 }
 
 function surSaisie(e) {
@@ -134,6 +191,7 @@ async function demarrer() {
   try {
     await charger();
     chargerInventaire();
+    chargerIdees();
     pret = true;
     rendre();
   } catch (e) {

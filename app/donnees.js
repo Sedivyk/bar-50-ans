@@ -4,7 +4,7 @@
 
 import {
   BOUTEILLES, RECETTES, tout, lireInventaire, ecrireInventaire,
-  lireChoix, ecrireChoix
+  lireChoix, ecrireChoix, lireNotes, ecrireNotes
 } from "./stockage.js";
 import { lienVers, oublier } from "./photos.js";
 
@@ -19,6 +19,7 @@ export const etat = {
   parType: {},     // type -> [ids de bouteilles]
   have: {},        // id -> cochée
   choix: {},       // « recette:index » -> id de bouteille préférée
+  notes: {},       // id de recette -> note de 0,5 à 5 étoiles
   photoURL: {}     // id de photo -> URL d’objet, pour un rendu synchrone
 };
 
@@ -112,10 +113,12 @@ export function defauts() {
 export function chargerInventaire() {
   etat.have = lireInventaire(defauts(), new Set(Object.keys(etat.ING)));
   etat.choix = lireChoix();
+  etat.notes = lireNotes();
 }
 
 export function enregistrerInventaire() { ecrireInventaire(etat.have); }
 export function enregistrerChoix() { ecrireChoix(etat.choix); }
+export function enregistrerNotes() { ecrireNotes(etat.notes); }
 
 export function nomType(id) {
   return (etat.TYPES[id] && etat.TYPES[id].nom) || id;

@@ -17,6 +17,7 @@ sans outil de build, publié sur GitHub Pages :
 | `manifest.webmanifest`, `sw.js` | PWA : installation et usage hors ligne |
 | `tools/` | Scripts de maintenance (photos, recettes, types) |
 | `tests/` | Vérifications Playwright en format iPhone |
+| `ia/` | Le relais IA (Cloudflare Worker) qui garde la clé Gemini |
 
 ### Les modules
 
@@ -26,7 +27,8 @@ sans outil de build, publié sur GitHub Pages :
 | `app/donnees.js` | Charge les JSON, y fond ses ajouts, tient les index |
 | `app/stockage.js` | localStorage (inventaire) et IndexedDB (ses ajouts) |
 | `app/accords.js` | Quelle recette est faisable, et avec quelle bouteille |
-| `app/vues.js` | Le rendu des trois onglets |
+| `app/vues.js` | Le rendu des onglets |
+| `app/idees.js` | L’onglet « Idées » : sa sélection, ses recettes, les idées de l’IA |
 | `app/formulaires.js` | Ajouter une bouteille, une recette, fiche d’une bouteille |
 | `app/photos.js` | Réduction des photos dans le navigateur, puis IndexedDB |
 | `app/transfert.js` | Exporter et réimporter son bar |
@@ -57,13 +59,55 @@ sans outil de build, publié sur GitHub Pages :
 
 ## Ses données à elle
 
-Rien ne sort de son appareil.
+Rien ne sort de son appareil, sauf quand elle touche « Inventer » dans l’onglet Idées
+(voir plus bas).
 
 - L’inventaire coché : `localStorage`, clé `ton-bar-50-v1` (inchangée depuis le début).
+- La taille du texte (Grand, Plus grand, Très grand, en haut de Mon bar) : `localStorage`,
+  clé `ton-bar-taille-v1`. Pour une lecture confortable, le texte de base fait 19 px et tout est en
+  `rem`, pour que tout suive le réglage. `npm run test:lisibilite` vérifie qu’aucun texte
+  ne descend sous 14,5 px et que rien ne déborde, même en « Très grand ».
+- Ses notes (de ½ à 5 étoiles, par demi-étoile) : `localStorage`, clé `ton-bar-notes-v1`.
+  Retoucher sa note l’efface ; le filtre par note n’apparaît qu’une fois une recette notée.
 - Ses bouteilles, ses recettes et ses photos : IndexedDB, base `ton-bar`.
 - Les photos sont réduites à 800 px de large dans le navigateur avant d’être gardées.
-- « Exporter mon bar » écrit un seul fichier JSON (photos comprises) que
+- « Exporter mon bar » écrit un seul fichier JSON (photos et notes comprises) que
   « Importer mon bar » sait relire, pour changer de téléphone sans rien perdre.
+
+## L’onglet « Idées »
+
+Elle coche quelques ingrédients (tous décochés au départ, sans effet sur Mon bar) :
+on lui montre ses recettes qui les utilisent, celles qui en utilisent le plus d’abord.
+Sa sélection et les idées reçues restent dans `localStorage`, clé `ton-bar-idees-v1`.
+
+« Inventer 3 recettes » demande de nouvelles recettes à Gemini. Elle n’a rien à
+configurer : l’application appelle le relais `ia/worker.js`, qui seul connaît la clé.
+On lui envoie les noms des ingrédients choisis, la liste des ingrédients connus (et
+lesquels elle a) et les noms des recettes existantes, rien d’autre. « Garder dans mes
+recettes » en fait une de ses recettes (IndexedDB, marquée `ia: true`).
+
+Tant que `ADRESSE_IA` est vide dans `app/idees.js`, la partie IA n’apparaît pas.
+
+### Le relais IA (une seule fois)
+
+1. Une clé Gemini sur <https://aistudio.google.com/apikey>, dans un projet Google
+   **sans facturation** : au pire, l’offre gratuite s’épuise, et rien n’est facturé.
+2. Un compte Cloudflare (gratuit), puis :
+
+   ```sh
+   cd ia
+   npx wrangler login
+   npx wrangler secret put GEMINI_KEY     # colle la clé ; elle ne va jamais dans le dépôt
+   npx wrangler deploy                    # affiche l'adresse https://ton-bar-ia.<compte>.workers.dev
+   ```
+
+3. Coller cette adresse dans `ADRESSE_IA` (`app/idees.js`), augmenter `VERSION`
+   dans `sw.js`, pousser.
+
+Le relais n’accepte que les appels venant de `https://sedivyk.github.io` (variable
+`ORIGINES` de `ia/wrangler.toml`), construit lui-même la question et ne renvoie que des
+recettes : ce n’est pas un accès libre à Gemini. Le modèle est `gemini-flash-lite-latest`,
+le moins cher, modifiable par la variable `MODELE`.
 
 ## Développement
 
@@ -72,11 +116,13 @@ est en modules : il faut donc le servir en HTTP, pas l’ouvrir en `file://`.
 
 ```sh
 npm install          # Playwright, pour les vérifications seulement
-npm test             # les quatre séries ci-dessous
+npm test             # toutes les séries ci-dessous
 npm run test:base    # l'application : affichage, compteurs, PWA, hors ligne
 npm run test:perso   # ses ajouts : bouteille, recette, photo, export/import
 npm run test:deco    # garnitures, idées déco, astuces
 npm run test:ambiances  # les occasions, et l'absence d'alcool chez les ados
+npm run test:notes   # les étoiles, les demi-étoiles et le filtre par note
+npm run test:idees   # l'onglet Idées (relais simulé) et le relais lui-même
 npm run test:live    # teste l'adresse GitHub Pages
 ```
 

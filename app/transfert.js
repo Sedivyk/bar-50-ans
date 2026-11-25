@@ -2,8 +2,10 @@
    ses recettes, ses photos et ce qui est coché. De quoi ne rien perdre
    en changeant de téléphone ou en vidant son navigateur. */
 
-import { etat, fusionner, chargerInventaire, enregistrerInventaire } from "./donnees.js";
-import { BOUTEILLES, RECETTES, PHOTOS, tout, ecrire } from "./stockage.js";
+import {
+  etat, fusionner, chargerInventaire, enregistrerInventaire, enregistrerNotes
+} from "./donnees.js";
+import { BOUTEILLES, RECETTES, PHOTOS, tout, ecrire, noteValide } from "./stockage.js";
 import { versTexte, depuisTexte, oublierTout } from "./photos.js";
 
 const FORMAT = 1;
@@ -19,6 +21,7 @@ export async function exporter() {
     date: new Date().toISOString(),
     inventaire: etat.have,
     choix: etat.choix,
+    notes: etat.notes,
     bouteilles,
     recettes,
     photos: await Promise.all(photos.map(async (p) => ({
@@ -87,6 +90,14 @@ export async function importer(file) {
   }
   if (paquet.choix && typeof paquet.choix === "object") {
     Object.assign(etat.choix, paquet.choix);
+  }
+  // ses étoiles : celles du fichier s’ajoutent, sans effacer celles d’ici
+  if (paquet.notes && typeof paquet.notes === "object") {
+    for (const [id, v] of Object.entries(paquet.notes)) {
+      const n = noteValide(v);
+      if (n !== null) etat.notes[id] = n;
+    }
+    enregistrerNotes();
   }
 
   return compte;

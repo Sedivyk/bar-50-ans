@@ -6,8 +6,9 @@ import {
   prefixeType, texteCherchable
 } from "./accords.js";
 import { glassSVG } from "./verres.js";
+import { rendreIdees } from "./idees.js";
 
-export const vue = { onglet: "ok", recherche: "", ambiance: "" };
+export const vue = { onglet: "ok", recherche: "", ambiance: "", note: "" };
 
 export const CAT_DECO = "Garnitures et déco";
 
@@ -20,6 +21,34 @@ export function estInstallee() {
   try {
     return window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
   } catch (e) { return false; }
+}
+
+/* ------------------------------------------------------------- les étoiles */
+
+/** 4.5 -> « 4,5 », 4 -> « 4 » */
+export const texteNote = (n) => String(n).replace(".", ",");
+
+function remplissage(n, i) {
+  return n >= i ? "f100" : n >= i - 0.5 ? "f50" : "";
+}
+
+/* Cinq étoiles, chacune coupée en deux : la moitié gauche donne la
+   demi-étoile, la droite l’étoile entière. Retoucher sa note l’efface. */
+function sectionNote(r) {
+  const n = etat.notes[r.id] || 0;
+  let etoiles = "";
+  for (let i = 1; i <= 5; i++) {
+    const demi = i - 0.5;
+    etoiles += `<span class="etoile ${remplissage(n, i)}"><span class="plein"></span>`
+      + `<button type="button" class="demi g" data-note-r="${esc(r.id)}" data-note="${demi}" aria-label="${texteNote(demi)} étoile${demi > 1 ? "s" : ""}" aria-pressed="${n === demi}"></button>`
+      + `<button type="button" class="demi d" data-note-r="${esc(r.id)}" data-note="${i}" aria-label="${i} étoile${i > 1 ? "s" : ""}" aria-pressed="${n === i}"></button></span>`;
+  }
+  const valeur = n
+    ? `<span class="note-val">${texteNote(n)}/5</span>
+       <button type="button" class="lien-btn" data-note-r="${esc(r.id)}" data-note="0">Effacer</button>`
+    : `<span class="note-val vide">Pas encore notée</span>`;
+  return `<section class="ma-note"><h3>Ma note</h3>
+    <div class="note-ligne"><span class="etoiles" role="group" aria-label="Ma note pour ${esc(r.nom)}">${etoiles}</span>${valeur}</div></section>`;
 }
 
 /* ------------------------------------------------------------- une recette */
@@ -83,7 +112,7 @@ function resume(r, manque) {
   return `<div class="rs">${esc(deux.join(", "))}</div>`;
 }
 
-export function carteRecette(r, manque) {
+export function carteRecette(r, manque, opts = {}) {
   const src = photoDe(r);
   const verre = glassSVG(r.verre);
 
@@ -107,21 +136,32 @@ export function carteRecette(r, manque) {
 
   const ings = r.ingredients.map((x, k) => ligneIngredient(r, x, k)).join("");
   const deco = sectionDeco(r);
-  const badge = (r.perso ? ' <b class="mine">ma recette</b>' : "")
+  const n = etat.notes[r.id];
+  const badge = (n ? ` <span class="note-mini" aria-label="Ma note : ${texteNote(n)} sur 5">★ ${texteNote(n)}</span>` : "")
+    + (opts.suggestion ? ' <b class="mine">idée IA</b>' : "")
+    + (r.perso ? ` <b class="mine">${r.ia ? "ma recette · IA" : "ma recette"}</b>` : "")
     + (r.sansAlcool ? ' <b class="mine doux">sans alcool</b>' : "");
   const lien = r.lien
     ? `<p class="lien"><a href="${esc(r.lien)}" target="_blank" rel="noopener noreferrer">Voir la page d’origine</a></p>`
     : "";
-  const actions = r.perso
+  const pour = opts.pour && opts.pour.length
+    ? `<p class="pour">Inventée pour : ${esc(opts.pour.join(", "))}</p>` : "";
+  const actions = opts.suggestion
+    ? (opts.gardee
+      ? `<div class="actions"><span class="gardee">✓ Gardée dans tes recettes</span>
+         <button class="lien-btn" data-oublier-idee="${esc(r.id)}">Retirer de la liste</button></div>`
+      : `<div class="actions"><button class="gros" data-garder="${esc(r.id)}">Garder dans mes recettes</button>
+         <button class="lien-btn" data-oublier-idee="${esc(r.id)}">Non merci</button></div>`)
+    : r.perso
     ? `<div class="actions"><button class="lien-btn" data-modifier-recette="${esc(r.id)}">Modifier</button>
        <button class="lien-btn danger" data-supprimer-recette="${esc(r.id)}">Supprimer</button></div>`
     : "";
 
-  return `<details class="r${r.signature ? " sig" : ""}${r.perso ? " perso" : ""}" data-id="${esc(r.id)}">
+  return `<details class="r${r.signature ? " sig" : ""}${r.perso ? " perso" : ""}${opts.suggestion ? " ia" : ""}" data-id="${esc(r.id)}">
     <summary>${thumb}<div class="st"><div class="rt">${esc(r.nom)}${badge}</div>${resume(r, manque)}</div><span class="chev" aria-hidden="true"></span></summary>
     <div class="body">${photo}<ul class="ing">${ings}</ul>
       <p class="method">${esc(r.methode)}</p>
-      ${deco}${r.note ? `<p class="note">${esc(r.note)}</p>` : ""}${lien}${actions}</div>
+      ${opts.suggestion ? "" : sectionNote(r)}${deco}${r.note ? `<p class="note">${esc(r.note)}</p>` : ""}${pour}${lien}${actions}</div>
   </details>`;
 }
 
@@ -155,15 +195,38 @@ export function ambianceCourante() {
   return etat.AMBIANCES.find((a) => a.id === vue.ambiance) || null;
 }
 
+/* Le filtre par étoiles : « 4 et + » garde 4, 4,5 et 5. */
+export const FILTRES_NOTE = [
+  { id: "", nom: "Toutes les notes" },
+  { id: "5", nom: "★ 5" },
+  { id: "4.5", nom: "★ 4,5 et +" },
+  { id: "4", nom: "★ 4 et +" },
+  { id: "3", nom: "★ 3 et +" },
+  { id: "aucune", nom: "Pas notées" }
+];
+
+function passeLaNote(r) {
+  if (!vue.note) return true;
+  const n = etat.notes[r.id] || 0;
+  if (vue.note === "aucune") return !n;
+  return n >= Number(vue.note);
+}
+
 function listeRecettes() {
   const q = vue.recherche.trim().toLowerCase();
   const amb = ambianceCourante();
   const retenues = amb ? new Set(amb.recettes) : null;
-  return etat.R
+  const liste = etat.R
     .map((r) => ({ r, m: manquants(r) }))
     .filter((x) => (vue.onglet === "ok" ? x.m.length === 0 : x.m.length === 1))
     .filter((x) => !retenues || retenues.has(x.r.id))
+    .filter((x) => passeLaNote(x.r))
     .filter((x) => !q || texteCherchable(x.r).includes(q));
+  // filtrées par étoiles : les mieux notées d’abord
+  if (vue.note && vue.note !== "aucune") {
+    liste.sort((a, b) => (etat.notes[b.r.id] || 0) - (etat.notes[a.r.id] || 0));
+  }
+  return liste;
 }
 
 /* Un ruban d’occasions au-dessus de la liste : Noël, la piscine,
@@ -177,6 +240,15 @@ function rubanAmbiances() {
   return `<div class="ambiances" role="group" aria-label="Occasions">${boutons}</div>`;
 }
 
+/* Le filtre par étoiles n’apparaît qu’une fois une recette notée. */
+function rubanNotes() {
+  if (!Object.keys(etat.notes).length && !vue.note) return "";
+  const boutons = FILTRES_NOTE.map((f) =>
+    `<button class="amb filtre-note${f.id === vue.note ? " on" : ""}" data-filtre-note="${esc(f.id)}"
+      aria-pressed="${f.id === vue.note}">${esc(f.nom)}</button>`).join("");
+  return `<div class="ambiances notes" role="group" aria-label="Filtrer par note">${boutons}</div>`;
+}
+
 function rendreListe(main) {
   const liste = listeRecettes();
   const q = vue.recherche.trim();
@@ -188,27 +260,32 @@ function rendreListe(main) {
       : "Il ne manque qu’un ingrédient. Une petite course, et c’est prêt.");
   let vide;
   if (q) vide = "Aucun cocktail ne correspond. Essaie le nom d’une bouteille ou d’un type.";
-  else if (amb) {
+  else if (vue.note) {
+    vide = vue.note === "aucune"
+      ? "Tout ce qui est ici a déjà sa note."
+      : "Aucun cocktail avec cette note ici. Ouvre une recette pour lui donner des étoiles.";
+  } else if (amb) {
     vide = vue.onglet === "ok"
       ? `Rien de cette sélection pour l’instant. Regarde dans « Presque ».`
       : `Rien à une bouteille près ici. Regarde dans « Je peux faire ».`;
   } else vide = "Rien ici pour l’instant. Ajoute des bouteilles dans Mon bar.";
 
-  main.innerHTML = `<input class="search" type="search" id="q" placeholder="Chercher un cocktail, une bouteille ou un type" value="${esc(vue.recherche)}" aria-label="Chercher">
+  main.innerHTML = `<input class="search" type="search" id="q" placeholder="Chercher un cocktail" value="${esc(vue.recherche)}" aria-label="Chercher">
     ${rubanAmbiances()}
+    ${rubanNotes()}
     <p class="hint">${aide}</p>
     <div class="list">${liste.length
       ? liste.map((x) => carteRecette(x.r, x.m)).join("")
       : `<p class="empty">${vide}</p>`}</div>`;
 }
 
-function chips(ids) {
+export function chips(ids, { coche = (id) => etat.have[id], attr = "data-id", fiche = true } = {}) {
   return ids.map((id) => {
     const b = etat.ING[id];
-    const perso = b.perso
+    const perso = fiche && b.perso
       ? `<button class="fiche" data-fiche="${esc(id)}" aria-label="Options pour ${esc(b.nom)}">⋯</button>`
       : "";
-    return `<span class="chip-rang"><label class="chip"><input type="checkbox" data-id="${esc(id)}"${etat.have[id] ? " checked" : ""}>
+    return `<span class="chip-rang"><label class="chip"><input type="checkbox" ${attr}="${esc(id)}"${coche(id) ? " checked" : ""}>
       <span>${esc(b.nom)}${b.boite ? ' <b class="box">boîte</b>' : ""}${b.perso ? ' <b class="box">à moi</b>' : ""}</span></label>${perso}</span>`;
   }).join("");
 }
@@ -219,6 +296,14 @@ function rendreBar(main) {
     html += `<section class="install"><h2>Garde-le sur ton écran d’accueil</h2>
       <p>Sur iPhone : touche <b>Partager</b> (le carré avec la flèche, en bas de Safari), puis <b>Sur l’écran d’accueil</b>. Ton bar s’ouvre alors comme une application, même sans réseau.</p></section>`;
   }
+
+  // en haut de Mon bar, pour qu’elle le trouve sans chercher
+  const taille = document.documentElement.dataset.taille || "normal";
+  html += `<section class="reglage-taille"><h2 class="sous">Taille du texte</h2>
+    <div class="tailles" role="group" aria-label="Taille du texte">${[
+      ["normal", "Grand"], ["plus", "Plus grand"], ["max", "Très grand"]
+    ].map(([id, nom]) => `<button class="amb${id === taille ? " on" : ""}" data-taille="${id}" aria-pressed="${id === taille}">${nom}</button>`).join("")}</div>
+  </section>`;
 
   html += `<div class="gros-boutons">
     <button class="gros" id="ajouter-bouteille">Ajouter une bouteille</button>
@@ -260,16 +345,15 @@ export function rendre() {
     t.setAttribute("aria-selected", t.dataset.view === vue.onglet ? "true" : "false"));
   const main = document.getElementById("main");
   if (vue.onglet === "bar") rendreBar(main);
+  else if (vue.onglet === "idees") rendreIdees(main);
   else rendreListe(main);
   protegerImages(main);
-  centrerAmbiance(main);
+  main.querySelectorAll(".ambiances").forEach(centrerAmbiance);
 }
 
 /* Le ruban défile : on amène l’occasion choisie sous les yeux,
    sans bouger la page verticalement. */
-function centrerAmbiance(racine) {
-  const ruban = racine.querySelector(".ambiances");
-  if (!ruban) return;
+function centrerAmbiance(ruban) {
   const actif = ruban.querySelector(".amb.on");
   if (!actif) return;
   ruban.scrollLeft = Math.max(0,

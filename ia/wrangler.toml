@@ -1,0 +1,14 @@
+# Le relais IA de « Ton bar » (Cloudflare Workers, offre gratuite).
+# La clé Gemini n'est jamais ici : `npx wrangler secret put GEMINI_KEY`.
+name = "ton-bar-ia"
+main = "worker.js"
+compatibility_date = "2025-06-01"
+# Publié à https://ton-bar-ia.sedivyk.workers.dev
+workers_dev = true
+preview_urls = false
+
+[vars]
+# Seul le site publié peut appeler le relais.
+ORIGINES = "https://sedivyk.github.io"
+# Toujours le plus récent des modèles Flash-Lite, le moins cher.
+MODELE = "gemini-flash-lite-latest"

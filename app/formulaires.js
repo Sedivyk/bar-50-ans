@@ -1,7 +1,9 @@
 /* Les fenêtres : ajouter une bouteille, ajouter ou modifier une recette,
    et la fiche d’une bouteille ajoutée. */
 
-import { etat, fusionner, typesParFamille, nomType, enregistrerInventaire } from "./donnees.js";
+import {
+  etat, fusionner, typesParFamille, nomType, enregistrerInventaire, enregistrerNotes
+} from "./donnees.js";
 import { BOUTEILLES, RECETTES, ecrire, effacer, nouvelId } from "./stockage.js";
 import { enregistrer as enregistrerPhoto, supprimer as supprimerPhoto } from "./photos.js";
 import { recettesPour } from "./accords.js";
@@ -371,6 +373,7 @@ export async function supprimerRecette(id) {
   if (!confirm(`Supprimer « ${r.nom} » ?`)) return;
   if (r.photo) await supprimerPhoto(r.photo);
   await effacer(RECETTES, id);
+  if (id in etat.notes) { delete etat.notes[id]; enregistrerNotes(); }
   await fusionner();
   rafraichir();
 }

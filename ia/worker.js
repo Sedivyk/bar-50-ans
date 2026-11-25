@@ -7,8 +7,18 @@
 
    Déploiement : voir « Le relais IA » dans le README. */
 
-const MODELE_PAR_DEFAUT = "gemini-flash-lite-latest";
-const MODELE_SECOURS = "gemini-flash-latest";
+/* Essayés dans l'ordre : le moins cher d'abord. Les alias « -latest » visent
+   les modèles les plus récents, souvent débordés (503) ; les versions fixes
+   prennent le relais. Un modèle retiré (404) est simplement sauté. */
+const MODELES_PAR_DEFAUT = [
+  "gemini-flash-lite-latest",
+  "gemini-3.5-flash-lite",
+  "gemini-3.1-flash-lite",
+  "gemini-flash-latest",
+  "gemini-3.5-flash"
+];
+const A_SAUTER = [404, 500, 503];
+const PAUSE_MS = 2000;
 const ORIGINES_PAR_DEFAUT = "https://sedivyk.github.io";
 const VERRES = ["coupe", "court", "grand", "shooter", "tasse"];
 const TAILLE_MAX = 64 * 1024;
@@ -166,20 +176,32 @@ export default {
     try { demande = lireDemande(JSON.parse(brut)); } catch (e) { demande = { erreur: "illisible" }; }
     if (demande.erreur) return json({ erreur: demande.erreur }, 400, origine);
 
-    const modele = env.MODELE || MODELE_PAR_DEFAUT;
-    // Si le modèle est débordé (503) ou en panne (500), on essaie une fois le secours.
-    const modeles = [modele, MODELE_SECOURS].filter((m, i, t) => t.indexOf(m) === i);
+    // MODELE (facultatif) : un ou plusieurs modèles, séparés par des virgules.
+    const modeles = (env.MODELE ? String(env.MODELE).split(",").map((s) => s.trim()).filter(Boolean) : [])
+      .concat(MODELES_PAR_DEFAUT).filter((m, i, t) => t.indexOf(m) === i);
+    // « essais » : chaque modèle tenté et sa réponse (aucune donnée), pour le diagnostic.
+    const essais = [];
+    // L'offre gratuite refuse par moments (503) : deux tours, avec une pause,
+    // sans dépasser ~30 s (l'application abandonne à 45 s).
+    const debut = Date.now();
     let res;
-    for (const m of modeles) {
-      res = await appelerGemini(m, demande, env.GEMINI_KEY);
-      if (!res || (res.status !== 503 && res.status !== 500)) break;
-      console.log("Gemini", m, res.status, "on essaie le suivant");
+    tours: for (let tour = 0; tour < 2; tour++) {
+      if (tour) await new Promise((r) => setTimeout(r, PAUSE_MS));
+      for (const m of modeles) {
+        if (Date.now() - debut > 30000) break tours;
+        res = await appelerGemini(m, demande, env.GEMINI_KEY);
+        essais.push(`${m}:${res ? res.status : "injoignable"}`);
+        if (res && !A_SAUTER.includes(res.status)) break tours;
+      }
     }
-    if (!res) return json({ erreur: "Gemini injoignable" }, 502, origine);
-    if (res.status === 429) return json({ erreur: "quota" }, 429, origine);
+    console.log("Gemini", essais.join(" "));
+    if (!res) return json({ erreur: "Gemini injoignable", essais }, 502, origine);
+    if (res.status === 429) return json({ erreur: "quota", essais }, 429, origine);
     if (!res.ok) {
-      console.log("Gemini", res.status, (await res.text()).slice(0, 500));
-      return json({ erreur: "Gemini a refusé" }, 502, origine);
+      const detail = (await res.text()).slice(0, 300);
+      console.log("Gemini", res.status, detail);
+      return json({ erreur: "Gemini a refusé", essais,
+        detail: res.status === 400 ? detail : undefined }, 502, origine);
     }
     const recettes = lireReponse(await res.json());
     if (!recettes.length) return json({ erreur: "réponse vide" }, 502, origine);

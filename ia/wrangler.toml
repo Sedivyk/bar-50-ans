@@ -10,5 +10,5 @@ preview_urls = false
 [vars]
 # Seul le site publié peut appeler le relais.
 ORIGINES = "https://sedivyk.github.io"
-# Toujours le plus récent des modèles Flash-Lite, le moins cher.
+# Le premier modèle essayé ; s'il est débordé, worker.js en essaie d'autres.
 MODELE = "gemini-flash-lite-latest"

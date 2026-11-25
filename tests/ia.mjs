@@ -82,6 +82,13 @@ check("quota Gemini épuisé : 429", (await appel(demande)).status === 429);
     r.status === 200 && vus.length === 2 && vus[0] !== vus[1], vus.join(" → "));
   reponseGemini = geminiDit({}, 503);
   check("tous débordés : 502 (elle verra « Réessaie dans un moment »)", (await appel(demande)).status === 502);
+  n = 0; vus.length = 0;
+  reponseGemini = () => (++n <= 2 ? geminiDit({}, n === 1 ? 503 : 404)() : reponseOk());
+  globalThis.fetch = async (url, init) => { vus.push(String(url).match(/models\/([^:]+)/)[1]); return avant(url, init); };
+  const r3 = await appel(demande);
+  globalThis.fetch = avant;
+  check("débordé puis retiré (404) : on continue jusqu’à un modèle qui répond",
+    r3.status === 200 && vus.length === 3, vus.join(" → "));
 }
 reponseGemini = geminiDit({}, 400);
 check("Gemini refuse : 502", (await appel(demande)).status === 502);

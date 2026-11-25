@@ -69,6 +69,7 @@ Rien ne sort de son appareil, sauf quand elle touche « Inventer » dans l’ong
   ne descend sous 14,5 px et que rien ne déborde, même en « Très grand ».
 - Ses notes (de ½ à 5 étoiles, par demi-étoile) : `localStorage`, clé `ton-bar-notes-v1`.
   Retoucher sa note l’efface ; le filtre par note n’apparaît qu’une fois une recette notée.
+- Ses notes écrites sur une recette (« Mes notes » : ce qu’elle a changé, ce qu’on en a pensé) : `localStorage`, clé `ton-bar-commentaires-v1`. Elles sont exportées avec le reste et la recherche les lit.
 - Ses bouteilles, ses recettes et ses photos : IndexedDB, base `ton-bar`.
 - Les photos sont réduites à 800 px de large dans le navigateur avant d’être gardées.
 - « Exporter mon bar » écrit un seul fichier JSON (photos et notes comprises) que
@@ -107,7 +108,8 @@ Tant que `ADRESSE_IA` est vide dans `app/idees.js`, la partie IA n’apparaît p
 Le relais n’accepte que les appels venant de `https://sedivyk.github.io` (variable
 `ORIGINES` de `ia/wrangler.toml`), construit lui-même la question et ne renvoie que des
 recettes : ce n’est pas un accès libre à Gemini. Le modèle est `gemini-flash-lite-latest`,
-le moins cher, modifiable par la variable `MODELE`.
+le moins cher, modifiable par la variable `MODELE`. S’il est débordé, le relais
+essaie d’autres modèles Flash (liste `MODELES_PAR_DEFAUT` dans `ia/worker.js`).
 
 ## Développement
 
@@ -122,6 +124,7 @@ npm run test:perso   # ses ajouts : bouteille, recette, photo, export/import
 npm run test:deco    # garnitures, idées déco, astuces
 npm run test:ambiances  # les occasions, et l'absence d'alcool chez les ados
 npm run test:notes   # les étoiles, les demi-étoiles et le filtre par note
+npm run test:commentaires # « Mes notes » sur une recette
 npm run test:idees   # l'onglet Idées (relais simulé) et le relais lui-même
 npm run test:live    # teste l'adresse GitHub Pages
 ```

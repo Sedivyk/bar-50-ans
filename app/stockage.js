@@ -6,6 +6,7 @@
 export const CLE_INVENTAIRE = "ton-bar-50-v1";
 export const CLE_CHOIX = "ton-bar-choix-v1";
 export const CLE_NOTES = "ton-bar-notes-v1";
+export const CLE_COMMENTAIRES = "ton-bar-commentaires-v1";
 
 const NOM_BASE = "ton-bar";
 const VERSION_BASE = 1;
@@ -120,4 +121,30 @@ export function lireNotes() {
 
 export function ecrireNotes(notes) {
   try { localStorage.setItem(CLE_NOTES, JSON.stringify(notes)); } catch (e) {}
+}
+
+/* Ses notes écrites sur une recette : ce qu’elle a changé, ce qu’on en a
+   pensé. Du texte libre ; vide = pas de note. */
+export const COMMENTAIRE_MAX = 2000;
+
+export function commentaireValide(v) {
+  if (typeof v !== "string") return null;
+  const t = v.replace(/\r\n?/g, "\n").trim().slice(0, COMMENTAIRE_MAX);
+  return t || null;
+}
+
+export function lireCommentaires() {
+  const c = {};
+  try {
+    const o = JSON.parse(localStorage.getItem(CLE_COMMENTAIRES) || "{}") || {};
+    for (const [id, v] of Object.entries(o)) {
+      const t = commentaireValide(v);
+      if (t) c[id] = t;
+    }
+  } catch (e) {}
+  return c;
+}
+
+export function ecrireCommentaires(c) {
+  try { localStorage.setItem(CLE_COMMENTAIRES, JSON.stringify(c)); } catch (e) {}
 }

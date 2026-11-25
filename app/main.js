@@ -8,7 +8,7 @@ import { noteValide } from "./stockage.js";
 import { vue, rendre, compter } from "./vues.js";
 import {
   brancher, ajouterBouteille, ajouterRecette, ficheBouteille,
-  modifierRecette, supprimerRecette, astucesDeco
+  modifierRecette, supprimerRecette, astucesDeco, commenterRecette
 } from "./formulaires.js";
 import { exporter, importer } from "./transfert.js";
 import {
@@ -17,7 +17,8 @@ import {
 
 let pret = false;
 
-function rafraichir() { if (pret) rendre(); }
+// après une fenêtre, les recettes ouvertes le restent (elle ne perd pas sa place)
+function rafraichir() { if (pret) rendreEnGardantOuvertes(); }
 brancher(rafraichir);
 brancherIdees(() => { if (pret) rendreEnGardantOuvertes(); });
 
@@ -79,6 +80,9 @@ function surClic(e) {
 
   const fiche = cible("[data-fiche]");
   if (fiche) { e.preventDefault(); return ficheBouteille(fiche.dataset.fiche); }
+
+  const com = cible("[data-commenter]");
+  if (com) return commenterRecette(com.dataset.commenter);
 
   const mod = cible("[data-modifier-recette]");
   if (mod) return modifierRecette(mod.dataset.modifierRecette);

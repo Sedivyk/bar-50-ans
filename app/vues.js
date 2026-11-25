@@ -51,6 +51,14 @@ function sectionNote(r) {
     <div class="note-ligne"><span class="etoiles" role="group" aria-label="Ma note pour ${esc(r.nom)}">${etoiles}</span>${valeur}</div></section>`;
 }
 
+/* Ses notes écrites : ce qu’elle a changé, ce qu’on en a pensé. */
+function sectionCommentaire(r) {
+  const t = etat.commentaires[r.id];
+  return `<section class="mes-notes"><h3>Mes notes</h3>
+    ${t ? `<p class="commentaire">${esc(t)}</p>` : ""}
+    <button type="button" class="${t ? "lien-btn" : "gros doux"}" data-commenter="${esc(r.id)}">${t ? "Modifier mes notes" : "Écrire une note"}</button></section>`;
+}
+
 /* ------------------------------------------------------------- une recette */
 
 function photoDe(r) {
@@ -138,6 +146,7 @@ export function carteRecette(r, manque, opts = {}) {
   const deco = sectionDeco(r);
   const n = etat.notes[r.id];
   const badge = (n ? ` <span class="note-mini" aria-label="Ma note : ${texteNote(n)} sur 5">★ ${texteNote(n)}</span>` : "")
+    + (etat.commentaires[r.id] && !opts.suggestion ? ' <span class="com-mini" aria-label="J’ai écrit des notes">✎</span>' : "")
     + (opts.suggestion ? ' <b class="mine">idée IA</b>' : "")
     + (r.perso ? ` <b class="mine">${r.ia ? "ma recette · IA" : "ma recette"}</b>` : "")
     + (r.sansAlcool ? ' <b class="mine doux">sans alcool</b>' : "");
@@ -161,7 +170,7 @@ export function carteRecette(r, manque, opts = {}) {
     <summary>${thumb}<div class="st"><div class="rt">${esc(r.nom)}${badge}</div>${resume(r, manque)}</div><span class="chev" aria-hidden="true"></span></summary>
     <div class="body">${photo}<ul class="ing">${ings}</ul>
       <p class="method">${esc(r.methode)}</p>
-      ${opts.suggestion ? "" : sectionNote(r)}${deco}${r.note ? `<p class="note">${esc(r.note)}</p>` : ""}${pour}${lien}${actions}</div>
+      ${opts.suggestion ? "" : sectionNote(r) + sectionCommentaire(r)}${deco}${r.note ? `<p class="note">${esc(r.note)}</p>` : ""}${pour}${lien}${actions}</div>
   </details>`;
 }
 

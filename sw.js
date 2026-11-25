@@ -2,7 +2,7 @@
    Met le site, les données et les photos en cache pour un usage hors ligne.
    Bump VERSION à chaque déploiement pour forcer le renouvellement du cache. */
 
-const VERSION = "ton-bar-v13";
+const VERSION = "ton-bar-v14";
 const SHELL_CACHE = VERSION + "-shell";
 const RUNTIME_CACHE = VERSION + "-runtime";
 

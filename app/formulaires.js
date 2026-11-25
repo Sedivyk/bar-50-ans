@@ -2,9 +2,12 @@
    et la fiche d’une bouteille ajoutée. */
 
 import {
-  etat, fusionner, typesParFamille, nomType, enregistrerInventaire, enregistrerNotes
+  etat, fusionner, typesParFamille, nomType, enregistrerInventaire, enregistrerNotes,
+  enregistrerCommentaires
 } from "./donnees.js";
-import { BOUTEILLES, RECETTES, ecrire, effacer, nouvelId } from "./stockage.js";
+import {
+  BOUTEILLES, RECETTES, ecrire, effacer, nouvelId, commentaireValide, COMMENTAIRE_MAX
+} from "./stockage.js";
 import { enregistrer as enregistrerPhoto, supprimer as supprimerPhoto } from "./photos.js";
 import { recettesPour } from "./accords.js";
 import { VERRES, VERRE_ETIQUETTE } from "./verres.js";
@@ -374,8 +377,41 @@ export async function supprimerRecette(id) {
   if (r.photo) await supprimerPhoto(r.photo);
   await effacer(RECETTES, id);
   if (id in etat.notes) { delete etat.notes[id]; enregistrerNotes(); }
+  if (id in etat.commentaires) { delete etat.commentaires[id]; enregistrerCommentaires(); }
   await fusionner();
   rafraichir();
+}
+
+/* Ses notes sur une recette, la sienne ou une du livre. */
+export function commenterRecette(id) {
+  const r = etat.R.find((x) => x.id === id);
+  if (!r) return;
+  const avant = etat.commentaires[id] || "";
+  ouvrir(`Mes notes · ${r.nom}`, `
+    <label class="ch"><span>Ce que tu as changé, ce que vous en avez pensé…</span>
+      <textarea id="c-texte" rows="7" maxlength="${COMMENTAIRE_MAX}"
+        placeholder="J’ai mis ½ oz de sirop au lieu de ¾. Les enfants ont adoré.">${esc(avant)}</textarea></label>
+    <div class="boutons">
+      <button class="gros" id="c-ok" type="button">Enregistrer</button>
+      <button type="button" class="lien-btn" data-annuler>Annuler</button>
+      ${avant ? '<button type="button" class="lien-btn danger" id="c-effacer">Effacer mes notes</button>' : ""}
+    </div>`, (d) => {
+    const zone = d.querySelector("#c-texte");
+    zone.focus();
+    zone.setSelectionRange(zone.value.length, zone.value.length);
+    const garder = (texte) => {
+      const t = commentaireValide(texte);
+      if (t) etat.commentaires[id] = t; else delete etat.commentaires[id];
+      enregistrerCommentaires();
+      fermer();
+      rafraichir();
+    };
+    d.querySelector("#c-ok").addEventListener("click", () => garder(zone.value));
+    const eff = d.querySelector("#c-effacer");
+    if (eff) eff.addEventListener("click", () => {
+      if (confirm("Effacer tes notes sur cette recette ?")) garder("");
+    });
+  });
 }
 
 export function modifierRecette(id) {

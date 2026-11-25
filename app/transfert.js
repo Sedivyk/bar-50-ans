@@ -3,9 +3,12 @@
    en changeant de téléphone ou en vidant son navigateur. */
 
 import {
-  etat, fusionner, chargerInventaire, enregistrerInventaire, enregistrerNotes
+  etat, fusionner, chargerInventaire, enregistrerInventaire, enregistrerNotes,
+  enregistrerCommentaires
 } from "./donnees.js";
-import { BOUTEILLES, RECETTES, PHOTOS, tout, ecrire, noteValide } from "./stockage.js";
+import {
+  BOUTEILLES, RECETTES, PHOTOS, tout, ecrire, noteValide, commentaireValide
+} from "./stockage.js";
 import { versTexte, depuisTexte, oublierTout } from "./photos.js";
 
 const FORMAT = 1;
@@ -22,6 +25,7 @@ export async function exporter() {
     inventaire: etat.have,
     choix: etat.choix,
     notes: etat.notes,
+    commentaires: etat.commentaires,
     bouteilles,
     recettes,
     photos: await Promise.all(photos.map(async (p) => ({
@@ -98,6 +102,15 @@ export async function importer(file) {
       if (n !== null) etat.notes[id] = n;
     }
     enregistrerNotes();
+  }
+  // ses notes écrites : celles du fichier s’ajoutent ; si une recette en a
+  // des deux côtés, celle du fichier gagne
+  if (paquet.commentaires && typeof paquet.commentaires === "object") {
+    for (const [id, v] of Object.entries(paquet.commentaires)) {
+      const t = commentaireValide(v);
+      if (t) etat.commentaires[id] = t;
+    }
+    enregistrerCommentaires();
   }
 
   return compte;

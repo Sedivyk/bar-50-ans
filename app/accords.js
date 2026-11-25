@@ -78,6 +78,8 @@ export function texteCherchable(r) {
     for (const id of bouteillesPour(x)) bouts.push(etat.ING[id].nom);
   }
   if (r.note) bouts.push(r.note);
+  // ce qu’elle a écrit sur la recette la fait trouver aussi
+  if (etat.commentaires && etat.commentaires[r.id]) bouts.push(etat.commentaires[r.id]);
   return bouts.join(" ").toLowerCase();
 }
 

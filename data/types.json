@@ -295,6 +295,36 @@
       "exemples": "Jus de canneberge"
     },
     {
+      "id": "jus-passion",
+      "nom": "Jus de fruit de la passion",
+      "famille": "Pour allonger",
+      "exemples": "Jus de fruit de la passion"
+    },
+    {
+      "id": "limonade",
+      "nom": "Limonade",
+      "famille": "Pour allonger",
+      "exemples": "Limonade, limonade rose"
+    },
+    {
+      "id": "soda-citron-lime",
+      "nom": "Soda citron-lime",
+      "famille": "Pour allonger",
+      "exemples": "7Up, Sprite"
+    },
+    {
+      "id": "jus-mangue",
+      "nom": "Jus de mangue",
+      "famille": "Pour allonger",
+      "exemples": "Jus de mangue"
+    },
+    {
+      "id": "jus-pamplemousse",
+      "nom": "Jus de pamplemousse",
+      "famille": "Pour allonger",
+      "exemples": "Jus de pamplemousse"
+    },
+    {
       "id": "lime",
       "nom": "Limes",
       "famille": "Garde-manger",

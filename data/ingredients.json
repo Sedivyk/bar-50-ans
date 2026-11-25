@@ -335,6 +335,55 @@
       "type": "jus-orange"
     },
     {
+      "id": "juspassion",
+      "nom": "Jus de fruit de la passion",
+      "categorie": "Pour allonger",
+      "defaut": false,
+      "type": "jus-passion"
+    },
+    {
+      "id": "juscanneberge",
+      "nom": "Jus de canneberge",
+      "categorie": "Pour allonger",
+      "defaut": false,
+      "type": "jus-canneberge"
+    },
+    {
+      "id": "limonade",
+      "nom": "Limonade",
+      "categorie": "Pour allonger",
+      "defaut": false,
+      "type": "limonade"
+    },
+    {
+      "id": "limonade_rose",
+      "nom": "Limonade rose",
+      "categorie": "Pour allonger",
+      "defaut": false,
+      "type": "limonade"
+    },
+    {
+      "id": "septup",
+      "nom": "7Up",
+      "categorie": "Pour allonger",
+      "defaut": false,
+      "type": "soda-citron-lime"
+    },
+    {
+      "id": "jusmangue",
+      "nom": "Jus de mangue",
+      "categorie": "Pour allonger",
+      "defaut": false,
+      "type": "jus-mangue"
+    },
+    {
+      "id": "juspamplemousse",
+      "nom": "Jus de pamplemousse",
+      "categorie": "Pour allonger",
+      "defaut": false,
+      "type": "jus-pamplemousse"
+    },
+    {
       "id": "lime",
       "nom": "Limes",
       "categorie": "Garde-manger",
